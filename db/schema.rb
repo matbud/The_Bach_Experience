@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_30_130946) do
+ActiveRecord::Schema.define(version: 2021_08_30_132752) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "activities", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.text "description"
+    t.integer "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "events", force: :cascade do |t|
     t.string "gender"
@@ -40,6 +49,15 @@ ActiveRecord::Schema.define(version: 2021_08_30_130946) do
     t.index ["user_id"], name: "index_guests_on_user_id"
   end
 
+  create_table "hotels", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.text "description"
+    t.integer "price_per_night"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "messages", force: :cascade do |t|
     t.text "content"
     t.bigint "user_id", null: false
@@ -50,6 +68,24 @@ ActiveRecord::Schema.define(version: 2021_08_30_130946) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
+  create_table "recommendations", force: :cascade do |t|
+    t.bigint "event_id", null: false
+    t.bigint "hotel_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["event_id"], name: "index_recommendations_on_event_id"
+    t.index ["hotel_id"], name: "index_recommendations_on_hotel_id"
+  end
+
+  create_table "recommended_activities", force: :cascade do |t|
+    t.bigint "activity_id", null: false
+    t.bigint "recommendation_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["activity_id"], name: "index_recommended_activities_on_activity_id"
+    t.index ["recommendation_id"], name: "index_recommended_activities_on_recommendation_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -58,6 +94,9 @@ ActiveRecord::Schema.define(version: 2021_08_30_130946) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.boolean "admin"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -67,4 +106,8 @@ ActiveRecord::Schema.define(version: 2021_08_30_130946) do
   add_foreign_key "guests", "users"
   add_foreign_key "messages", "events"
   add_foreign_key "messages", "users"
+  add_foreign_key "recommendations", "events"
+  add_foreign_key "recommendations", "hotels"
+  add_foreign_key "recommended_activities", "activities"
+  add_foreign_key "recommended_activities", "recommendations"
 end
