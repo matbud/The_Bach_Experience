@@ -10,9 +10,23 @@ class RecommendationsController < ApplicationController
   end
 
   def show
-    @hotel = Hotel.all.sample
-    @activity = Activity.all.sample(3)
-    @recommendation = Recommendation.find(params[:id])
-    authorize @recommendations
+    # @event = Event.find(params[:event_id])
+
+    # @hotel = Hotel.all.sample
+    if Recommendation.where(id: params[:id]).exists?
+      @recommendation = Recommendation.find(params[:id])
+    else
+      @event = Event.find(params[:event_id])
+      @hotel = Hotel.all.sample
+      @recommendation = Recommendation.new(hotel: @hotel, event: @event)
+      @recommendation.save
+      3.times do
+        loop do
+          recommended_activity = RecommendedActivity.new(recommendation: @recommendation, activity: Activity.all.sample)
+          break if recommended_activity.save
+        end
+      end
+    end
+    authorize @recommendation
   end
 end
