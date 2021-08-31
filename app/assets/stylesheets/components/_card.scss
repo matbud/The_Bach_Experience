@@ -14,6 +14,19 @@
 }
 
 
+.card-category h6 {
+display: none;
+}
+
+.card-category:hover h6 {
+  display: block;
+  text-align: center;
+}
+
+.card-category:hover h2 {
+  display: none;
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
