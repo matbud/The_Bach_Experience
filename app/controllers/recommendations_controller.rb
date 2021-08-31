@@ -10,14 +10,14 @@ class RecommendationsController < ApplicationController
   end
 
   def show
-    # @event = Event.find(params[:event_id])
+    @event = Event.find(params[:event_id])
 
-    # @hotel = Hotel.all.sample
-    if Recommendation.where(id: params[:id]).exists?
+    @hotel = Hotel.all.sample
+    if Recommendation.find(params[:id])
       @recommendation = Recommendation.find(params[:id])
     else
-      @event = Event.find(params[:event_id])
-      @hotel = Hotel.all.sample
+      # @event = Event.find(params[:event_id])
+      # @hotel = Hotel.all.sample
       @recommendation = Recommendation.new(hotel: @hotel, event: @event)
       @recommendation.save
       3.times do
