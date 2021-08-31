@@ -6,7 +6,7 @@ class EventPolicy < ApplicationPolicy
   end
 
   def create?
-    current_user.admin
+    user.admin
   end
 
   def show?
