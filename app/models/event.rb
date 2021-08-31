@@ -6,5 +6,4 @@ class Event < ApplicationRecord
 
   validates :gender, :theme, :start_date, :end_date, :budget, :number_of_guests, :location, presence: true
   validates :budget, :number_of_guests, numericality: { greater_than: 0 }
-
 end
