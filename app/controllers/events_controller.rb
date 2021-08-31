@@ -5,13 +5,20 @@ class EventsController < ApplicationController
   end
 
   def create
-
+    @event = Event.new(event_params)
+    @event.status = 'pending'
+    @event.user = current_user
+    authorize @event
+    if @event.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
 
   def event_params
-    # to fill in
-    params.require(:event).permit()
+    params.require(:event).permit(:start_date, :end_date, :theme, :gender, :budget, :number_of_guests, :location)
   end
 end
