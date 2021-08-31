@@ -5,8 +5,12 @@ class RecommendationPolicy < ApplicationPolicy
     end
   end
 
+  def index?
+    true
+  end
+
   def show?
     # later needs to be changed to work only for the admin
-    true 
+    true
   end
 end
