@@ -1,0 +1,11 @@
+<div class='form-event-new'>
+  <%= simple_form_for @event do |f| %>
+    <%= f.input :gender, as: :radio_buttons, collection: ['Women', 'Men', "Mixed"] %>
+    <%= f.input :theme, as: :radio_buttons, collection: ['Wild', 'Nature', "Fancy", 'Cosy'] %>
+    <%= f.input :number_of_guests, input_html: { min: 1 } %>
+    <%= f.input :budget, input_html: { min: 1, placeholder: '€' } %>
+    <%= f.input :location %>
+    <%# add dates %>
+    <%= f.submit %>
+  <% end %>
+</div>
