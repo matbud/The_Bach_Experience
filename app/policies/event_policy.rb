@@ -21,6 +21,10 @@ class EventPolicy < ApplicationPolicy
     update?
   end
 
+  def confirm_recommendation?
+    update?
+  end
+
   def change_theme?
     update?
   end
@@ -31,5 +35,9 @@ class EventPolicy < ApplicationPolicy
 
   def invite?
     update?
+  end
+
+  def summary?
+    show?
   end
 end
