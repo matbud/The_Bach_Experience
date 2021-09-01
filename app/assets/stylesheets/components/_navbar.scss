@@ -1,3 +1,10 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 85px;
+  position: relative;
+}
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
@@ -10,4 +17,11 @@
 .navbar-lewagon .navbar-brand img {
   width: 125px;
   justify-content: center;
+  position: absolute;
+  top: 10px;
+  left: 625px;
+}
+
+.bnt-actioncall-navbar {
+  padding-right: 20px;
 }
