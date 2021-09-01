@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   get '/events/:id/choose_recommendation', to: 'events#choose_recommendation'
   get 'dashboards/:id', to: 'dashboards#show', as: :dashboard
   get '/draft', to: 'pages#draft'
+  resources :plannings, only: [:create]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
