@@ -97,17 +97,17 @@ file = URI.open('https://unsplash.it/1300/600?random')
 activity1.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity1.save
 
-activity2 = Activity.new(name: "Massage", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"cozy, fancy", gender:"mixte", price: 120)
+activity2 = Activity.new(name: "Massage", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"cozy, fancy", gender:"mixed", price: 120)
 file = URI.open('https://unsplash.it/1300/600?random')
 activity2.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity2.save
 
-activity3 = Activity.new(name: "Cooking Class", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"cozy", gender:"mixte", price: 100)
+activity3 = Activity.new(name: "Cooking Class", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"cozy", gender:"mixed", price: 100)
 file = URI.open('https://unsplash.it/1300/600?random')
 activity3.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity3.save
 
-activity4 = Activity.new(name: "Comedy show", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"cozy", gender:"mixte", price: 60)
+activity4 = Activity.new(name: "Comedy show", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"cozy", gender:"mixed", price: 60)
 file = URI.open('https://unsplash.it/1300/600?random')
 activity4.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity4.save
@@ -132,17 +132,17 @@ file = URI.open('https://unsplash.it/1300/600?random')
 activity8.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity8.save
 
-activity9 = Activity.new(name: "Wine tasting", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy", gender:"mixte", price: 65)
+activity9 = Activity.new(name: "Wine tasting", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy", gender:"mixed", price: 65)
 file = URI.open('https://unsplash.it/1300/600?random')
 activity9.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity9.save
 
-activity10 = Activity.new(name: "Cocktail Class", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy", gender:"mixte", price: 55)
+activity10 = Activity.new(name: "Cocktail Class", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy", gender:"mixed", price: 55)
 file = URI.open('https://unsplash.it/1300/600?random')
 activity10.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity10.save
 
-activity11 = Activity.new(name: "Casino", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy, wild", gender:"mixte", price: 25)
+activity11 = Activity.new(name: "Casino", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy, wild", gender:"mixed", price: 25)
 file = URI.open('https://unsplash.it/1300/600?random')
 activity11.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity11.save
@@ -162,27 +162,27 @@ file = URI.open('https://unsplash.it/1300/600?random')
 activity14.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity14.save
 
-activity15 = Activity.new(name: "Open bar boat trip", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"mixte", price: 75)
+activity15 = Activity.new(name: "Open bar boat trip", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"mixed", price: 75)
 file = URI.open('https://unsplash.it/1300/600?random')
 activity15.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity15.save
 
-activity15 = Activity.new(name: "Strip dancer", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"mixte", price: 100)
+activity15 = Activity.new(name: "Strip dancer", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"mixed", price: 100)
 file = URI.open('https://unsplash.it/1300/600?random')
 activity15.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity15.save
 
-activity16 = Activity.new(name: "Pub crawl", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"mixte", price: 50)
+activity16 = Activity.new(name: "Pub crawl", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"mixed", price: 50)
 file = URI.open('https://unsplash.it/1300/600?random')
 activity16.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity16.save
 
-activity17 = Activity.new(name: "Party bus", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"mixte", price: 170)
+activity17 = Activity.new(name: "Party bus", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"mixed", price: 170)
 file = URI.open('https://unsplash.it/1300/600?random')
 activity17.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity17.save
 
-activity18 = Activity.new(name: "Escape room", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"mixte", price: 50)
+activity18 = Activity.new(name: "Escape room", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"mixed", price: 50)
 file = URI.open('https://unsplash.it/1300/600?random')
 activity18.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity18.save
@@ -212,27 +212,27 @@ file = URI.open('https://unsplash.it/1300/600?random')
 activity23.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity23.save
 
-activity24 = Activity.new(name: "Hiking", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"nature", gender:"mixte", price: 100)
+activity24 = Activity.new(name: "Hiking", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"nature", gender:"mixed", price: 100)
 file = URI.open('https://unsplash.it/1300/600?random')
 activity24.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity24.save
 
-activity25 = Activity.new(name: "Horse riding", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"nature", gender:"mixte", price: 120)
+activity25 = Activity.new(name: "Horse riding", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"nature", gender:"mixed", price: 120)
 file = URI.open('https://unsplash.it/1300/600?random')
 activity25.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity25.save
 
-activity26 = Activity.new(name: "Treetop adventure course", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"nature", gender:"mixte", price: 80)
+activity26 = Activity.new(name: "Treetop adventure course", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"nature", gender:"mixed", price: 80)
 file = URI.open('https://unsplash.it/1300/600?random')
 activity26.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity26.save
 
-activity27 = Activity.new(name: "Kayak", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"nature", gender:"mixte", price: 70)
+activity27 = Activity.new(name: "Kayak", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"nature", gender:"mixed", price: 70)
 file = URI.open('https://unsplash.it/1300/600?random')
 activity27.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity27.save
 
-activity28 = Activity.new(name: "Rockclimbing", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"nature", gender:"mixte", price: 60)
+activity28 = Activity.new(name: "Rockclimbing", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"nature", gender:"mixed", price: 60)
 file = URI.open('https://unsplash.it/1300/600?random')
 activity28.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity28.save
