@@ -6,5 +6,8 @@ class DashboardsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     authorize @event
+
+    @plannings = Planning.where(event: @event)
   end
+
 end

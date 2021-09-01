@@ -36,3 +36,13 @@
 
   </div>
 </div>
+
+<%= month_calendar(events: @plannings, end_attribute: @event.end_date.to_s) do |date, plannings| %>
+  <%= date %>
+
+  <% plannings.each do |planning| %>
+    <div class="planning">  <-- We will add some style to the planning class later so let's add it now -->
+      <p><%= planning.name %></p>
+    </div>
+  <% end %>
+<% end %>
