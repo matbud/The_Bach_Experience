@@ -1,5 +1,5 @@
 <h1 class="text-center my-3">Recommendations</h1>
-<div class="container card-container text-center pt-5">
+<div class="container card-container text-center pt-3">
   <div class="card-trips">
     <h2>Hotel:</h2>
     <div class="card-trip">
@@ -13,7 +13,10 @@
         <p><%= @hotel.address %></p>
         <p><%= @hotel.description %></p>
       </div>
-      <h3><%= "#{ @hotel.price_per_night}€" %></h3>
+      <div class="hotel-price">
+        <h3><%= "#{ @hotel.price_per_night}€" %></h3>
+        <p>/ per night</p>
+      </div>
     </div>
   </div>
   <%# <h2>Activities:</h2> %>
@@ -31,7 +34,10 @@
           <p><%= activity.address %></p>
           <p><%= activity.description %></p>
         </div>
-        <h3 class="card-product-price"><%= activity.price %></h3>
+        <div class="activity-price">
+          <h3><%= "#{activity.price}€" %></h3>
+          <p>/ per activity</p>
+        </div>
       </div>
     <% end %>
   </div>

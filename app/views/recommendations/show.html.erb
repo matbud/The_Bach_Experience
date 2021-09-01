@@ -1,38 +1,46 @@
 <h1 class="text-center my-3">Recommendations</h1>
-<div class="container card-container text-center pt-5">
+<div class="container card-container text-center pt-3">
   <div class="card-trips">
     <h2>Hotel:</h2>
-    <div class="card-trip">
-      <%# Img to be replaced by seed pictures %>
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-      <%# <% if @hotel.photos.attached? %>
-      <%# <%= cl_image_tag hotel.photos.first.key %>
-      <%# <% end %>
-      <div class="card-trip-infos">
-        <h2><%= @hotel.name %></h2>
-        <p><%= @hotel.address %></p>
-        <p><%= @hotel.description %></p>
+    <%# <% @recommendation.hotel.each do |hotel| %>
+      <div class="card-trip">
+        <%# Img to be replaced by seed pictures %>
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <%# <% if @hotel.photos.attached? %>
+        <%# <%= cl_image_tag hotel.photos.first.key %>
+        <%# <% end %>
+        <div class="card-trip-infos">
+          <h2><%= @hotel.name %></h2>
+          <p><%= @hotel.address %></p>
+          <p><%= @hotel.description %></p>
+        </div>
+        <div class="hotel-price">
+          <h3><%= "#{ @hotel.price_per_night}€" %></h3>
+          <p>/ per night</p>
+        </div>
       </div>
-      <h3><%= "#{ @hotel.price_per_night}€" %></h3>
+      <%# <% end %>
+    </div>
+    <%# <h2>Activities:</h2> %>
+    <div class="card-products">
+      <h2>Activities:</h2>
+      <% @recommendation.recommended_activities.each do |activity| %>
+        <div class="card-product">
+          <%# Img to be replaced by seed pictures %>
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <%# <% if activity.photos.attached? %>
+          <%# <%= cl_image_tag activity.photos.first.key %>
+          <%# <% end %>
+          <div class="card-product-infos">
+            <h2><%= activity.activity.name %></h2>
+            <p><%= activity.activity.address %></p>
+            <p><%= activity.activity.description %></p>
+          </div>
+          <div class="activity-price">
+            <h3><%= "#{ activity.activity.price }€" %></h3>
+            <p>/ per night</p>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
-  <%# <h2>Activities:</h2> %>
-  <div class="card-products">
-    <h2>Activities:</h2>
-    <% @recommendation.recommended_activities.each do |activity| %>
-      <div class="card-product">
-        <%# Img to be replaced by seed pictures %>
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-        <%# <% if activity.photos.attached? %>
-        <%# <%= cl_image_tag activity.photos.first.key %>
-        <%# <% end %>
-        <div class="card-product-infos">
-          <h2><%= activity.activity.name %></h2>
-          <p><%= activity.activity.address %></p>
-          <p><%= activity.activity.description %></p>
-        </div>
-        <h3 class="card-product-price"><%= activity.activity.price %></h3>
-      </div>
-    <% end %>
-  </div>
-</div>
