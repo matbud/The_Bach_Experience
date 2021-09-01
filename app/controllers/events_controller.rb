@@ -1,4 +1,9 @@
 class EventsController < ApplicationController
+  BUDGET_PROPORTIONS = {
+    hotel: 0.4,
+    activity: 0.2
+  }
+
   def new
     @event = Event.new
     authorize @event
@@ -20,6 +25,12 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     authorize @event
     generate_recommendation
+  end
+
+  def confirm_recommendation
+    @event = Event.find(params[:id])
+    @event.recommendations.last.update(chosen: true)
+    # TODO: redirect_to next_path
   end
 
   private
