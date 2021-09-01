@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :events, only: [ :new, :create ] do
     resources :recommendations, only: [:index, :show]
   end
+  get 'dashboards/:id', to: 'dashboards#show', as: :dashboard
   get '/draft', to: 'pages#draft'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
