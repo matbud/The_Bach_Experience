@@ -30,7 +30,14 @@ class EventsController < ApplicationController
   def confirm_recommendation
     @event = Event.find(params[:id])
     @event.recommendations.last.update(chosen: true)
-    # TODO: redirect_to next_path
+    authorize @event
+    redirect_to summary_path(@event)
+  end
+
+  def summary
+    @event = Event.find(params[:id])
+    @recommendation = @event.recommendations.last
+    authorize @event
   end
 
   private
