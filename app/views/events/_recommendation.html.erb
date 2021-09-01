@@ -10,12 +10,12 @@
         <%# <%= cl_image_tag hotel.photos.first.key %>
         <%# <% end %>
         <div class="card-trip-infos">
-          <h2><%= @hotel.name %></h2>
-          <p><%= @hotel.address %></p>
-          <p><%= @hotel.description %></p>
+          <h2><%= @recommendation.hotel.name %></h2>
+          <p><%= @recommendation.hotel.address %></p>
+          <p><%= @recommendation.hotel.description %></p>
         </div>
         <div class="hotel-price">
-          <h3><%= "#{ @hotel.price_per_night}€" %></h3>
+          <h3><%= "#{ @recommendation.hotel.price_per_night}€" %></h3>
           <p>/ per night</p>
         </div>
       </div>
