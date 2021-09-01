@@ -24,12 +24,14 @@ gem 'redis', '~> 4.0'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+gem "simple_calendar", "~> 2.4"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise'
 gem 'pundit'
+gem 'cloudinary', '~> 1.16.0'
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'

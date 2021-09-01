@@ -7,5 +7,4 @@ class DashboardsController < ApplicationController
     @event = Event.find(params[:id])
     authorize @event
   end
-
 end
