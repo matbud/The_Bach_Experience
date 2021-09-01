@@ -1,8 +1,14 @@
-<div class="text-center"><p>Gender: <%= @event.gender %></p>
-<p>Theme: <%= @event.theme %></p>
-<p>Start date: <%= @event.start_date %></p>
-<p>End date: <%= @event.end_date %></p>
-<p>Budget per person: <%= @event.budget_per_person %></p>
-<p>Number of guests: <%= @event.number_of_guests %></p>
+<div class="text-center">
+  <p>Take a moment to review the details of your event</p>
+  <p>Gender: <%= @event.gender %></p>
+  <p>Theme: <%= @event.theme %></p>
+  <p>Start date: <%= @event.start_date %></p>
+  <p>End date: <%= @event.end_date %></p>
+  <p>Budget per person: €<%= @event.budget_per_person %></p>
+  <p>Number of guests: <%= @event.number_of_guests %></p>
 </div>
 <%= render 'recommendation' %>
+<div class="text-center">
+  <%= button_to "Edit", class: "btn-blue" %>
+  <%= button_to "Confirm", method: :patch, class: "btn-red" %>
+</div>

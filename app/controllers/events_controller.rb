@@ -15,7 +15,7 @@ class EventsController < ApplicationController
     @event.user = current_user
     authorize @event
     if @event.save
-      redirect_to root_path
+      redirect_to choose_recommendation_path(@event)
     else
       render :new
     end
@@ -38,6 +38,8 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @recommendation = @event.recommendations.last
     authorize @event
+    # TODO: implement edit button in the view
+    # redirect_to invite_path(@event)
   end
 
   private
@@ -51,6 +53,7 @@ class EventsController < ApplicationController
     # 1. choose a hotel
     # TODO: change how the hotel is selected based on budget, location, theme etc.
     hotel = Hotel.all.sample
+    # hotel = Hotel.where(theme: @event.theme)
 
     # 2. create Recommendation instance and assign the hotel and event
     @recommendation = Recommendation.create(hotel: hotel, event: @event)
