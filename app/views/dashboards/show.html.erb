@@ -31,6 +31,16 @@
           <div class="planning">
             <p><%= planning.name %></p>
             <small><%= planning.time unless planning.multi_days? %></small>
+            <div class="planning-change">
+              <%# <%= link_to "Update #{planning.name}", %>
+              <%# planning_path(planning), %>
+              <%# method: :patch, %>
+              <%# data: { confirm: "Are you sure?" } %>
+              <%= link_to "Delete #{planning.name}",
+              planning_path(planning),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+            </div>
           </div>
         <% end %>
       <% end %>

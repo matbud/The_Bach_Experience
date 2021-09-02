@@ -6,11 +6,26 @@ class PlanningsController < ApplicationController
     @new_planning = Planning.new(planning_params)
     @new_planning.event = @event
     authorize @new_planning
+    raise
     if @new_planning.save
       redirect_to dashboard_path(current_user.events.first)
     else
       render :create
     end
+  end
+
+  def update
+    @new_planning = Planning.find(params[:id])
+    @new_planning.update(planning_params)
+    authorize @new_planning
+    redirect_to dashboard_path(current_user.events.first)
+  end
+
+  def destroy
+    @new_planning = Planning.find(params[:id])
+    @new_planning.destroy
+    authorize @new_planning
+    redirect_to dashboard_path(current_user.events.first)
   end
 
   private
