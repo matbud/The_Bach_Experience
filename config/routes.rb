@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/events/:id/choose_recommendation', to: 'events#choose_recommendation', as: :choose_recommendation
   patch '/events/:id/confirm_recommendation', to: 'events#confirm_recommendation', as: :confirm_recommendation
   get '/events/:id/summary', to: 'events#summary', as: :summary
+  patch '/events/:id/confirm_event', to: 'events#confirm_event', as: :confirm_event
+  get '/events/:id/invite', to: 'events#invite', as: :invite
 
   get 'dashboards/:id', to: 'dashboards#show', as: :dashboard
   get '/draft', to: 'pages#draft'
