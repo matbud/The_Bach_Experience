@@ -6,13 +6,19 @@
     <% end %>
   </div>
   <div class="collapse navbar-collapse navbar-btn-avatar" id="navbarSupportedContent">
-    <div class="bnt-actioncall-navbar text-center"><a class="btn-blue text-center" href="#">─ CREATE EVENT ─</a></div>
+    <div class="bnt-actioncall-navbar text-center">
+      <%= link_to "─ CREATE EVENT ─", new_event_path, class:"btn-blue text-center" %>
+      <%# < class="btn-blue text-center">─ CREATE EVENT ─</a> %>
+      <%# <div class="bnt-actioncall-navbar text-center"><a class="btn-blue text-center" href="#">─ CREATE EVENT ─</a></div> %>
+      <%# <% end %>
+    </div>
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "My event dashboard", "#", class: "dropdown-item" %>
+            <%# PATH BELOW NOT WORKING %>
+            <%# <%= link_to "My event dashboard", dashboard_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
