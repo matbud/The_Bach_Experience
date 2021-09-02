@@ -25,12 +25,12 @@
       </div>
     </div>
     <div class="col-7" style="background-color:grey">
-      <%= calendar(start_date: @event.start_date.to_s, number_of_days: @number_of_day, new_planning: @new_planning) do |date, plannings| %>
+      <%= calendar(start_date: @event.start_date.to_s, number_of_days: @number_of_day, events: @plannings, new_planning: @new_planning) do |date, plannings| %>
         <%= date %>
         <% plannings.each do |planning| %>
           <div class="planning">
             <p><%= planning.name %></p>
-            <small><%= planning.time %></small>
+            <small><%= planning.time unless planning.multi_days? %></small>
           </div>
         <% end %>
       <% end %>
