@@ -29,7 +29,7 @@ class EventPolicy < ApplicationPolicy
     update?
   end
 
-  def confirm?
+  def confirm_event?
     update?
   end
 

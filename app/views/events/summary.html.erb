@@ -10,5 +10,5 @@
 <%= render 'recommendation' %>
 <div class="text-center">
   <%= button_to "Edit", class: "btn-blue" %>
-  <%= button_to "Confirm", method: :patch, class: "btn-red" %>
+  <%= button_to "Confirm", confirm_event_path(@event), method: :patch, class: "btn-red" %>
 </div>

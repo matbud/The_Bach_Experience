@@ -39,7 +39,18 @@ class EventsController < ApplicationController
     @recommendation = @event.recommendations.last
     authorize @event
     # TODO: implement edit button in the view
-    # redirect_to invite_path(@event)
+  end
+
+  def confirm_event
+    @event = Event.find(params[:id])
+    @event.update(status: "confirmed")
+    authorize @event
+    redirect_to invite_path(@event)
+  end
+
+  def invite
+    @event = Event.find(params[:id])
+    authorize @event
   end
 
   private
