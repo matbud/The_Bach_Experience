@@ -5,7 +5,15 @@ class PlanningPolicy < ApplicationPolicy
     end
   end
 
-    def create?
-      user.admin
-    end
+  def create?
+    user.admin
+  end
+
+  def update?
+    create?
+  end
+
+  def destroy?
+    create?
+  end
 end
