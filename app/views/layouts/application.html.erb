@@ -9,6 +9,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
   <body>
+  <div class=”main-container”>
     <% if current_page?(root_path) %>
       <%= render 'shared/navbar' %>
     <% else %>
@@ -16,5 +17,7 @@
     <% end %>
     <%= render 'shared/flashes' %>
     <%= yield %>
+    <%= render 'shared/footer' %>
+    </div>
   </body>
 </html>
