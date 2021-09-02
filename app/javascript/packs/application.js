@@ -33,6 +33,6 @@ import { initFlatpickr } from '../plugins/init_flatpickr'
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  initAutocomplete(); // autocomplete the location
+  // initAutocomplete(); // autocomplete the location
   initFlatpickr(); // calendar for form
 });
