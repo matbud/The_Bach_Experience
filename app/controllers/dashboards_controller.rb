@@ -13,6 +13,9 @@ class DashboardsController < ApplicationController
   # Scope your query to the dates being shown:
     start_date = params.fetch(:start_date, @event.start_date.to_s).to_date
 
+    # Objects we'll pass to the form
+    @new_planning = Planning.new
+
   # # For a monthly view:
   #   @plannings = Planning.where(starts_at: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
 
