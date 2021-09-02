@@ -51,12 +51,10 @@ class EventsController < ApplicationController
   def generate_recommendation
     # create a new recommendation
     # 1. choose a hotel
-    # TODO: change how the hotel is selected based on budget, location, theme etc.
-    hotel = Hotel.all.sample
-    # hotel = Hotel.where(theme: @event.theme)
-
+    set_hotel
+    
     # 2. create Recommendation instance and assign the hotel and event
-    @recommendation = Recommendation.create(hotel: hotel, event: @event)
+    @recommendation = Recommendation.create(hotel: @hotel, event: @event)
 
     # 3. choose valid activites
     # TODO: change how the activities are selected based on theme etc.
@@ -66,9 +64,17 @@ class EventsController < ApplicationController
 
   def generate_recommended_activities
     # choose 3 unique activities from the valid activities
-    activities = @valid_activities.sample(3)
+    max_price_per_activity = (@event.budget_per_person * BUDGET_PROPORTIONS[:activity]).to_i
+    activities = Activity.where("(gender ILIKE ? OR gender ILIKE ?) AND address ILIKE ? AND theme ILIKE ? AND price <= ?", "mixed", "#{@event.gender}", "%#{@event.location}%", "%#{@event.theme}%", max_price_per_activity).sample(3)
 
     # use these activities to create RecommendedActivities
     activities.each { |activity| RecommendedActivity.create(recommendation: @recommendation, activity: activity) }
+  end
+
+  def set_hotel
+    night_count = @event.end_date - @event.start_date
+    budget_for_hotel = @event.budget_per_person * BUDGET_PROPORTIONS[:hotel]
+    max_price_per_night = (budget_for_hotel / night_count).to_i
+    @hotel = Hotel.where("location ILIKE ? AND theme ILIKE ? AND price_per_night <= ?", "%#{@event.location}%", "%#{@event.theme}%", max_price_per_night).sample
   end
 end
