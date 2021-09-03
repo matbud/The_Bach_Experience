@@ -1,0 +1,16 @@
+<div class="event-summary">
+  <p><i class="fas fa-male"></i><i class="fas fa-female"></i> <strong>Gender</strong> <i class="fas fa-female"></i><i class="fas fa-male"></i></p>
+  <p><%= @event.gender %></p>
+  <hr>
+  <p><i class="fas fa-glass-cheers"></i> <strong>Theme</strong> <i class="fas fa-glass-cheers"></i></p>
+  <p><%= @event.theme %></p>
+  <hr>
+  <p><i class="far fa-calendar-alt"></i> <strong>Date</strong> <i class="far fa-calendar-alt"></i></p>
+  <p><%= @event.start_date.strftime("%e %B %Y") %> - <%= @event.end_date.strftime("%e %B %Y") %></p>
+  <hr>
+  <p><i class="fas fa-money-bill"></i> <strong>Budget per person</strong> <i class="fas fa-money-bill"></i></p>
+  <p>€<%= @event.budget_per_person %></p>
+  <hr>
+  <p><i class="fas fa-users"></i> <strong>Number of guests</strong> <i class="fas fa-users"></i></p>
+  <p><%= @event.number_of_guests %></p>
+</div>
