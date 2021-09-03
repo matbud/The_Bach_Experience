@@ -10,12 +10,14 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 60px;
   font-weight: bold;
-  background-color: black;
+  // background-color: black;
 }
 
 .banner p {
-  font-size: 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  background: rgba(140, 0, 28, 0.8);
+  text-shadow: 1px 1px 3px rgb(130, 220, 255,);
+  // background: rgba(140, 0, 28, 0.2);
+
 }
