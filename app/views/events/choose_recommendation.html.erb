@@ -1,6 +1,5 @@
 
-
-  <div class="sum-card text-center p-5 row">
+<div class="sum-card text-center p-5 row">
     <h2 class="text-center mt-2">Your event will be <strong><%=@event.theme  %></strong>...</h2>
     <p> 📆 <%=@event.start_date%> to <%=@event.end_date%>   &nbsp;&nbsp;  &nbsp;&nbsp; 💰 <%=@event.budget_per_person%>€/person &nbsp;&nbsp;&nbsp;&nbsp; 👫 <%=@event.number_of_guests + 1 %> </p>
 
@@ -12,4 +11,4 @@
       <a class="btn-red m-5" href="#">Change theme recommendation</a>
       <%= button_to 'Choose this recommendation', confirm_recommendation_path(@event), method: :patch, class: "btn-blue m-5" %>
     </div>
-  </div>
+</div>
