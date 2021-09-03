@@ -8,7 +8,7 @@
 
     <div class="recommendations-nav">
       <a class="btn-red m-5" href="#">New recommendation</a>
-      <a class="btn-red m-5" href="#">Change theme recommendation</a>
-      <%= button_to 'Choose this recommendation', confirm_recommendation_path(@event), method: :patch, class: "btn-blue m-5" %>
+      <a class="btn-red m-5" href="#">Change theme</a>
+      <%= link_to 'Choose this recommendation', confirm_recommendation_path(@event), method: :patch, class: "btn-blue m-5" %>
     </div>
 </div>

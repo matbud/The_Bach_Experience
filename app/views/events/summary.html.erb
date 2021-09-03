@@ -1,14 +1,15 @@
-<div class="text-center">
-  <p>Take a moment to review the details of your event</p>
-  <p>Gender: <%= @event.gender %></p>
-  <p>Theme: <%= @event.theme %></p>
-  <p>Start date: <%= @event.start_date %></p>
-  <p>End date: <%= @event.end_date %></p>
-  <p>Budget per person: €<%= @event.budget_per_person %></p>
-  <p>Number of guests: <%= @event.number_of_guests %></p>
-</div>
-<%= render 'recommendation' %>
-<div class="text-center">
-  <%= button_to "Edit", class: "btn-blue" %>
-  <%= button_to "Confirm", confirm_event_path(@event), method: :patch, class: "btn-red" %>
+<div class="sum-card text-center p-5 row">
+  <div class="event-summary">
+    <h5 class="text-center">Take a moment to review the details of your event</h5>
+    <p><i class="fas fa-male"></i><i class="fas fa-female"></i>Gender: <%= @event.gender %></p>
+    <p>Theme: <%= @event.theme %></p>
+    <p><i class="far fa-calendar-alt"></i> Date: <%= @event.start_date %> - <%= @event.end_date %></p>
+    <p><i class="fas fa-money-bill"></i> Budget per person: €<%= @event.budget_per_person %></p>
+    <p><i class="fas fa-users"></i> Number of guests: <%= @event.number_of_guests %></p>
+  </div>
+  <%= render 'recommendation' %>
+  <div class="d-flex justify-content-center">
+    <%= link_to "Edit", "#", class: "btn-red mx-5" %>
+    <%= link_to "Confirm", confirm_event_path(@event), method: :patch, class: "btn-blue mx-5" %>
+  </div>
 </div>
