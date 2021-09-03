@@ -35,11 +35,8 @@
             </div>
             <div class="planning-commands">
               <div data-toggle="modal" data-target="#staticBackdropEdit-<%= planning.id %>">
-                <%# <i class="far fa-edit"></i> %>
                 📝
               </div>
-              <%# <button type="button" class="btn btn-light" data-toggle="modal" data-target="#staticBackdropEdit-<%= planning.id %>
-              <%# </button> %>
               <div>
                 <%= render 'plannings/edit', planning: planning %>
                 <%= link_to "🗑️",
