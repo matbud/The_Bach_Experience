@@ -9,6 +9,6 @@
 </div>
 <%= render 'recommendation' %>
 <div class="text-center">
-  <%= button_to "Edit", class: "btn-blue" %>
-  <%= button_to "Confirm", confirm_event_path(@event), method: :patch, class: "btn-red" %>
+  <%= link_to "Edit", class: "btn-blue" %>
+  <%= link_to "Confirm", confirm_event_path(@event), method: :patch, class: "btn-red" %>
 </div>
