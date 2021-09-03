@@ -27,14 +27,15 @@
   padding: 0px 10px;
 }
 .footer-links a:hover {
-transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 .footer .fa-heart {
   color: #D23333;
 }
 
-.footer
+// .footer
+
 .footer-links .people a {
   color: $bx-dark-red;
   opacity: 0.15;
@@ -53,51 +54,51 @@ transform: scale(1.5);
 
 
 .fun-color {
-   font-weight: bolder;
-   color: #8C031C;
-   text-decoration: underline;
-  }
+  font-weight: bolder;
+  color: #8C031C;
+  text-decoration: underline;
+}
 
 
-  .test {
-    display: flex;
-    justify-content: center;
-  }
+.test {
+  display: flex;
+  justify-content: center;
+}
 
 
-  .best {
-     display: flex;
-    justify-content: center;
-    font-size: 8px;
-    color: $bx-dark-red;
-    opacity: 0.15;
+.best {
+  display: flex;
+  justify-content: center;
+  font-size: 8px;
+  color: $bx-dark-red;
+  opacity: 0.15;
 
-  }
+}
 
 
 
-  // test
-  * {
- box-sizing: border-box;
+// test
+* {
+  box-sizing: border-box;
 }
 *:before,
 *:after {
- box-sizing: border-box;
+  box-sizing: border-box;
 }
 html,
 body {
- height: 100%;
- position: relative;
+  height: 100%;
+  position: relative;
 }
 .main-container {
- min-height: 100vh; /* will cover the 100% of viewport */
- overflow: hidden;
- display: block;
- position: relative;
- padding-bottom: 100px; /* height of your footer */
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px; /* height of your footer */
 }
 footer {
- position: absolute;
- bottom: 0;
- width: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
