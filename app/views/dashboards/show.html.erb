@@ -32,10 +32,10 @@
             <p><%= planning.name %></p>
             <small><%= planning.time unless planning.multi_days? %></small>
             <div class="planning-change">
-              <%# <%= link_to "Update #{planning.name}", %>
-              <%# planning_path(planning), %>
-              <%# method: :patch, %>
-              <%# data: { confirm: "Are you sure?" } %>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdropEdit-<%= planning.id %>">
+                Update event
+              </button>
+              <%= render 'plannings/edit', planning: planning %>
               <%= link_to "Delete #{planning.name}",
               planning_path(planning),
               method: :delete,

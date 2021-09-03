@@ -13,6 +13,6 @@ Rails.application.routes.draw do
 
   get 'dashboards/:id', to: 'dashboards#show', as: :dashboard
   get '/draft', to: 'pages#draft'
-  resources :plannings, only: [ :update, :destroy ]
+  resources :plannings, only: [ :edit, :update, :destroy ]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -14,6 +14,11 @@ class PlanningsController < ApplicationController
     end
   end
 
+  def edit
+    @new_planning = Planning.find(params[:id])
+    authorize @new_planning
+  end
+
   def update
     @new_planning = Planning.find(params[:id])
     @new_planning.update(planning_params)
