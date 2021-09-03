@@ -1,5 +1,5 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+<button type="button" class="btn btn-red py-1" data-toggle="modal" data-target="#staticBackdrop">
   Create event
 </button>
 <!-- Modal -->
@@ -18,13 +18,12 @@
             <%= f.input :name, as: :string %>
             <%= f.input :start_time, as: :string %>
             <%= f.input :end_time, as: :string %>
-            <%= f.submit %>
+            <%# <%= f.submit %>
+            <hr>
+            <%= f.button :submit, class:"btn btn-red" %>
+            <button type="button" class="btn btn-blue" data-dismiss="modal">Close</button>
           <% end %>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Add event</button>
       </div>
     </div>
   </div>
