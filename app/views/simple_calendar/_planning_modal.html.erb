@@ -1,7 +1,7 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-red py-1" data-toggle="modal" data-target="#staticBackdrop">
-  Create event
-</button>
+<a type="button" class="btn-blue my-1" data-toggle="modal" data-target="#staticBackdrop">
+  Add planning event
+</a>
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -19,8 +19,8 @@
             <%= f.input :start_time, as: :string %>
             <%= f.input :end_time, as: :string %>
             <hr>
-            <%= f.button :submit, class:"btn btn-blue" %>
-            <button type="button" class="btn btn-red" data-dismiss="modal">Close</button>
+            <%= f.button :submit, class:"btn-blue" %>
+            <a type="button" class="btn-red" data-dismiss="modal">Close</a>
           <% end %>
         </div>
       </div>
