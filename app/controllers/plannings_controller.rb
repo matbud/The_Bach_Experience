@@ -6,7 +6,6 @@ class PlanningsController < ApplicationController
     @new_planning = Planning.new(planning_params)
     @new_planning.event = @event
     authorize @new_planning
-    raise
     if @new_planning.save
       redirect_to dashboard_path(current_user.events.first)
     else

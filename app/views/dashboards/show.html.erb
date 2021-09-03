@@ -1,6 +1,6 @@
-<h1 class="text-center"> <%= current_user.first_name  %> 's Dashboard</h1>
-<div class="containers">
-  <div class="row">
+<h1 class="text-center py-3"> <%= current_user.first_name  %>'s Dashboard</h1>
+<div class="dashboard-container">
+  <div class="row dashboard-row">
     <div class="col-4 m-1 p-2" style="background-color:grey">
       <br>
       <div class="row d-flex justify-content-center mt-1" style="background-color:white">
@@ -24,22 +24,29 @@
         <br>
       </div>
     </div>
-    <div class="col-7" style="background-color:grey">
+    <div class="col-7 planning-table" style="background-color:white">
       <%= calendar(start_date: @event.start_date.to_s, number_of_days: @number_of_day, events: @plannings, new_planning: @new_planning) do |date, plannings| %>
         <%= date %>
         <% plannings.each do |planning| %>
-          <div class="planning">
-            <p><%= planning.name %></p>
-            <small><%= planning.time unless planning.multi_days? %></small>
-            <div class="planning-change">
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdropEdit-<%= planning.id %>">
-                Update event
-              </button>
-              <%= render 'plannings/edit', planning: planning %>
-              <%= link_to "Delete #{planning.name}",
-              planning_path(planning),
-              method: :delete,
-              data: { confirm: "Are you sure?" } %>
+          <div class="planning-item">
+            <div class="planning-info">
+              <p><%= planning.name %></p>
+              <small><%= planning.time unless planning.multi_days? %></small>
+            </div>
+            <div class="planning-commands">
+              <div data-toggle="modal" data-target="#staticBackdropEdit-<%= planning.id %>">
+                <%# <i class="far fa-edit"></i> %>
+                📝
+              </div>
+              <%# <button type="button" class="btn btn-light" data-toggle="modal" data-target="#staticBackdropEdit-<%= planning.id %>
+              <%# </button> %>
+              <div>
+                <%= render 'plannings/edit', planning: planning %>
+                <%= link_to "🗑️",
+                planning_path(planning),
+                method: :delete,
+                data: { confirm: "Are you sure?" } %>
+              </div>
             </div>
           </div>
         <% end %>

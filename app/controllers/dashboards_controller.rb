@@ -6,7 +6,7 @@ class DashboardsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     authorize @event
-    @number_of_day = @event.end_date.day - @event.start_date.day
+    @number_of_day = @event.end_date.day - @event.start_date.day + 1
 
     @plannings = Planning.where(event: @event)
 

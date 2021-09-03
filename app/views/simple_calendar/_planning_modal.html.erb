@@ -18,13 +18,12 @@
             <%= f.input :name, as: :string %>
             <%= f.input :start_time, as: :string %>
             <%= f.input :end_time, as: :string %>
-            <%= f.submit %>
+            <%# <%= f.submit %>
+            <hr>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <%= f.button :submit, class:"btn btn-primary" %>
           <% end %>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Add event</button>
       </div>
     </div>
   </div>
