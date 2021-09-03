@@ -1,12 +1,14 @@
-<div class='form-event-new'>
-  <%= simple_form_for @event do |f| %>
-    <%= f.input :gender, as: :radio_buttons, collection: ['Women', 'Men', "Mixed"] %>
-    <%= f.input :theme, as: :radio_buttons, collection: ['Wild', 'Nature', "Fancy", 'Cosy'] %>
-    <%= f.input :number_of_guests, input_html: { min: 1 } %>
-    <%= f.input :budget_per_person, input_html: { min: 1, placeholder: '€' } %>
-    <%= f.input :location, collection: ['Amsterdam', 'Paris', 'Ibiza', 'Brussels'] %>
-    <%= f.input :start_date, as: :string %>
-    <%= f.input :end_date, as: :string %>
-    <%= f.submit %>
-  <% end %>
+<div class="container col-6">
+  <div class='form-event-new'>
+    <%= simple_form_for @event do |f| %>
+      <%= f.input :gender, as: :radio_buttons, collection: ['Women', 'Men', "Mixed"] %>
+      <%= f.input :theme, as: :radio_buttons, collection: ['Wild', 'Nature', "Fancy", 'Cosy'] %>
+      <%= f.input :number_of_guests, input_html: { min: 1 } %>
+      <%= f.input :budget_per_person, input_html: { min: 1, placeholder: '€' } %>
+      <%= f.input :location, collection: ['Amsterdam', 'Paris', 'Ibiza', 'Brussels'] %>
+      <%= f.input :start_date, as: :string %>
+      <%= f.input :end_date, as: :string %>
+      <%= f.submit %>
+    <% end %>
+  </div>
 </div>
