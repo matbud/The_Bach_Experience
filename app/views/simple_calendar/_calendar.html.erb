@@ -1,15 +1,17 @@
 <div class="simple-calendar">
   <div class="d-flex align-items-center justify-content-between">
     <div class="calendar-heading my-2">
+      <%# Month of the event %>
       <span class="calendar-title"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></span>
     </div>
-    <%# Add modal here  %>
+    <%# Add modal here %>
     <%= render 'simple_calendar/planning_modal' %>
   </div>
   <table class="table table-striped">
     <thead>
       <tr>
         <% date_range.slice(0, 7).each do |day| %>
+          <%# Change should be made here %>
           <th><%= t('date.abbr_day_names')[day.wday] %></th>
         <% end %>
       </tr>
