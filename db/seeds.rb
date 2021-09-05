@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Planning.destroy_all
 RecommendedActivity.destroy_all
 Recommendation.destroy_all
 Event.destroy_all
@@ -15,16 +16,26 @@ User.destroy_all
 puts "creating users"
 
 user1 = User.new(email: "mat@lewagon.com", password: '123123', first_name: "Mateusz", last_name: "Budzisz", admin: true)
+file = URI.open('https://res.cloudinary.com/dxessq1na/image/upload/v1630754019/u1_e5oqsc.jpg')
+user1.photo.attach(io: file, filename: 'u1.jpg', content_type: 'image/jpg')
 user1.save
 
 user2 = User.new(email: "el@lewagon.com", password: '123456', first_name: "Elodie", last_name: "Duffau", admin: true)
+file = URI.open('https://res.cloudinary.com/dxessq1na/image/upload/v1630754019/u2_kdtlw2.jpg')
+user2.photo.attach(io: file, filename: 'u2.jpg', content_type: 'image/jpg')
 user2.save
 
 user3 = User.new(email: "mel@lewagon.com", password: '321321', first_name: "Melanie", last_name: "Olivier", admin: true)
+file = URI.open('https://res.cloudinary.com/dxessq1na/image/upload/v1630754019/u3_zzf3gx.jpg')
+user3.photo.attach(io: file, filename: 'u2.jpg', content_type: 'image/jpg')
 user3.save
 
 user4 = User.new(email: "claire@lewagon.com", password: 'happybirthday', first_name: "Claire", last_name: "Gauthier", admin: false)
+file = URI.open('https://res.cloudinary.com/dxessq1na/image/upload/v1630754019/u4_bezmgx.jpg')
+user4.photo.attach(io: file, filename: 'u4.jpg', content_type: 'image/jpg')
 user4.save
+
+
 
 puts "creating hotels"
 
