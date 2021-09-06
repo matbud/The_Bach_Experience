@@ -7,7 +7,7 @@
   padding-bottom: 10px;
 }
 
-.form-check label {
+.form-event .form-check label {
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -17,27 +17,19 @@
   height: 100px;
 }
 
-[for=event_gender_mixed] {
-  background-image: url("yoga.png");
+.form-event [for=event_gender_mixed] {
+  background-image: url("yoga.png"); //to be changed - test
 }
 
-[type=radio] { 
+.form-event [type=radio] { 
   position: absolute;
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-// [type=radio] {
-//   cursor: pointer;
-// }
-
-/* CHECKED STYLES */
-[type=radio]:checked + label {
+.form-event [type=radio]:checked + label {
   outline: 2px solid #f00;
 }
 
 
-// .form-group {
-//   // display: inline-block;
-// }
