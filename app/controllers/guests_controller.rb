@@ -9,14 +9,14 @@ class GuestsController < ApplicationController
     authorize @guest
   end
 
-  def accept
+  def accept_event
     @guest = Guest.find(params[:id])
     authorize @guest
     @guest.update(status: "accepted")
     redirect_to dashboard_path(current_user.events.first)
   end
 
-  def reject
+  def reject_event
     @guest = Guest.find(params[:id])
     authorize @guest
     @guest.update(status: "rejected")
