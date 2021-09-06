@@ -9,8 +9,7 @@
       <%# <% @recommendation.hotel.each do |hotel| %>
       <div class="card-trip">
         <%# Img to be replaced by seed pictures %>
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-        <%# <% if @hotel.photos.attached? %>
+        <%= image_tag @recommendation.hotel.photo_name %>        <%# <% if @hotel.photos.attached? %>
         <%# <%= cl_image_tag hotel.photos.first.key %>
         <%# <% end %>
         <div class="card-trip-infos">
