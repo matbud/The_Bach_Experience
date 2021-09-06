@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :set_event, only: [ :choose_recommendation, :confirm_recommendation, :summary, :confir_event, :edit, :update, :invite]
   BUDGET_PROPORTIONS = {
     hotel: 0.4,
     activity: 0.2
@@ -22,27 +23,23 @@ class EventsController < ApplicationController
   end
 
   def choose_recommendation
-    @event = Event.find(params[:id])
     authorize @event
     generate_recommendation
   end
 
   def confirm_recommendation
-    @event = Event.find(params[:id])
     @event.recommendations.last.update(chosen: true)
     authorize @event
     redirect_to summary_path(@event)
   end
 
   def summary
-    @event = Event.find(params[:id])
     @recommendation = @event.recommendations.last
     authorize @event
     # TODO: implement edit button in the view
   end
 
   def confirm_event
-    @event = Event.find(params[:id])
     @event.update(status: "confirmed")
     authorize @event
     redirect_to dashboard_path(@event)
@@ -51,11 +48,22 @@ class EventsController < ApplicationController
   end
 
   def invite
-    @event = Event.find(params[:id])
     authorize @event
   end
 
+  def edit
+    authorize @event
+  end
+
+  def update
+
+  end
+
   private
+
+  def set_event
+    @event = Event.find(params[:id])
+  end
 
   def event_params
     params.require(:event).permit(:start_date, :end_date, :theme, :gender, :budget_per_person, :number_of_guests, :location)
