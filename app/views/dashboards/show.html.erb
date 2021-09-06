@@ -14,24 +14,35 @@
       <%# <br> %>
       <div class="row d-flex justify-content-center mt-1" style="background-color:white">
         <h3> Attendencies </h3>
-        <div>
-          <table class="table">
-            <thead>
+        <br>
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="px-3">Participant</th>
+              <th class="px-3">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @event.guests.each do |guest| %>
               <tr>
-                <th class="px-3">Name</th>
-                <th class="px-3">Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% @event.guests.each do |guest| %>
-                <tr>
+                <% if current_user.admin? %>
+                  <td class="px-3"><%= guest.user.first_name %></td>
+                  <% if guest.status == "accepted" %>
+                    <td class="px-3"><%= "#{guest.status} ✔️" %></td>
+                  <% elsif guest.status == "rejected" %>
+                    <td class="px-3"><%= "#{guest.status} ❌" %></td>
+                  <% else %>
+                    <td class="px-3"><%= guest.status %></td>
+                  <% end %>
+                <% else %>
                   <td class="px-3"><%= guest.user.first_name %></td>
                   <td class="px-3"><%= guest.status %></td>
-                </tr>
-              <% end %>
-            </tbody>
-          </table>
-        </div>
+                  <td class="px-3"><%= button_to "Accept",  accept_invitation_path(guest), method: 'patch', class:"btn-gradient" %> <%= button_to "Reject", reject_invitation_path(guest), method: 'patch', class:"btn-gradient" %></td>
+                <% end %>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
       </div>
       <%# <br>
       <div class="row d-flex justify-content-center" style="background-color:white">

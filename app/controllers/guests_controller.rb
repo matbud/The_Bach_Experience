@@ -8,26 +8,20 @@ class GuestsController < ApplicationController
       authorize guest
       redirect_to dashboard_path(current_user.events.first)
     end
-    # @user = User.find_by("email ILIKE ?", "%#{@user.email}%")
-    # @guest = Guest.new(guest_params)
-    # @guest.status = 'pending'
-    # @guest.event = @event
-    # @guest.user = @user
-    # authorize @guest
   end
 
-  def accept_event
+  def accept_invitation
     @guest = Guest.find(params[:id])
     authorize @guest
     @guest.update(status: "accepted")
-    redirect_to dashboard_path(current_user.events.first)
+    redirect_to dashboard_path(current_user.guests.last.event)
   end
 
-  def reject_event
+  def reject_invitation
     @guest = Guest.find(params[:id])
     authorize @guest
     @guest.update(status: "rejected")
-    redirect_to dashboard_path(current_user.events.first)
+    redirect_to dashboard_path(current_user.guests.last.event)
   end
 
 end
