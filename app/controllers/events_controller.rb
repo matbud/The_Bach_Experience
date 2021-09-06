@@ -76,7 +76,7 @@ class EventsController < ApplicationController
     # create a new recommendation
     # 1. choose a hotel
     set_hotel
-    
+
     # 2. create Recommendation instance and assign the hotel and event
     @recommendation = Recommendation.create(hotel: @hotel, event: @event)
 

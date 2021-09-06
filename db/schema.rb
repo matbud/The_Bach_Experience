@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 2021_09_06_093942) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "theme"
     t.string "gender"
-    t.string "location"
     t.string "photo_name"
   end
 

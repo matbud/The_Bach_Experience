@@ -12,12 +12,27 @@
         <br> %>
       </div>
       <%# <br> %>
-      <%# <div class="row d-flex justify-content-center mt-1" style="background-color:white">
-        <h3> Attendencies</h3> %>
-      <%# <br> %>
-      <%# <br>
-        <br> %>
-      <%# </div> %>
+      <div class="row d-flex justify-content-center mt-1" style="background-color:white">
+        <h3> Attendencies </h3>
+        <div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="px-3">Name</th>
+                <th class="px-3">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @event.guests.each do |guest| %>
+                <tr>
+                  <td class="px-3"><%= guest.user.first_name %></td>
+                  <td class="px-3"><%= guest.status %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
       <%# <br>
       <div class="row d-flex justify-content-center" style="background-color:white">
         <h3 class="text-center"> Chat</h3>
