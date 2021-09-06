@@ -1,10 +1,14 @@
-.card-trip {
+.hotel-card {
   // overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  margin: 20px;
-  width: 300px;
+  margin: auto;
   padding: 10px;
+  max-width: 70%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 h1 {
@@ -12,67 +16,75 @@ h1 {
   font-family: "Playfair Display", serif;
 }
 
-.card-trip > img {
+.hotel-card > img {
   width: 100%;
   object-fit: cover;
   position: relative;
 }
 
-.card-trip-infos h2 {
-  font-size: 25px;
+.hotel-card-infos h2 {
+  font-size: 20px;
   font-weight: bold;
   padding: 15px 0 10px 0;
   font-family: "Poppins", sans-serif;
   color: $bx-blue;
 }
 
-.card-trip h3 {
-  font-size: 25px;
+.hotel-card h3 {
+  font-size: 20px;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
   margin-bottom: 0px;
 }
 
-.card-trip p {
+.hotel-card p {
   font-family: "Poppins", sans-serif;
   font-size: 12px;
   opacity: 0.7;
-  text-align: right;
+  text-align: left;
+  margin: 10px;
 }
 
 .hotel-price {
   font-family: "Poppins", sans-serif;
   font-size: 13px;
   opacity: 0.7;
-  position: absolute;
-  bottom: -30px;
-  right: 810px;
+  text-align: right;
+  margin: 10px;
+  // position: absolute;
+  // bottom: -30px;
+  // right: 810px;
 }
 
 .hotel-price p {
   font-family: "Poppins", sans-serif;
   font-size: 10px;
+  text-align: right;
   font-style: italic;
   opacity: 0.7;
 }
 
+#per-night {
+  font-size: 8px;
+  margin: 0;
+}
 // // Smallest device
 // @media (min-width: 100px) and (max-width: 575px) {
-//   .cards-trip {
+//   .hotels-trip {
 //     grid-template-columns: 1fr;
 //   }
 // }
 
 // // Small devices (landscape phones, 576px and up)
 // @media (min-width: 576px) {
-//   .cards-trip {
+//   .hotels-trip {
 //     grid-template-columns: 1fr;
 //   }
 // }
 
 // // Medium devices (tablets, 768px and up)
 // @media (min-width: 768px) {
-//   .cards-trip {
+//   .hotels-trip {
 //     grid-template-columns: 1fr 1fr;
 //   }
 // }
