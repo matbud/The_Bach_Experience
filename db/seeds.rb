@@ -41,32 +41,33 @@ puts "creating hotels"
 
 # To use when pictures on server: @message.image.attach(io: File.open('/path/to/file'), filename: 'file.pdf')
 
-hotel1 = Hotel.new(name: "The Hotel Brussels", location: "Brussels", address: "Boulevard de Waterloo 38, 1000 Brussels, Belgique", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy", price_per_night: 120)
+hotel1 = Hotel.new(name: "The Hotel Brussels", location: "Brussels", address: "Boulevard de Waterloo 38, 1000 Brussels, Belgique", description: "In one of Brussels' tallest buildings within a 15-minute walk from Grand Place, The Hotel Brussels features panoramic city views, an on-site gourmet restaurant and free access to a spa, wellness and fitness center overlooking Brussels.", theme:"fancy", price_per_night: 100)
 file = URI.open('https://unsplash.it/1300/600?random')
 hotel1.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 hotel1.save
 
-hotel2 = Hotel.new(name: "Hygge Hotel", location: "Brussels", address: "Rue des Drapiers 31, 1050 Brussels, Belgique", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"cozy, wild", price_per_night: 75)
+
+hotel2 = Hotel.new(name: "Hygge Hotel", location: "Brussels", address: "Rue des Drapiers 31, 1050 Brussels, Belgique", description: "Welcome to the brand new Hygge Hotel in Brussels, located in the Louise area, one of the best spots in Brussels. We guarantee our best prices!", theme:"cozy, nature", price_per_night: 55)
 file = URI.open('https://unsplash.it/1300/600?random')
 hotel2.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 hotel2.save
 
-hotel3 = Hotel.new(name: "Guest House Les 3 Tilleuls", location: "Brussels", address: "Berensheide 8, Watermael-Boitsfort, 1170 Bruxelles, Belgique", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"nature", price_per_night: 80)
+hotel3 = Hotel.new(name: "MEININGER Hotel Bruxelles", location: "Brussels", address: "Berensheide 8, Watermael-Boitsfort, 1170 Bruxelles, Belgique", description: "The MEININGER Hotel Bruxelles City Center is located in an old brewery building. The imposing brick building built in 1912 has modern facilities.", theme:"wild", price_per_night: 80)
 file = URI.open('https://unsplash.it/1300/600?random')
 hotel3.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 hotel3.save
 
-hotel4 = Hotel.new(name: "Bicycle Hotel Amsterdam", location: "Amsterdam", address: "Van Ostadestraat 123, Amsterdam Oud-Zuid, 1072 SV Amsterdam, Pays-Bas", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"nature, cozy", price_per_night: 60)
+hotel4 = Hotel.new(name: "CityZen M Hotel Amsterdam", location: "Amsterdam", address: "Van Ostadestraat 123, Amsterdam Oud-Zuid, 1072 SV Amsterdam, Pays-Bas", description: "This unique hotel offers modern rooms with mood lighting, free Wi-Fi and a flat-screen TV with free on-demand films. CitizenM Amsterdam South includes designer lounges and is 750 m from the RAI Conference Centre.", theme:"nature, cozy", price_per_night: 60)
 file = URI.open('https://unsplash.it/1300/600?random')
 hotel4.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 hotel4.save
 
-hotel5 = Hotel.new(name: "Kimpton De Witt Amsterdam, an IHG Hotel", location: "Amsterdam", address: "Nieuwezijds Voorburgwal 5, Amsterdam City Centre, 1012 RC Amsterdam, Pays-Bas", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy, cozy", price_per_night: 120)
+hotel5 = Hotel.new(name: "Kimpton De Witt Amsterdam, an IHG Hotel", location: "Amsterdam", address: "Nieuwezijds Voorburgwal 5, Amsterdam City Centre, 1012 RC Amsterdam, Pays-Bas", description: "The Kimpton De Witt Hotel inspires standout stays with features including elements of a 17th century poet's home, local art, swank accommodations, a cocktail", theme:"fancy, cozy", price_per_night: 120)
 file = URI.open('https://unsplash.it/1300/600?random')
 hotel5.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 hotel5.save
 
-hotel6 = Hotel.new(name: "THIS HO(S)TEL", location: "Amsterdam", address: "14 Warmoesstraat, Amsterdam City Centre, 1012 JD Amsterdam, Pays-Bas", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", price_per_night: 70)
+hotel6 = Hotel.new(name: "THIS HO(S)TEL", location: "Amsterdam", address: "14 Warmoesstraat, Amsterdam City Centre, 1012 JD Amsterdam, Pays-Bas", description: "Sleep comfortable, undisturbed and affordable during your stay in Amsterdam. Every room has a double-bed, integrated storage space and space for 2 guests.", theme:"wild", price_per_night: 70)
 file = URI.open('https://unsplash.it/1300/600?random')
 hotel6.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 hotel6.save
