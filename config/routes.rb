@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :events, only: [ :new, :create, :edit, :update ] do
      resources :plannings, only: [:create]
+     resources :guests, only: [:create]
   end
   get '/events/:id/choose_recommendation', to: 'events#choose_recommendation', as: :choose_recommendation
   patch '/events/:id/confirm_recommendation', to: 'events#confirm_recommendation', as: :confirm_recommendation
@@ -17,5 +18,7 @@ Rails.application.routes.draw do
   get '/test', to: 'pages#test'
 
   resources :plannings, only: [ :edit, :update, :destroy ]
+  patch '/guests/:id/accept', to: "guests#accept_invitation", as: :accept_invitation
+  patch '/guests/:id/reject', to: "guests#reject_invitation", as: :reject_invitation
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

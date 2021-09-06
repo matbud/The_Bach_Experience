@@ -1,0 +1,35 @@
+.form-event {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.form-event .row {
+  padding-bottom: 10px;
+}
+
+.form-event .form-check label {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+}
+
+.form-event [for=event_gender_mixed] {
+  background-image: url("yoga.png"); //to be changed - test
+}
+
+.form-event [type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.form-event [type=radio]:checked + label {
+  outline: 2px solid #f00;
+}
+
+

@@ -14,6 +14,10 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.status = 'pending'
     @event.user = current_user
+
+    @guest = Guest.create(status: 'accepted', event: @event, user: current_user)
+    authorize @guest
+
     authorize @event
     if @event.save
       redirect_to choose_recommendation_path(@event)
@@ -76,7 +80,7 @@ class EventsController < ApplicationController
     # create a new recommendation
     # 1. choose a hotel
     set_hotel
-    
+
     # 2. create Recommendation instance and assign the hotel and event
     @recommendation = Recommendation.create(hotel: @hotel, event: @event)
 

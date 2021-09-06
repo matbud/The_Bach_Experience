@@ -22,11 +22,15 @@
             <%= image_tag "https://pbs.twimg.com/profile_images/1380119262950531074/sYlD_F3U_400x400.jpg", class: "avatar-2 dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%# PATH BELOW NOT WORKING %>
             <% if current_user.events.any? %>
               <%= link_to "My event dashboard", dashboard_path(current_user.events.first), class: "dropdown-item"%>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            <% elsif current_user.guests.any? %>
+              <%= link_to "My event dashboard", dashboard_path(current_user.guests.last.event), class: "dropdown-item"%>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            <% else current_user.guests.any? %>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             <% end %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
       <% else %>
