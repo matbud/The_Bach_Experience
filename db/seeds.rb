@@ -35,176 +35,176 @@ file = URI.open('https://res.cloudinary.com/dxessq1na/image/upload/v1630754019/u
 user4.photo.attach(io: file, filename: 'u4.jpg', content_type: 'image/jpg')
 user4.save
 
-
-
 puts "creating hotels"
 
 # To use when pictures on server: @message.image.attach(io: File.open('/path/to/file'), filename: 'file.pdf')
 
-hotel1 = Hotel.new(name: "The Hotel Brussels", location: "Brussels", address: "Boulevard de Waterloo 38, 1000 Brussels, Belgique", description: "In one of Brussels' tallest buildings within a 15-minute walk from Grand Place, The Hotel Brussels features panoramic city views, an on-site gourmet restaurant and free access to a spa, wellness and fitness center overlooking Brussels.", theme:"fancy", price_per_night: 100)
-file = URI.open('https://unsplash.it/1300/600?random')
-hotel1.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
-hotel1.save
+Hotel.create(name: "The Hotel Brussels", location: "Brussels", address: "Boulevard de Waterloo 38, 1000 Brussels, Belgique", description: "In one of Brussels' tallest buildings within a 15-minute walk from Grand Place, The Hotel Brussels features panoramic city views, an on-site gourmet restaurant and free access to a spa, wellness and fitness center overlooking Brussels.", theme:"fancy", price_per_night: 100, photo_name: 'hotel1.jpg')
 
+# hotel1 = Hotel.new(name: "The Hotel Brussels", location: "Brussels", address: "Boulevard de Waterloo 38, 1000 Brussels, Belgique", description: "In one of Brussels' tallest buildings within a 15-minute walk from Grand Place, The Hotel Brussels features panoramic city views, an on-site gourmet restaurant and free access to a spa, wellness and fitness center overlooking Brussels.", theme:"fancy", price_per_night: 100)
+# file = URI.open('https://unsplash.it/1300/600?random')
+# hotel1.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
+# hotel1.save
 
-hotel2 = Hotel.new(name: "Hygge Hotel", location: "Brussels", address: "Rue des Drapiers 31, 1050 Brussels, Belgique", description: "Welcome to the brand new Hygge Hotel in Brussels, located in the Louise area, one of the best spots in Brussels. We guarantee our best prices!", theme:"cozy, nature", price_per_night: 55)
-file = URI.open('https://unsplash.it/1300/600?random')
-hotel2.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
-hotel2.save
+# photo_name: "hotel1.jpg"
+Hotel.create(name: "Hygge Hotel", location: "Brussels", address: "Rue des Drapiers 31, 1050 Brussels, Belgique", description: "Welcome to the brand new Hygge Hotel in Brussels, located in the Louise area, one of the best spots in Brussels. We guarantee our best prices!", theme:"cozy, nature", price_per_night: 55, photo_name: 'hotel1.jpg')
+# file = URI.open('https://unsplash.it/1300/600?random')
+# hotel2.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
+# hotel2.save
 
-hotel3 = Hotel.new(name: "MEININGER Hotel Bruxelles", location: "Brussels", address: "Berensheide 8, Watermael-Boitsfort, 1170 Bruxelles, Belgique", description: "The MEININGER Hotel Bruxelles City Center is located in an old brewery building. The imposing brick building built in 1912 has modern facilities.", theme:"wild", price_per_night: 80)
-file = URI.open('https://unsplash.it/1300/600?random')
-hotel3.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
-hotel3.save
+Hotel.create(name: "MEININGER Hotel Bruxelles", location: "Brussels", address: "Berensheide 8, Watermael-Boitsfort, 1170 Bruxelles, Belgique", description: "The MEININGER Hotel Bruxelles City Center is located in an old brewery building. The imposing brick building built in 1912 has modern facilities.", theme:"wild", price_per_night: 80, photo_name: 'hotel2.jpg')
+# file = URI.open('https://unsplash.it/1300/600?random')
+# hotel3.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
+# hotel3.save
 
-hotel4 = Hotel.new(name: "CityZen M Hotel Amsterdam", location: "Amsterdam", address: "Van Ostadestraat 123, Amsterdam Oud-Zuid, 1072 SV Amsterdam, Pays-Bas", description: "This unique hotel offers modern rooms with mood lighting, free Wi-Fi and a flat-screen TV with free on-demand films. CitizenM Amsterdam South includes designer lounges and is 750 m from the RAI Conference Centre.", theme:"nature, cozy", price_per_night: 60)
-file = URI.open('https://unsplash.it/1300/600?random')
-hotel4.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
-hotel4.save
+Hotel.create(name: "CityZen M Hotel Amsterdam", location: "Amsterdam", address: "Van Ostadestraat 123, Amsterdam Oud-Zuid, 1072 SV Amsterdam, Pays-Bas", description: "This unique hotel offers modern rooms with mood lighting, free Wi-Fi and a flat-screen TV with free on-demand films. CitizenM Amsterdam South includes designer lounges and is 750 m from the RAI Conference Centre.", theme:"nature, cozy", price_per_night: 60, photo_name: 'hotel3.jpg')
+# file = URI.open('https://unsplash.it/1300/600?random')
+# hotel4.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
+# hotel4.save
 
-hotel5 = Hotel.new(name: "Kimpton De Witt Amsterdam, an IHG Hotel", location: "Amsterdam", address: "Nieuwezijds Voorburgwal 5, Amsterdam City Centre, 1012 RC Amsterdam, Pays-Bas", description: "The Kimpton De Witt Hotel inspires standout stays with features including elements of a 17th century poet's home, local art, swank accommodations, a cocktail", theme:"fancy, cozy", price_per_night: 120)
-file = URI.open('https://unsplash.it/1300/600?random')
-hotel5.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
-hotel5.save
+Hotel.create(name: "Kimpton De Witt Amsterdam, an IHG Hotel", location: "Amsterdam", address: "Nieuwezijds Voorburgwal 5, Amsterdam City Centre, 1012 RC Amsterdam, Pays-Bas", description: "The Kimpton De Witt Hotel inspires standout stays with features including elements of a 17th century poet's home, local art, swank accommodations, a cocktail", theme:"fancy, cozy", price_per_night: 80, photo_name: 'hotel4.jpg')
+# file = URI.open('https://unsplash.it/1300/600?random')
+# hotel5.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
+# hotel5.save
 
-hotel6 = Hotel.new(name: "THIS HO(S)TEL", location: "Amsterdam", address: "14 Warmoesstraat, Amsterdam City Centre, 1012 JD Amsterdam, Pays-Bas", description: "Sleep comfortable, undisturbed and affordable during your stay in Amsterdam. Every room has a double-bed, integrated storage space and space for 2 guests.", theme:"wild", price_per_night: 70)
-file = URI.open('https://unsplash.it/1300/600?random')
-hotel6.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
-hotel6.save
+Hotel.create(name: "THIS HO(S)TEL", location: "Amsterdam", address: "14 Warmoesstraat, Amsterdam City Centre, 1012 JD Amsterdam, Pays-Bas", description: "Sleep comfortable, undisturbed and affordable during your stay in Amsterdam. Every room has a double-bed, integrated storage space and space for 2 guests.", theme:"wild", price_per_night: 40, photo_name: 'hotel5.jpg')
+# file = URI.open('https://unsplash.it/1300/600?random')
+# hotel6.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
+# hotel6.save
 
-hotel7 = Hotel.new(name: "Hôtel Sunny", location: "Paris", address: "48, Boulevard du Port Royal, 5e arr., 75005 Paris, France", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild, nature", price_per_night: 80)
-file = URI.open('https://unsplash.it/1300/600?random')
-hotel7.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
-hotel7.save
+Hotel.create(name: "Hôtel Sunny", location: "Paris", address: "48, Boulevard du Port Royal, 5e arr., 75005 Paris, France", description: "This family hotel is located in the 5km outside of Paris. It offers soundproofed rooms with flat-screen satellite TV and private bathroom.", theme:"nature", price_per_night: 60, photo_name: 'hotel6.jpg')
+# file = URI.open('https://unsplash.it/1300/600?random')
+# hotel7.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
+# hotel7.save
 
-hotel8 = Hotel.new(name: "Hôtel Magellan", location: "Paris", address: "17-19 Rue Jean Baptiste Dumas, 17e arr., 75017 Paris, France", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy, nature", price_per_night: 150)
-file = URI.open('https://unsplash.it/1300/600?random')
-hotel8.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
-hotel8.save
+Hotel.create(name: "Hôtel Magellan", location: "Paris", address: "17-19 Rue Jean Baptiste Dumas, 17e arr., 75017 Paris, France", description: "Located a 15-minute walk from The Arc de Triomphe and Park Monceau, the Hôtel Magellan has a lounge bar and a garden. With a 24-hour front desk desk, free Wi-Fi is available throughout the hotel.", theme:"fancy, cozy", price_per_night: 80, photo_name: 'hotel7.jpg')
+# file = URI.open('https://unsplash.it/1300/600?random')
+# hotel8.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
+# hotel8.save
 
-hotel9 = Hotel.new(name: "Paris Art Hotel Quartier Latin", location: "Paris", address: "1, Rue Des Ecoles, 5e arr., 75005 Paris, France", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"cosy, wild", price_per_night: 100)
-file = URI.open('https://unsplash.it/1300/600?random')
-hotel9.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
-hotel9.save
+Hotel.create(name: "Paris Art Hotel Quartier Latin", location: "Paris", address: "1, Rue Des Ecoles, 5e arr., 75005 Paris, France", description: "Welcome to Paris Art Hotel Quartier-Latin, a charming 3-star boutique hotel in the 5th district of Paris near the Pantheon, Sorbonne and Notre Dame.", theme:"wild", price_per_night: 40, photo_name: 'hotel8.jpg')
+# file = URI.open('https://unsplash.it/1300/600?random')
+# hotel9.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
+# hotel9.save
 
-hotel10 = Hotel.new(name: "Hotel Rural & Spa Can Curreu", location: "Ibiza", address: "Ctra San Carlos, km 12, 07850 Sant Carles de Peralta, Espagne", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"cosy, nature", price_per_night: 100)
-file = URI.open('https://unsplash.it/1300/600?random')
-hotel10.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
-hotel10.save
+Hotel.create(name: "Hotel Rural & Spa Can Curreu", location: "Ibiza", address: "Ctra San Carlos, km 12, 07850 Sant Carles de Peralta, Espagne", description: "Located in the village of San Carlos, this luxurious 5-star hotel and spa resort includes an indoor and outdoor swimming pool, a gym and equestrian center. It includes free Wi-Fi.", theme:"cosy, nature", price_per_night: 60, photo_name: 'hotel9.jpg')
+# file = URI.open('https://unsplash.it/1300/600?random')
+# hotel10.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
+# hotel10.save
 
-hotel11 = Hotel.new(name: "Aparthotel Puerto Cala Vadella", location: "Ibiza", address: "Playa de Cala Vadella, 07830 Cala Vadella, Espagne", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"cosy, wild, fancy", price_per_night: 90)
-file = URI.open('https://unsplash.it/1300/600?random')
-hotel11.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
-hotel11.save
+Hotel.create(name: "Paradiso Ibiza Art Hotel", location: "Ibiza", address: "Playa de Cala Vadella, 07830 Cala Vadella, Espagne", description: "Art comes to life in our most media-friendly hotel. An art gallery curated by ADDA GALLERY PARIS, exhibitions in the lobby, a tattoo studio, the colour pink.", theme:"cosy, wild, fancy", price_per_night: 80, photo_name: 'hotel10.jpg')
+# file = URI.open('https://unsplash.it/1300/600?random')
+# hotel11.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
+# hotel11.save
 
-hotel12 = Hotel.new(name: "One Ibiza Suites", location: "Ibiza", address: "Periodista Francisco Escanelles 20 83, 07800 Ibiza, Espagne", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild, fancy", price_per_night: 150)
-file = URI.open('https://unsplash.it/1300/600?random')
-hotel12.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
-hotel12.save
+Hotel.create(name: "Ibiza Ushuaïa Beach Hotel", location: "Ibiza", address: "Periodista Francisco Escanelles 20 83, 07800 Ibiza, Espagne", description: "Set on Playa d’en Bossa Beach, the adults-only Ushuaia Ibiza Beach Hotel features a spa and 3 outdoor pools with large sun beds. Guests enjoy free entrance to live DJ performances hosted by the hotel.", theme:"wild, fancy", price_per_night: 70, photo_name: 'hotel11.jpg')
+# file = URI.open('https://unsplash.it/1300/600?random')
+# hotel12.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
+# hotel12.save
 
 puts "creating activities"
 
-activity1 = Activity.new(name: "Nails treat", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"cozy", gender:"women", price: 80)
+activity1 = Activity.new(name: "Nails treat", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"cozy", gender:"women", price: 80, photo_name: 'hotel12.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity1.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity1.save
 
-activity2 = Activity.new(name: "Massage", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"cozy, fancy", gender:"mixed", price: 120)
+activity2 = Activity.new(name: "Massage", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"cozy, fancy", gender:"mixed", price: 120, photo_name: 'hotel1.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity2.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity2.save
 
-activity3 = Activity.new(name: "Cooking Class", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"cozy", gender:"mixed", price: 100)
+activity3 = Activity.new(name: "Cooking Class", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"cozy", gender:"mixed", price: 100, photo_name: 'hotel1.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity3.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity3.save
 
-activity4 = Activity.new(name: "Comedy show", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"cozy", gender:"mixed", price: 60)
+activity4 = Activity.new(name: "Comedy show", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"cozy", gender:"mixed", price: 60, photo_name: 'hotel1.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity4.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity4.save
 
-activity5 = Activity.new(name: "Beer tasting", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"cozy", gender:"men", price: 40)
+activity5 = Activity.new(name: "Beer tasting", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"cozy", gender:"men", price: 40, photo_name: 'hotel1.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity5.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity5.save
 
-activity6 = Activity.new(name: "Spa", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy", gender:"women", price: 150)
+activity6 = Activity.new(name: "Spa", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy", gender:"women", price: 150, photo_name: 'hotel1.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity6.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity6.save
 
-activity7 = Activity.new(name: "Photoshoot", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy", gender:"women", price: 70)
+activity7 = Activity.new(name: "Photoshoot", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy", gender:"women", price: 70, photo_name: 'hotel1.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity7.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity7.save
 
-activity8 = Activity.new(name: "Mimosa Brunch", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy", gender:"women", price: 45)
+activity8 = Activity.new(name: "Mimosa Brunch", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy", gender:"women", price: 45, photo_name: 'hotel1.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity8.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity8.save
 
-activity9 = Activity.new(name: "Wine tasting", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy", gender:"mixed", price: 65)
+activity9 = Activity.new(name: "Wine tasting", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy", gender:"mixed", price: 65, photo_name: 'hotel1.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity9.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity9.save
 
-activity10 = Activity.new(name: "Cocktail Class", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy", gender:"mixed", price: 55)
+activity10 = Activity.new(name: "Cocktail Class", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy", gender:"mixed", price: 55, photo_name: 'hotel1.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity10.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity10.save
 
-activity11 = Activity.new(name: "Casino", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy, wild", gender:"mixed", price: 25)
+activity11 = Activity.new(name: "Casino", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy, wild", gender:"mixed", price: 25, photo_name: 'hotel1.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity11.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity11.save
 
-activity12 = Activity.new(name: "F1 racing", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy", gender:"men", price: 175)
+activity12 = Activity.new(name: "F1 racing", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy", gender:"men", price: 175, photo_name: 'hotel1.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity12.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity12.save
 
-activity13 = Activity.new(name: "Golf", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy", gender:"men", price: 115)
+activity13 = Activity.new(name: "Golf", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"fancy", gender:"men", price: 115, photo_name: 'hotel1.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity13.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity13.save
 
-activity14 = Activity.new(name: "Pole Dancing class", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"women", price: 85)
+activity14 = Activity.new(name: "Pole Dancing class", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"women", price: 85, photo_name: 'hotel1.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity14.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity14.save
 
-activity15 = Activity.new(name: "Open bar boat trip", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"mixed", price: 75)
+activity15 = Activity.new(name: "Open bar boat trip", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"mixed", price: 75, photo_name: 'hotel1.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity15.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity15.save
 
-activity15 = Activity.new(name: "Strip dancer", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"mixed", price: 100)
+activity15 = Activity.new(name: "Strip dancer", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"mixed", price: 100, photo_name: 'hotel1.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity15.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity15.save
 
-activity16 = Activity.new(name: "Pub crawl", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"mixed", price: 50)
+activity16 = Activity.new(name: "Pub crawl", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"mixed", price: 50, photo_name: 'hotel1.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity16.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity16.save
 
-activity17 = Activity.new(name: "Party bus", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"mixed", price: 170)
+activity17 = Activity.new(name: "Party bus", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"mixed", price: 170, photo_name: 'hotel1.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity17.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity17.save
 
-activity18 = Activity.new(name: "Escape room", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"mixed", price: 50)
+activity18 = Activity.new(name: "Escape room", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"mixed", price: 50, photo_name: 'hotel1.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity18.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity18.save
 
-activity19 = Activity.new(name: "Shooting Range", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"men", price: 50)
+activity19 = Activity.new(name: "Shooting Range", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"men", price: 50, photo_name: 'hotel1.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity19.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity19.save
 
-activity20 = Activity.new(name: "Paintball", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"men", price: 90)
+activity20 = Activity.new(name: "Paintball", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.", theme:"wild", gender:"men", price: 90, photo_name: 'hotel1.jpg')
 file = URI.open('https://unsplash.it/1300/600?random')
 activity20.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 activity20.save
