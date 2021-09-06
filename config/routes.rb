@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :events, only: [ :new, :create ] do
-    resources :plannings, only: [:create]
-    resources :guests, only: [:create]
+  resources :events, only: [ :new, :create, :edit, :update ] do
+     resources :plannings, only: [:create]
+     resources :guests, only: [:create]
   end
   get '/events/:id/choose_recommendation', to: 'events#choose_recommendation', as: :choose_recommendation
   patch '/events/:id/confirm_recommendation', to: 'events#confirm_recommendation', as: :confirm_recommendation
