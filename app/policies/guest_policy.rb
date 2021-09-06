@@ -9,11 +9,11 @@ class GuestPolicy < ApplicationPolicy
     user.admin
   end
 
-  def accept_event?
+  def accept_invitation?
     record.user == user
   end
 
-  def reject_event?
-    accept_event?
+  def reject_invitation?
+    accept_invitation?
   end
 end

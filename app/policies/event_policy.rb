@@ -10,7 +10,7 @@ class EventPolicy < ApplicationPolicy
   end
 
   def show?
-    record.user == user
+    record.user == user || record.guests.include?(user.guests.last)
   end
 
   def update?
