@@ -11,15 +11,19 @@
     <%= favicon_link_tag asset_path('fav.png') %>
   </head>
   <body>
-  <div class=”main-container”>
     <% if current_page?(root_path) %>
       <%= render 'shared/navbar' %>
     <% else %>
       <%= render 'shared/navbarsecond' %>
     <% end %>
     <%= render 'shared/flashes' %>
-    <%= yield %>
+    <% if current_page?(root_path) %>
+       <%= yield %>
+      <% else %>
+    <div class='main-container'>
+      <%= yield %>
     </div>
+    <% end %>
     <%= render 'shared/footer' %>
   </body>
 </html>
