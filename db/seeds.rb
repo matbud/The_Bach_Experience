@@ -160,7 +160,7 @@ Activity.create(name: "Casino", address: "Brussels, Paris, Ibiza, Amsterdam", de
 # activity11.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity11.save
 
-Activity.create(name: "F1 racing", address: "Brussels, Paris, Ibiza, Amsterdam", description: "During two hours you will be able to drive test a F1 cars.", theme:"fancy", gender:"men", price: 50, photo_name: 'f1.jpg')
+Activity.create(name: "F1 racing", address: "Brussels, Paris, Ibiza, Amsterdam", description: "During two hours you will be able to drive test a F1 cars.", theme:"fancy", gender:"men", price: 50, photo_name: 'f1.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity12.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity12.save
