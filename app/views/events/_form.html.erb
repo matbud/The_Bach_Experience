@@ -1,15 +1,49 @@
 <div class="container col-6 my-4">
-  <div class='form-event-new'>
-    <%= simple_form_for @event do |f| %>
-      <%= f.input :name %>
-      <%= f.input :gender, as: :radio_buttons, collection: ['Women', 'Men', "Mixed"] %>
-      <%= f.input :theme, as: :radio_buttons, collection: ['Wild', 'Nature', "Fancy", 'Cosy'] %>
-      <%= f.input :number_of_guests, input_html: { min: 1 } %>
-      <%= f.input :budget_per_person, input_html: { min: 1, placeholder: '€' } %>
-      <%= f.input :location, collection: ['Amsterdam', 'Paris', 'Ibiza', 'Brussels'] %>
-      <%= f.input :start_date, as: :string %>
-      <%= f.input :end_date, as: :string %>
-      <%= f.submit %>
+  <div class='form-event'>
+    <%= simple_form_for @event, html: { class: "" } do |f| %>
+      <div class="row">
+        <div class="col">
+          <%= f.input :name, label: false, placeholder: "Party's name", html: { class: "form-name" } %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <%= f.input :number_of_guests, input_html: { min: 1, class: "" } %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <%= f.input :location, collection: ['Amsterdam', 'Paris', 'Ibiza', 'Brussels'] %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <%= f.input :start_date, as: :string %>
+        </div>
+        <div class="col">
+          <%= f.input :end_date, as: :string %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <%= f.input :budget_per_person, input_html: { min: 1, placeholder: '€' } %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <%= f.input :gender, as: :radio_buttons, collection: ['Women', 'Men', "Mixed"], input_html: { class: "" } %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <%= f.input :theme, as: :radio_buttons, collection: ['Wild', 'Nature', "Fancy", 'Cosy'] %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <%= f.submit %>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>
