@@ -32,7 +32,7 @@
         <% @recommendation.recommended_activities.each do |activity| %>
           <div class="card-product">
             <%# Img to be replaced by seed pictures %>
-            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+            <%= image_tag activity.activity.photo_name %>
             <%# <% if activity.photos.attached? %>
             <%# <%= cl_image_tag activity.photos.first.key %>
             <%# <% end %>
