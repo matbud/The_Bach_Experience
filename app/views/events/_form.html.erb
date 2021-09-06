@@ -1,49 +1,48 @@
-<div class="container col-6 my-4">
+<div class="container my-4">
   <div class='form-event'>
-    <%= simple_form_for @event, html: { class: "" } do |f| %>
-      <div class="row">
-        <div class="col">
-          <%= f.input :name, label: false, placeholder: "Party's name", html: { class: "form-name" } %>
+    <%= simple_form_for @event, 
+    wrapper: :horizontal_form,
+    wrapper_mappings: {
+    boolean:       :horizontal_boolean,
+    check_boxes:   :horizontal_collection,
+    date:          :horizontal_multi_select,
+    datetime:      :horizontal_multi_select,
+    file:          :horizontal_file,
+    radio_buttons: :horizontal_collection,
+    range:         :horizontal_range,
+    time:          :horizontal_multi_select,
+    # select:        :horizontal_select
+  } do |f| %>
+      <%= f.input :name, placeholder: "Mel's bachelorette party" %>
+      <%= f.input :number_of_guests, label: "No. of guests", input_html: { min: 1 }, input_html: { placeholder: "10" } %>
+      <%= f.input :location, collection: ['Amsterdam', 'Paris', 'Ibiza', 'Brussels'], input_html: { placeholder: "Amsterdam" } %>
+      <div class="row form-group">
+        <div class="col-3 mx-0">
+          <%= f.label :start_date, label: "Date"%>
+        </div>
+        <div class="col-9 mx-0 d-flex">
+          <%= f.input_field :start_date, as: :string, placeholder: "1-10-2021", class: 'form-control' %>
+          <%= f.input_field :end_date, as: :string, label: false, placeholder: "3-10-2021", class: 'form-control' %>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <%= f.input :number_of_guests, input_html: { min: 1, class: "" } %>
+      <%= f.input :budget_per_person, label: "Budget pp.", input_html: { min: 1, placeholder: '€200' } %>
+      <div class="row form-group">
+        <div class="col-3 d-flex align-items-center">
+          <%= f.label :gender %>
+        </div>
+        <div class="col-9 d-flex justify-content-around">
+          <%= f.input_field :gender, as: :radio_buttons, collection: ['Women', 'Men', "Mixed"], wrapper: :horizontal_collection_inline %>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <%= f.input :location, collection: ['Amsterdam', 'Paris', 'Ibiza', 'Brussels'] %>
+      <div class="row form-group">
+        <div class="col-3 d-flex align-items-center">
+          <%= f.label :theme %>
+        </div>
+        <div class="col-9 d-flex justify-content-around">
+          <%= f.input_field :theme, as: :radio_buttons, collection: ['Wild', 'Nature', "Fancy", 'Cosy'], wrapper: :horizontal_collection_inline %>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <%= f.input :start_date, as: :string %>
-        </div>
-        <div class="col">
-          <%= f.input :end_date, as: :string %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <%= f.input :budget_per_person, input_html: { min: 1, placeholder: '€' } %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <%= f.input :gender, as: :radio_buttons, collection: ['Women', 'Men', "Mixed"], input_html: { class: "" } %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <%= f.input :theme, as: :radio_buttons, collection: ['Wild', 'Nature', "Fancy", 'Cosy'] %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <%= f.submit %>
-        </div>
-      </div>
+      <%= f.submit %>
     <% end %>
   </div>
 </div>
