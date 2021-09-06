@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [ :choose_recommendation, :confirm_recommendation, :summary, :confir_event, :edit, :update, :invite]
+  before_action :set_event, only: [ :choose_recommendation, :confirm_recommendation, :summary, :confirm_event, :edit, :update, :invite]
   BUDGET_PROPORTIONS = {
     hotel: 0.4,
     activity: 0.2
@@ -57,6 +57,9 @@ class EventsController < ApplicationController
 
   def update
     authorize @event
+    @event.recommendations.last.update(chosen: false)
+    @event.update(event_params)
+    redirect_to choose_recommendation_path(@event)
   end
 
   private
@@ -66,7 +69,7 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:start_date, :end_date, :theme, :gender, :budget_per_person, :number_of_guests, :location)
+    params.require(:event).permit(:name, :start_date, :end_date, :theme, :gender, :budget_per_person, :number_of_guests, :location)
   end
 
   def generate_recommendation
