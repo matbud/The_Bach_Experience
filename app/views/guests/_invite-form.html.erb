@@ -1,8 +1,15 @@
+<%# <form>
+  <div class="form-group">
+    <label for="guestEmailAddresses">Email addresses:</label>
+    <textarea class="form-control" id="guestEmailAddresses" rows="5"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Send invitations</button>
+</form> %>
 <div class="container col-6 my-4">
   <div class='form-event-new'>
-    <%= simple_form_for @guest do |f| %>
-      <%= f.input :email, as: :text %>
-      <%= f.submit %>
+    <%= form_tag event_guests_path(@event), method: :post do %>
+      <%= text_field_tag :emails, size: "70x5" %>
+      <%= submit_tag "Send" %>
     <% end %>
   </div>
 </div>

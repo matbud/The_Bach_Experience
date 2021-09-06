@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get '/test', to: 'pages#test'
 
   resources :plannings, only: [ :edit, :update, :destroy ]
-  patch '/guests/:id/accept', to: "guests#accept", as: :accept_invitation
-  patch '/guests/:id/reject', to: "guests#reject", as: :reject_invitation
+  patch '/guests/:id/accept', to: "guests#accept_invitation", as: :accept_invitation
+  patch '/guests/:id/reject', to: "guests#reject_invitation", as: :reject_invitation
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

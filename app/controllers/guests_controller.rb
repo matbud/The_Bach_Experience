@@ -1,12 +1,19 @@
 class GuestsController < ApplicationController
   def create
     @event = Event.find(params[:event_id])
-    @user = User.find_by("email ILIKE ?", "%#{@user.email}%")
-    @guest = Guest.new(guest_params)
-    @guest.status = 'pending'
-    @guest.event = @event
-    @guest.user = @user
-    authorize @guest
+    @emails = params[:emails].split(",")
+    @emails.each do |email|
+      user = User.find_by(email: email)
+      guest = Guest.create(status: 'pending', event: @event, user: user)
+      authorize guest
+      redirect_to dashboard_path(current_user.events.first)
+    end
+    # @user = User.find_by("email ILIKE ?", "%#{@user.email}%")
+    # @guest = Guest.new(guest_params)
+    # @guest.status = 'pending'
+    # @guest.event = @event
+    # @guest.user = @user
+    # authorize @guest
   end
 
   def accept_event
@@ -23,9 +30,4 @@ class GuestsController < ApplicationController
     redirect_to dashboard_path(current_user.events.first)
   end
 
-  private
-
-  def guest_params
-    params.require(:guest).permit(:status)
-  end
 end
