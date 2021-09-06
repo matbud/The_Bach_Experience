@@ -3,7 +3,7 @@
   <%= render 'summary_card' %>
   <%= render 'recommendation' %>
   <div class="d-flex justify-content-center">
-    <%= link_to "Edit", "#", class: "btn-red mx-5" %>
+    <%= link_to "Edit", edit_event_path(@event), class: "btn-red mx-5" %>
     <%= link_to "Confirm", confirm_event_path(@event), method: :patch, class: "btn-blue mx-5" %>
   </div>
 </div>
