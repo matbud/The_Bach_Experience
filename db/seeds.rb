@@ -41,7 +41,7 @@ puts "creating hotels"
 
 # To use when pictures on server: @message.image.attach(io: File.open('/path/to/file'), filename: 'file.pdf')
 
-hotel1 = Hotel.new(name: "The Hotel Brussels", location: "Brussels", address: "In one of Brussels' tallest buildings within a 15-minute walk from Grand Place, The Hotel Brussels features panoramic city views, an on-site gourmet restaurant and free access to a spa, wellness and fitness center overlooking Brussels.", theme:"fancy", price_per_night: 100)
+hotel1 = Hotel.new(name: "The Hotel Brussels", location: "Brussels", address: "Boulevard de Waterloo 38, 1000 Brussels, Belgique", description: "In one of Brussels' tallest buildings within a 15-minute walk from Grand Place, The Hotel Brussels features panoramic city views, an on-site gourmet restaurant and free access to a spa, wellness and fitness center overlooking Brussels.", theme:"fancy", price_per_night: 100)
 file = URI.open('https://unsplash.it/1300/600?random')
 hotel1.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 hotel1.save
