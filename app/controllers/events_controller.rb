@@ -42,9 +42,9 @@ class EventsController < ApplicationController
   def confirm_event
     @event.update(status: "confirmed")
     authorize @event
-    redirect_to dashboard_path(@event)
+    # redirect_to dashboard_path(@event)
     # TODO: change redirection to invitation
-    # redirect_to invite_path(@event)
+    redirect_to invite_path(@event)
   end
 
   def invite
@@ -56,7 +56,7 @@ class EventsController < ApplicationController
   end
 
   def update
-
+    authorize @event
   end
 
   private
