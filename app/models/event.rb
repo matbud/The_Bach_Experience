@@ -9,6 +9,10 @@ class Event < ApplicationRecord
   validates :budget_per_person, :number_of_guests, numericality: { greater_than: 0 }
 
   def available_dates
-    { from: start_date, to: (end_date + 1) }
+    { from: start_date, to: end_date }
+  end
+
+  def unavailable_dates
+    plannings.map { |planning| { from: planning.start_time.strftime("%b %d %Y %H:%M"), to: planning.end_time.strftime("%b %d %Y %H:%M") } }
   end
 end

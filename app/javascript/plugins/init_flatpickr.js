@@ -26,23 +26,27 @@ const initFlatpickr = () => {
       dateFormat: "d-m-Y",
     });
   } else if (startDateInputPlanning && endDateInputPlanning) {
+    const availableDates = JSON.parse(document.querySelector('.planning-table').dataset.available)
+    const unavailableDates = JSON.parse(document.querySelector('.planning-table').dataset.unavailable)
     const startDateCalendar = flatpickr(startDateInputPlanning, {
       enableTime: true,
       dateFormat: "Y-m-d H:i",
+      enable: [availableDates],
+      disable: unavailableDates, // doesn't work for now
       onChange: function (selectedDates, selectedDate) {
         if (selectedDate === "") {
           endDateInputPlanning.disabled = true;
         }
-        // let minDate = selectedDates[0];
-        // minDate.setDate(minDate.getDate() + 1); // adds one day to the start date
-        // endDateCalendar.set("minDate", minDate);
+        let minDate = selectedDates[0];
+        endDateCalendar.set("minDate", minDate);
         endDateInputPlanning.disabled = false;
       },
     });
-
+    console.log(startDateCalendar)
+    
     const endDateCalendar = flatpickr(endDateInputPlanning, {
       enableTime: true,
-      dateFormat: "Y-m-d H:i",
+      dateFormat: "Y-m-d H:i"
     });
   }
 };
