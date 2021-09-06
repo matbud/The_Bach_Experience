@@ -15,7 +15,7 @@ class EventsController < ApplicationController
     @event.status = 'pending'
     @event.user = current_user
 
-    @guest = Guest.create(status: 'accepted ✅', event: @event, user: current_user)
+    @guest = Guest.create(status: 'accepted', event: @event, user: current_user)
     authorize @guest
 
     authorize @event

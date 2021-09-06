@@ -6,8 +6,8 @@ class GuestsController < ApplicationController
       user = User.find_by(email: email)
       guest = Guest.create(status: 'pending', event: @event, user: user)
       authorize guest
-      redirect_to dashboard_path(current_user.events.first)
     end
+    redirect_to dashboard_path(current_user.events.first)
   end
 
   def accept_invitation
