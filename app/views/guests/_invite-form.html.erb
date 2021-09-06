@@ -8,7 +8,7 @@
 <div class="container col-6 my-4">
   <div class='form-event-new'>
     <%= form_tag event_guests_path(@event), method: :post do %>
-      <%= text_field_tag(:emails, nil, size: 70) %>
+      <%= text_area_tag(:emails, nil, size: "70x5") %>
       <%# <%= text_field_tag(:emails, size: "70x5") %>
       <%= submit_tag "Send" %>
     <% end %>
