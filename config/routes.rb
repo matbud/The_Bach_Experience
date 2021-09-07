@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :events, only: [ :new, :create, :edit, :update ] do
      resources :plannings, only: [:create]
      resources :guests, only: [:create]
+     resources :messages, only: :create
   end
   get '/events/:id/choose_recommendation', to: 'events#choose_recommendation', as: :choose_recommendation
   patch '/events/:id/confirm_recommendation', to: 'events#confirm_recommendation', as: :confirm_recommendation

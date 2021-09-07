@@ -44,13 +44,13 @@
           </tbody>
         </table>
       </div>
-      <%# <br>
+      <br>
       <div class="row d-flex justify-content-center" style="background-color:white">
         <h3 class="text-center"> Chat</h3>
-        <br> %>
-      <%# <br>
-        <br> %>
-      <%# </div> %>
+        <%= render 'chatbox' %>
+        <br>
+        <br>
+      </div>
     </div>
     <div class="col-7 planning-table" style="background-color:white" data-available="<%= @event.available_dates.to_json %>" data-unavailable="<%= @event.unavailable_dates.to_json %>">
       <%= calendar(start_date: @event.start_date.to_s, number_of_days: @number_of_day, events: @plannings, new_planning: @new_planning) do |date, plannings| %>

@@ -12,11 +12,10 @@ class DashboardsController < ApplicationController
 
   # Scope your query to the dates being shown:
     start_date = params.fetch(:start_date, @event.start_date.to_s).to_date
-    # @plannings = Planning.where(starts_at: start_date.beginning_of_day..start_date.end_of_day)
 
-    # Objects we'll pass to the form
+    # Objects we'll pass to their respective forms
     @new_planning = Planning.new
-
+    @message = Message.new
 
   end
 end
