@@ -31,10 +31,10 @@
           <%= f.label :gender %>
         </div>
         <div class="col-9">
-          <%= f.input_field :gender, as: :radio_buttons, collection: ['Women', 'Men', "Mixed"], wrapper: :horizontal_collection_inline, wrapper_html: { class: "d-flex justify-content-between" } %>
+          <%= f.input_field :gender, as: :radio_buttons, collection: ['Women', "Mixed", 'Men'], wrapper: :horizontal_collection_inline, wrapper_html: { class: "d-flex justify-content-between" } %>
         </div>
       </div>
-      <div class="row form-group">
+      <div class="row form-group pt-2">
         <div class="col-3 d-flex align-items-center">
           <%= f.label :theme %>
         </div>

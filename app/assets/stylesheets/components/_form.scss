@@ -30,6 +30,11 @@
   // width: 140px;
   height: 150px;
   color: white;
+  font-weight: bold;
+  font-size: 22px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  filter: saturate(80%) contrast(75%) brightness(90%);
 }
 
 .event_gender .form-check label {
@@ -40,26 +45,26 @@
 }
 
 .form-event [for=event_theme_fancy] {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("fancy.png");
+  background-image: image-url("fancy.png");
 }
 .form-event [for=event_theme_cosy] {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("cozy3.png");
+  background-image: image-url("cozy3.png");
 }
 .form-event [for=event_theme_wild] {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("wild2.png");
+  background-image: image-url("wild2.png");
 }
 .form-event [for=event_theme_nature] {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("breath.png");
+  background-image: image-url("breath.png");
 }
 
 .form-event [for=event_gender_women] {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://i.pinimg.com/564x/c2/d5/6a/c2d56aa943b1d0bf08a5af9c17ed6fdc.jpg");
+  background-image: url("https://i.pinimg.com/564x/c2/d5/6a/c2d56aa943b1d0bf08a5af9c17ed6fdc.jpg");
 }
 .form-event [for=event_gender_men] {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://i.pinimg.com/474x/d6/40/aa/d640aa111128811b7f494d3dc5d58d4c.jpg");
+  background-image: url("https://i.pinimg.com/474x/d6/40/aa/d640aa111128811b7f494d3dc5d58d4c.jpg");
 }
 .form-event [for=event_gender_mixed] {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("mixed.png");
+  background-image: image-url("mixed.png");
 }
 
 .form-event [type=radio] { 
@@ -71,7 +76,8 @@
 
 .form-event [type=radio]:checked + label {
   // outline: 3px solid $bx-red;
-  transform: scale(1.1);
+  transform: scale(1.18);
+  filter: saturate(100%) contrast(100%) brightness(100%);
 }
 
 

@@ -16,7 +16,9 @@ const initFlatpickr = () => {
         }
         let minDate = selectedDates[0];
         minDate.setDate(minDate.getDate() + 1); // adds one day to the start date
-        endDateCalendar.set("minDate", minDate);
+        let maxDate = new Date()
+        maxDate.setDate(minDate.getDate() + 2);
+        endDateCalendar.set("enable", [{'from': minDate, 'to': maxDate}]);
         endDateInput.disabled = false;
       },
     });
