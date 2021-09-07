@@ -40,7 +40,7 @@ puts "creating hotels"
 
 # To use when pictures on server: @message.image.attach(io: File.open('/path/to/file'), filename: 'file.pdf')
 
-Hotel.create(name: "The Hotel Brussels", location: "Brussels", address: "Boulevard de Waterloo 38, 1000 Brussels, Belgique", description: "In one of Brussels' tallest buildings within a 15-minute walk from Grand Place, The Hotel Brussels features panoramic city views, an on-site gourmet restaurant and free access to a spa, wellness and fitness center overlooking Brussels.", theme:"fancy", price_per_night: 100, photo_name: 'hotel1.jpg')
+Hotel.create(name: "The Hotel Brussels", location: "Brussels", address: "Boulevard de Waterloo 38, 1000 Brussels, Belgique", description: "In one of Brussels' tallest buildings within a 15-minute walk from Grand Place, The Hotel Brussels features panoramic city views, an on-site gourmet restaurant and free access to a spa, wellness and fitness center overlooking Brussels.", theme:"fancy", price_per_night: 100, photo_name: 'hotel1.png')
 
 # hotel1 = Hotel.new(name: "The Hotel Brussels", location: "Brussels", address: "Boulevard de Waterloo 38, 1000 Brussels, Belgique", description: "In one of Brussels' tallest buildings within a 15-minute walk from Grand Place, The Hotel Brussels features panoramic city views, an on-site gourmet restaurant and free access to a spa, wellness and fitness center overlooking Brussels.", theme:"fancy", price_per_night: 100)
 # file = URI.open('https://unsplash.it/1300/600?random')
@@ -73,7 +73,7 @@ Hotel.create(name: "THIS HO(S)TEL", location: "Amsterdam", address: "14 Warmoess
 # hotel6.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # hotel6.save
 
-Hotel.create(name: "Hôtel Sunny", location: "Paris", address: "48, Boulevard du Port Royal, 5e arr., 75005 Paris, France", description: "This family hotel is located in the 5km outside of Paris. It offers soundproofed rooms with flat-screen satellite TV and private bathroom.", theme:"nature", price_per_night: 60, photo_name: 'hotel6.jpg')
+Hotel.create(name: "Hôtel Sunny", location: "Paris", address: "48, Boulevard du Port Royal, 5e arr., 75005 Paris, France", description: "This family hotel is located in the 5km outside of Paris. It offers soundproofed rooms with flat-screen satellite TV and private bathroom.", theme:"nature", price_per_night: 60, photo_name: 'hotel6.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # hotel7.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # hotel7.save

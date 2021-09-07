@@ -1,26 +1,37 @@
-<div class="container-card row mb-3 pt-3">
-  <div class="col">
-    <h3 class="text-center">Our recommandation for <strong><%=@event.name %></strong>🎉</h3>
-      <div class="row align-items-center pt-2">
-        <div class="col-6">
-          <p class="text-right"> <em> Details of your event : </em><br>
+<div class="reco-background">
+  <div class="container-card row mb-3 pt-3">
+    <div class="col">
+      <h3 class="text-center">Our recommandation for <strong><%=@event.name %></strong> 🎉</h3>
+        <div class="row align-items-center pt-2">
+          <div class="col-6">
+            <p class="text-right"> <em> Details of your event : </em><br>
+          </div>
+          <div class="col-6">
+            ✨ <%=@event.theme%> mood <br>
+            📆 <%=@event.start_date%> to <%=@event.end_date%> <br>
+            💰 <%=@event.budget_per_person%>€/person <br>
+            👫 <%=@event.number_of_guests %> <br></p>
+          </div>
         </div>
-        <div class="col-6">
-          ✨ <%=@event.theme%> mood <br>
-          📆 <%=@event.start_date%> to <%=@event.end_date%> <br>
-          💰 <%=@event.budget_per_person%>€/person <br>
-          👫 <%=@event.number_of_guests %> <br></p>
-        </div>
-      </div>
+    </div>
   </div>
-</div>
 
-<div class="row">
-  <%= render 'recommendation' %>
-</div>
+  <div class="row pt-2">
+    <%= render 'recommendation' %>
+  </div>
 
-<div class="recommendations-nav">
-  <a class="btn-red m-5" href="#">New recommendation</a>
-  <a class="btn-red m-5" href="#">Change theme</a>
-  <%= link_to 'Choose this recommendation', confirm_recommendation_path(@event), method: :patch, class: "btn-blue m-5" %>
+  <div class="container-card row mt-3 p-4 text-center">
+
+    <div class="col-md-4 p-4">
+      <a class="btn-red btn-border-drawing" href="#">SURPRISE AGAIN</a>
+    </div>
+
+    <div class="col-md-4 p-4">
+      <a class="btn-red" href="#">CHANGE MOOD</a>
+    </div>
+    <div class="col-md-4 p-4">
+      <%= link_to 'I LOVE IT', confirm_recommendation_path(@event), method: :patch, class: "btn-blue" %>
+    </div>
+    </div>
+
 </div>
