@@ -10,6 +10,10 @@ class MessagesController < ApplicationController
     # else
     #   render "dashboard/show"
     end
+    EventChannel.broadcast_to(
+      @event,
+      render_to_string(partial: "chatbox", locals: { message: @message })
+    )
   end
 
   private
