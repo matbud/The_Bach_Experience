@@ -6,6 +6,9 @@ class EventsController < ApplicationController
   }
 
   def new
+    if current_user.guest
+      redirect_to dashboard_path(current_user.guest.event), notice: "You already have an event!"
+    end
     @event = Event.new
     authorize @event
   end
@@ -14,11 +17,8 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.status = 'pending'
     @event.user = current_user
-
-    @guest = Guest.create(status: 'accepted', event: @event, user: current_user)
-    authorize @guest
-
     authorize @event
+
     if @event.save
       redirect_to choose_recommendation_path(@event)
     else
@@ -45,7 +45,10 @@ class EventsController < ApplicationController
 
   def confirm_event
     @event.update(status: "confirmed")
+    @guest = Guest.create(status: 'accepted', event: @event, user: current_user)
     authorize @event
+    # authorize @guest
+
     # redirect_to dashboard_path(@event)
     # TODO: change redirection to invitation
     redirect_to invite_path(@event)

@@ -6,12 +6,20 @@
     <% end %>
   </div>
   <div class="collapse navbar-collapse navbar-btn-avatar" id="navbarSupportedContent">
-    <div class="bnt-actioncall-navbar text-center">
-      <%= link_to "CREATE EVENT", new_event_path, class:"btn draw-border text-center" %>
-      <%# < class="btn-blue text-center">─ CREATE EVENT ─</a> %>
-      <%# <div class="bnt-actioncall-navbar text-center"><a class="btn-blue text-center" href="#">─ CREATE EVENT ─</a></div> %>
-      <%# <% end %>
-    </div>
+    <% if user_signed_in? %>
+      <% unless current_user.guest %>
+        <div class="bnt-actioncall-navbar text-center">
+          <%= link_to "CREATE EVENT", new_event_path, class:"btn draw-border text-center" %>
+          <%# < class="btn-blue text-center">─ CREATE EVENT ─</a> %>
+          <%# <div class="bnt-actioncall-navbar text-center"><a class="btn-blue text-center" href="#">─ CREATE EVENT ─</a></div> %>
+          <%# <% end %>
+        </div>
+      <% end %>
+    <% else %>
+      <div class="bnt-actioncall-navbar text-center">
+        <%= link_to "CREATE EVENT", new_event_path, class:"btn draw-border text-center" %>
+      </div>
+    <% end %>
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
@@ -23,13 +31,13 @@
             <%= image_tag "https://pbs.twimg.com/profile_images/1380119262950531074/sYlD_F3U_400x400.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <% if current_user.events.any? %>
-              <%= link_to "My event dashboard", dashboard_path(current_user.events.first), class: "dropdown-item"%>
+            <% if current_user.event %>
+              <%= link_to "My event dashboard", dashboard_path(current_user.event), class: "dropdown-item"%>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            <% elsif current_user.guests.any? %>
-              <%= link_to "My event dashboard", dashboard_path(current_user.guests.last.event), class: "dropdown-item"%>
+            <% elsif current_user.guest %>
+              <%= link_to "My event dashboard", dashboard_path(current_user.guest.event), class: "dropdown-item"%>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            <% else current_user.guests.any? %>
+            <% else current_user.guest %>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             <% end %>
           </div>
