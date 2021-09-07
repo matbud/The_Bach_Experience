@@ -2,7 +2,7 @@
     <h3 class="text-center mt-2 py-4">Your event package</h3>
   <div class="row">
 
-    <div class="col-md-6 text-center mb-2">
+    <div class="col-lg-6 text-center mb-2 pb-4">
       <h4> H O T E L</h4>
         <div class="hotel-card">
           <%= image_tag @recommendation.hotel.photo_name %>
@@ -23,9 +23,9 @@
        </div>
     </div>
 
-    <div class="col-md-6 text-center">
+    <div class="col-lg-6 text-center">
       <h4> A C T I V I T I E S</h4>
-      <div class="card-activities row">
+      <div class="card-activities px-3">
         <% @recommendation.recommended_activities.each do |activity| %>
 
         <div class="card-activity">
