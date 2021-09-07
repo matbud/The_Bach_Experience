@@ -10,7 +10,14 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
     <%= favicon_link_tag asset_path('fav.png') %>
   </head>
-  <body class="<%= 'show-body' if params[:controller] == 'events' && params[:action] == 'choose_recommendation' %>">
+  <% if params[:controller] == 'events' && params[:action] == 'choose_recommendation' %>
+    <body class="show-body">
+  <% elsif params[:controller] == 'events' && (params[:action] == 'new' || params[:action] == 'edit') %>
+    <body class="form-event-bg">
+  <% else %>
+    <body>
+  <% end %>
+  <%# <body class="<%= 'show-body' if params[:controller] == 'events' && params[:action] == 'choose_recommendation' %>
     <% if current_page?(root_path) %>
       <%= render 'shared/navbar' %>
     <% else %>
