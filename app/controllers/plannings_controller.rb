@@ -7,7 +7,7 @@ class PlanningsController < ApplicationController
     @new_planning.event = @event
     authorize @new_planning
     if @new_planning.save
-      redirect_to dashboard_path(current_user.events.first)
+      redirect_to dashboard_path(current_user.event)
     else
       render :create
     end
