@@ -1,0 +1,45 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th class="px-3">Participant</th>
+      <th class="px-3">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @event.guests.each do |guest| %>
+      <tr>
+        <% if current_user == @event.user %>
+          <% if guest.user.photo.attached? %>
+            <%# Avatar picture %>
+            <td><%= cl_image_tag guest.user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %></td>
+          <% else %>
+            <%# Default picture %>
+            <td><%= image_tag "https://pbs.twimg.com/profile_images/1380119262950531074/sYlD_F3U_400x400.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %></td>
+          <% end %>
+          <td class="px-3"><%= guest.user.first_name %></td>
+          <% if guest.status == "accepted" %>
+            <td class="px-3"><%= "#{guest.status} ✔️" %></td>
+          <% elsif guest.status == "rejected" %>
+            <td class="px-3"><%= "#{guest.status} ❌" %></td>
+          <% else %>
+            <td class="px-3"><%= guest.status %></td>
+          <% end %>
+        <% else %>
+          <% if guest.user.photo.attached? %>
+            <%# Avatar picture %>
+            <%= cl_image_tag guest.user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% else %>
+            <%# Default picture %>
+            <%= image_tag "https://pbs.twimg.com/profile_images/1380119262950531074/sYlD_F3U_400x400.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% end %>
+          <td class="px-3"><%= guest.user.first_name %></td>
+          <td class="px-3"><%= guest.status %></td>
+          <% if guest == current_user.guest %>
+            <td class="px-3"><%= button_to "Accept",  accept_invitation_path(guest), method: 'patch', class:"btn-gradient" %> <%= button_to "Reject", reject_invitation_path(guest), method: 'patch', class:"btn-gradient" %></td>
+          <% end %>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
