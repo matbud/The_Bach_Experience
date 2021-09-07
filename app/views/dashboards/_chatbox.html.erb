@@ -1,6 +1,5 @@
 <div class="d-flex">
   <div class="eventchatroom">
-    <h1>#<%= @event.name %></h1>
     <div>
       <div id="messages" data-event-id="<%= @event.id %>">
         <% @event.messages.each do |message| %>

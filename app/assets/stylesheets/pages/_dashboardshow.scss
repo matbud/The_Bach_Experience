@@ -1,12 +1,23 @@
 .dashboard-container {
-  width: 1200px;
-  margin: 0 auto;
-  // display: flex;
-  // justify-content: space-between;
+  margin-top: 0px !important;
+  padding: 0px !important;
 }
 
 .dashboard-row {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   margin-bottom: 30px;
+}
+
+.dashboard-collapse {
+  flew-grow: 1;
+}
+
+.dashboard-card {
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-card-header {
+  padding: 5px;
 }

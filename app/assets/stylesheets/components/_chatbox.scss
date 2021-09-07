@@ -1,6 +1,6 @@
 .eventchatroom {
   background: white;
-  height: calc(50vh - 66px);
+  // height: calc(50vh - 66px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -17,7 +17,7 @@
   padding: 0 1rem;
   padding-top: 1rem;
   overflow: scroll;
-  max-height: calc(50vh - 66px - 65px - 71px);
+  max-height: calc(50vh - -65px - 65px - 71px);
 }
 
 #new_message {
