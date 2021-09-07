@@ -70,7 +70,7 @@
 }
 
 .form-event [type=radio]:checked + label {
-  outline: 3px solid $bx-red;
+  // outline: 3px solid $bx-red;
   transform: scale(1.1);
 }
 
