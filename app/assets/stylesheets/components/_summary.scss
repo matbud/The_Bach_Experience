@@ -1,18 +1,46 @@
 .event-summary {
   // text-align: center;
   // background-color: $bx-beige;
-  width: 50vw;
-  margin: 20px auto;
+  margin: 0.5rem  0.5rem auto auto;
   padding: 15px;
-  border: 2px solid $bx-beige;
+  // border: 1px solid $bx-blue;
   box-shadow: 0 0 15px rgba($color: #000000, $alpha: 0.2);
-  border-radius: 5px;
+  background-color: white;
 }
 
 .event-summary i {
-  color: $bx-beige;
+  color: $bx-red;
 }
 
 .event-summary p {
   margin-bottom: 5px;
+}
+
+
+
+.card-container {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // padding: 15px;
+  border: 1px dotted $bx-blue;
+  border-radius: 3px;
+  // margin-bottom: 50px;
+  box-shadow: 0 0 10px rgba(91, 137, 166, 0.3);
+  background-color: rgba(91, 137, 166, 0.2);
+}
+
+
+.sum-card {
+  background-color: rgba(91, 137, 166, 0.1);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+
+.sum-card h2 {
+  font-size: 20px;
+  font-family: $body-font ;
 }
