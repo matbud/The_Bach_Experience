@@ -4,6 +4,7 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     @message.event = @event
     @message.user = current_user
+    authorize @message
     if @message.save
       redirect_to dashboard_path(@event, anchor: "message-#{@message.id}")
       # redirect_to dashboard_path(current_user.events.first, anchor: "message-#{@message.id}")
@@ -12,7 +13,7 @@ class MessagesController < ApplicationController
     end
     EventChannel.broadcast_to(
       @event,
-      render_to_string(partial: "chatbox", locals: { message: @message })
+      render_to_string(partial: "message", locals: { message: @message })
     )
   end
 
