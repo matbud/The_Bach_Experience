@@ -1,3 +1,10 @@
+.form-event-container {
+  background-color: $bx-background;
+  width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
 .form-event {
   width: 700px;
   margin: 0 auto;
@@ -15,10 +22,20 @@
   background-size: cover;
   width: 100px;
   height: 100px;
+  color: white;
 }
 
-.form-event [for=event_gender_mixed] {
-  background-image: url("yoga.png"); //to be changed - test
+.form-event [for=event_theme_fancy] {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("fancy.png"); //to be changed - test
+}
+.form-event [for=event_theme_cosy] {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("cozy3.png"); //to be changed - test
+}
+.form-event [for=event_theme_wild] {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("wild2.png"); //to be changed - test
+}
+.form-event [for=event_theme_nature] {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("breath.png"); //to be changed - test
 }
 
 .form-event [type=radio] { 
@@ -29,7 +46,19 @@
 }
 
 .form-event [type=radio]:checked + label {
-  outline: 2px solid #f00;
+  outline: 3px solid $bx-blue;
 }
 
 
+.form-event ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-style: italic;
+}
+.form-event ::-moz-placeholder { /* Firefox 19+ */
+  font-style: italic;
+}
+.form-event :-ms-input-placeholder { /* IE 10+ */
+  font-style: italic;
+}
+.form-event :-moz-placeholder { /* Firefox 18- */
+  font-style: italic;
+}
