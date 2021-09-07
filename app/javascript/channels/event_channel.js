@@ -10,6 +10,7 @@ const initEventCable = () => {
       {
         received(data) {
           console.log(data); // called when data is broadcast in the cable
+          messagesContainer.insertAdjacentHTML("beforeend", data);
         },
       }
     );
