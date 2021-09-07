@@ -10,7 +10,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
     <%= favicon_link_tag asset_path('fav.png') %>
   </head>
-  <body>
+  <body class="<%= 'show-body' if params[:controller] == 'events' && params[:action] == 'choose_recommendation' %>">
     <% if current_page?(root_path) %>
       <%= render 'shared/navbar' %>
     <% else %>

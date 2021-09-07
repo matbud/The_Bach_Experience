@@ -1,26 +1,48 @@
 .btn-blue {
-  color: white;
-  // border: 1px solid #4A4A4A;
-  padding: 8px 24px;
-  border-radius: 45px;
-  font-weight: lighter;
-  transition: opacity 0.3s ease;
-  background-color: $bx-blue;
+  // color: white;
+  // // border: 1px solid #4A4A4A;
+  // padding: 8px 24px;
+  // border-radius: 45px;
+  // font-weight: lighter;
+  // transition: opacity 0.3s ease;
+  // background-color: $bx-blue;
+  background: $bx-blue;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+  height: 50px;
+  width: 200px;
 }
 
 .btn-blue:hover {
   opacity: 1;
-  text-decoration: none;
   font-weight: bolder;
+  text-decoration: none;
   color: white;
+  background-color: #2c5066;
+;
 }
 
 .btn-red {
-  color: white;
-  padding: 8px 24px;
-  border-radius: 45px;
+  // color: white;
+  // padding: 8px 24px;
+  // border-radius: 45px;
+  // background: $bx-dark-red;
+  // font-weight: lighter;
   background: $bx-dark-red;
-  font-weight: lighter;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+  height: 50px;
+  width: 200px;
 }
 
 .btn-red:hover {
