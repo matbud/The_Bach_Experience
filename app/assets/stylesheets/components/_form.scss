@@ -1,12 +1,19 @@
+.form-event-bg {
+  background-image: linear-gradient(36deg, rgba(91,137,166,0.9) 5%, rgba(140,3,28,0.48923319327731096) 90%), image-url("agenda.png");
+  backdrop-filter: blur(0.5px);
+  background-size: cover;
+}
+
 .form-event-container {
-  background-color: $bx-background;
-  width: 800px;
+  background-color: white;
+  opacity: 1;
+  width: 950px;
   margin: 0 auto;
-  padding: 20px;
+  padding-top: 15px;
 }
 
 .form-event {
-  width: 700px;
+  width: 900px;
   margin: 0 auto;
 }
 
@@ -20,22 +27,39 @@
   justify-content: center;
   align-items: center;
   background-size: cover;
-  width: 100px;
-  height: 100px;
+  // width: 140px;
+  height: 150px;
   color: white;
 }
 
+.event_gender .form-check label {
+  width: 200px;
+}
+.event_theme .form-check label {
+  width: 150px;
+}
+
 .form-event [for=event_theme_fancy] {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("fancy.png"); //to be changed - test
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("fancy.png");
 }
 .form-event [for=event_theme_cosy] {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("cozy3.png"); //to be changed - test
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("cozy3.png");
 }
 .form-event [for=event_theme_wild] {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("wild2.png"); //to be changed - test
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("wild2.png");
 }
 .form-event [for=event_theme_nature] {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("breath.png"); //to be changed - test
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("breath.png");
+}
+
+.form-event [for=event_gender_women] {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://i.pinimg.com/564x/c2/d5/6a/c2d56aa943b1d0bf08a5af9c17ed6fdc.jpg");
+}
+.form-event [for=event_gender_men] {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://i.pinimg.com/474x/d6/40/aa/d640aa111128811b7f494d3dc5d58d4c.jpg");
+}
+.form-event [for=event_gender_mixed] {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), image-url("mixed.png");
 }
 
 .form-event [type=radio] { 
@@ -46,7 +70,8 @@
 }
 
 .form-event [type=radio]:checked + label {
-  outline: 3px solid $bx-blue;
+  outline: 3px solid $bx-red;
+  transform: scale(1.1);
 }
 
 
