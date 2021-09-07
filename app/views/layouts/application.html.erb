@@ -14,6 +14,10 @@
     <body class="show-body">
   <% elsif params[:controller] == 'events' && (params[:action] == 'new' || params[:action] == 'edit') %>
     <body class="form-event-bg">
+
+   <% elsif params[:controller] == 'events' && (params[:action] == 'summary') %>
+    <body class="review-body">
+
   <% else %>
     <body>
   <% end %>
