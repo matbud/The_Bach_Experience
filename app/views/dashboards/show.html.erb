@@ -1,73 +1,52 @@
-<h1 class="text-center py-3"> <%= current_user.first_name  %>'s Dashboard</h1>
 <div class="dashboard-container">
-  <div class="row dashboard-row">
-    <div class="col-4">
-      <%# <div class="col-4 m-1 p-2" style="background-color:grey"> %>
-      <br>
-      <div class="row d-flex justify-content-center" style="background-color:white">
-        <h3 class="text-center"> Summary Card</h3>
-        <%= render 'events/summary_card' %>
-        <%# <br>
-        <br>
-        <br> %>
-      </div>
-      <%# <br> %>
-      <div class="row d-flex justify-content-center mt-1" style="background-color:white">
-        <h3> Attendance </h3>
-        <br>
-        <table class="table">
-          <thead>
-            <tr>
-              <th></th>
-              <th class="px-3">Participant</th>
-              <th class="px-3">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @event.guests.each do |guest| %>
-              <tr>
-                <% if current_user == @event.user %>
-                  <% if guest.user.photo.attached? %>
-                    <%# Avatar picture %>
-                    <td><%= cl_image_tag guest.user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %></td>
-                  <% else %>
-                    <%# Default picture %>
-                    <td><%= image_tag "https://pbs.twimg.com/profile_images/1380119262950531074/sYlD_F3U_400x400.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %></td>
-                  <% end %>
-                  <td class="px-3"><%= guest.user.first_name %></td>
-                  <% if guest.status == "accepted" %>
-                    <td class="px-3"><%= "#{guest.status} ✔️" %></td>
-                  <% elsif guest.status == "rejected" %>
-                    <td class="px-3"><%= "#{guest.status} ❌" %></td>
-                  <% else %>
-                    <td class="px-3"><%= guest.status %></td>
-                  <% end %>
-                <% else %>
-                  <% if guest.user.photo.attached? %>
-                    <%# Avatar picture %>
-                    <%= cl_image_tag guest.user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-                  <% else %>
-                    <%# Default picture %>
-                    <%= image_tag "https://pbs.twimg.com/profile_images/1380119262950531074/sYlD_F3U_400x400.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-                  <% end %>
-                  <td class="px-3"><%= guest.user.first_name %></td>
-                  <td class="px-3"><%= guest.status %></td>
-                  <% if guest == current_user.guest %>
-                    <td class="px-3"><%= button_to "Accept",  accept_invitation_path(guest), method: 'patch', class:"btn-gradient" %> <%= button_to "Reject", reject_invitation_path(guest), method: 'patch', class:"btn-gradient" %></td>
-                  <% end %>
-                <% end %>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-      </div>
-      <br>
-      <div class="row d-flex justify-content-center" style="background-color:white">
-        <h3 class="text-center">Chat</h3>
-        <%= render 'chatbox' %>
+  <div class="dashboard-row">
+    <div class="col-lg-6">
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <h3 class="text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Summary
+              </h3>
+            </h2>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="dashboard-card">
+              <%= render 'events/summary_card' %>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <h3 class="collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Attendance
+              </h3>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="dashboard-card">
+              <%= render 'attendance' %>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <h3 class="collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Chat
+                </h3>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="dashboard-car">
+                <%= render 'chatbox' %>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="col-7 planning-table" style="background-color:white" data-available="<%= @event.available_dates.to_json %>" data-unavailable="<%= @event.unavailable_dates.to_json %>">
+    <div class="col-lg-6 planning-table" style="background-color:white" data-available="<%= @event.available_dates.to_json %>" data-unavailable="<%= @event.unavailable_dates.to_json %>">
       <%= calendar(start_date: @event.start_date.to_s, number_of_days: @number_of_day, events: @plannings, new_planning: @new_planning) do |date, plannings| %>
         <%= date %>
         <% plannings.each do |planning| %>
