@@ -37,7 +37,9 @@
                 <% else %>
                   <td class="px-3"><%= guest.user.first_name %></td>
                   <td class="px-3"><%= guest.status %></td>
-                  <td class="px-3"><%= button_to "Accept",  accept_invitation_path(guest), method: 'patch', class:"btn-gradient" %> <%= button_to "Reject", reject_invitation_path(guest), method: 'patch', class:"btn-gradient" %></td>
+                  <% if guest == current_user.guest %>
+                    <td class="px-3"><%= button_to "Accept",  accept_invitation_path(guest), method: 'patch', class:"btn-gradient" %> <%= button_to "Reject", reject_invitation_path(guest), method: 'patch', class:"btn-gradient" %></td>
+                  <% end %>
                 <% end %>
               </tr>
             <% end %>

@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-  has_many :events
+  has_one :event # to change
   has_many :messages
-  has_many :guests
+  has_one :guest # to change
   has_one_attached :photo
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
