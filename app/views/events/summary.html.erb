@@ -1,10 +1,12 @@
 <div class="container">
-    <div class="container-card mb-2">
+
+  <div class="container-card row summary-header mb-2">
     <h3 class="text-center p-4 mb-2"> Take a moment to review the details of your event <i class="fas fa-pen-alt"></i> </h3>
-   </div>
+  </div>
+
   <div class="row">
 
-    <div class="col-md-4">
+    <div class="container-card col-md-4">
       <%= render 'summary_card' %>
     </div>
 
@@ -13,10 +15,13 @@
     </div>
 
   </div>
-  <div class="container-card py-4">
+
+  <div class="container-card summary-header row py-4 mt-1">
+
     <div class="row">
       <%= link_to "Edit", edit_event_path(@event), class: "btn-red mx-5" %>
       <%= link_to "Confirm", confirm_event_path(@event), method: :patch, class: "btn-blue mx-5" %>
+
     </div>
   </div>
 

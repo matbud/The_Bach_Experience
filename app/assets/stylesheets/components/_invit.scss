@@ -1,0 +1,23 @@
+// EVENT FORM
+
+// .invit-form {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-around;
+// }
+
+
+
+
+.invitation-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+#img-invite {
+ position: cover;
+ max-width: 100%;
+height: auto;
+}

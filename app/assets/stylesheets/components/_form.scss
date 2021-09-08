@@ -7,13 +7,13 @@
 .form-event-container {
   background-color: white;
   opacity: 1;
-  width: 950px;
+  width: 100%;
   margin: 0 auto;
   padding-top: 15px;
 }
 
 .form-event {
-  width: 900px;
+  width: auto;
   margin: 0 auto;
 }
 
@@ -67,7 +67,7 @@
   background-image: image-url("mixed.png");
 }
 
-.form-event [type=radio] { 
+.form-event [type=radio] {
   position: absolute;
   opacity: 0;
   width: 0;
