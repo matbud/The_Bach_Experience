@@ -1,3 +1,5 @@
+<%= render 'change_mood', event: @event %>
+
 <div class="reco-background">
   <div class="container-card row mb-3 pt-3">
     <div class="col">
@@ -26,8 +28,9 @@
     </div>
 
     <div class="col-md-4 p-4">
-      <a class="btn-red" href="#">CHANGE MOOD</a>
+      <a class="btn-red" data-toggle="modal" data-target="#changeMoodModal">CHANGE MOOD</a>
     </div>
+
     <div class="col-md-4 p-4">
       <%= link_to 'I LOVE IT', confirm_recommendation_path(@event), method: :patch, class: "btn-blue" %>
     </div>
