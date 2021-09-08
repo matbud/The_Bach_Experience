@@ -8,9 +8,9 @@
           <small><%= planning.time unless planning.multi_days? %></small>
         </div>
         <div class="planning-commands">
-          <div data-toggle="modal" data-target="#staticBackdropEdit-<%= planning.id %>">
+          <a type="button" data-toggle="modal" data-target="#staticBackdropEdit-<%= planning.id %>">
             📝
-          </div>
+          </a>
           <div>
             <%= render 'plannings/edit', planning: planning %>
             <%= link_to "🗑️",
