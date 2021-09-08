@@ -1,0 +1,45 @@
+.change-mood .form-check label {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  // width: 140px;
+  height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  filter: saturate(80%) contrast(75%) brightness(90%);
+}
+
+.event_theme .form-check label {
+  width: 150px;
+}
+
+.change-mood [for=event_theme_fancy] {
+  background-image: image-url("fancy.png");
+}
+.change-mood [for=event_theme_cosy] {
+  background-image: image-url("cozy3.png");
+}
+.change-mood [for=event_theme_wild] {
+  background-image: image-url("wild2.png");
+}
+.change-mood [for=event_theme_nature] {
+  background-image: image-url("breath.png");
+}
+
+.change-mood [type=radio] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.change-mood [type=radio]:checked + label {
+  // outline: 3px solid $bx-red;
+  transform: scale(1.18);
+  filter: saturate(100%) contrast(100%) brightness(100%);
+}
