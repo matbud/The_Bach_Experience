@@ -7,13 +7,14 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
         <%= simple_form_for event,
             remote: true, 
             wrapper: :horizontal_form,
             wrapper_mappings: {
               radio_buttons: :horizontal_collection
             } do |f| %>
+                  <div class="modal-body">
+
           <div class="change-mood">
             <%= f.input_field :theme, as: :radio_buttons, collection: ['Wild', 'Nature', "Fancy", 'cozy'], wrapper: :horizontal_collection_inline, wrapper_html: { class: "d-flex justify-content-between mx-auto" } %>
           </div>
