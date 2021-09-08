@@ -8,7 +8,7 @@
       <%= image_tag "https://pbs.twimg.com/profile_images/1380119262950531074/sYlD_F3U_400x400.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
     <% end %>
     <span><%= message.user.first_name %></span>
-    <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+    <small><%= message.created_at.in_time_zone('Europe/Amsterdam').strftime("%a %b %e at %l:%M%p") %></small>
   </i>
   <p><%= message.content %></p>
 </div>

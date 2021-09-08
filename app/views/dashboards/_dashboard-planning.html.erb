@@ -1,0 +1,25 @@
+<div class="col-lg-6 planning-table" style="background-color:white" data-available="<%= @event.available_dates.to_json %>" data-unavailable="<%= @event.unavailable_dates.to_json %>">
+  <%= calendar(start_date: @event.start_date.to_s, number_of_days: @number_of_day, events: @plannings, new_planning: @new_planning) do |date, plannings| %>
+    <%= date %>
+    <% plannings.each do |planning| %>
+      <div class="planning-item">
+        <div class="planning-info">
+          <p><%= planning.name %></p>
+          <small><%= planning.time unless planning.multi_days? %></small>
+        </div>
+        <div class="planning-commands">
+          <div data-toggle="modal" data-target="#staticBackdropEdit-<%= planning.id %>">
+            📝
+          </div>
+          <div>
+            <%= render 'plannings/edit', planning: planning %>
+            <%= link_to "🗑️",
+                planning_path(planning),
+                method: :delete,
+                data: { confirm: "Are you sure?" } %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
