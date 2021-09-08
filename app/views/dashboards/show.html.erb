@@ -1,51 +1,53 @@
-<div class="dashboard-container">
-  <div class="dashboard-row">
-    <div class="col-lg-6">
-      <div class="accordion" id="accordionExample">
-        <div class="card">
-          <div class="card-header" id="headingOne">
-            <h2 class="mb-0">
-              <h3 class="collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <p class="dashboard-collapse-title">Summary   <i class="far fa-list-alt"></i></p>
-              </h3>
-            </h2>
-          </div>
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-            <div class="dashboard-card">
-              <%= render 'events/summary_card' %>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header" id="headingTwo">
-            <h2 class="mb-0">
-              <h3 class="collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                <p class="dashboard-collapse-title">Attendance   <i class="fas fa-glass-cheers"></i></p>
-              </h3>
-            </h2>
-          </div>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-            <div class="dashboard-card">
-              <%= render 'attendance' %>
-            </div>
-          </div>
+<div class="container">
+  <div class="dashboard-container">
+    <div class="dashboard-row">
+      <div class="col-lg-6">
+        <div class="accordion" id="accordionExample">
           <div class="card">
-            <div class="card-header" id="headingThree">
+            <div class="card-header" id="headingOne">
               <h2 class="mb-0">
-                <h3 class="collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                  <p class="dashboard-collapse-title">Chat   <i class="far fa-comments"></i></p>
+                <h3 class="collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <p class="dashboard-collapse-title">Summary   <i class="far fa-list-alt"></i></p>
                 </h3>
               </h2>
             </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-              <div class="dashboard-car">
-                <%= render 'chatbox' %>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="dashboard-card">
+                <%= render 'events/summary_card' %>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <h3 class="collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                  <p class="dashboard-collapse-title">Attendance   <i class="fas fa-glass-cheers"></i></p>
+                </h3>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="dashboard-card">
+                <%= render 'attendance' %>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <h3 class="collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                    <p class="dashboard-collapse-title">Chat   <i class="far fa-comments"></i></p>
+                  </h3>
+                </h2>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="dashboard-car">
+                  <%= render 'chatbox' %>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <%= render 'dashboard-planning' %>
     </div>
-    <%= render 'dashboard-planning' %>
   </div>
 </div>
