@@ -1,10 +1,20 @@
-.navbar {
+// new code ________________________________
+
+.navbar-logo {
   display: flex;
-  align-items: center;
   height: 85px;
-  position: relative;
+  justify-content: center;
 }
 
+.nav-left {
+  position: absolute;
+  right: 0 ;
+  top: 10px;
+  display: flex;
+}
+
+
+// old code ________________________________
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
@@ -14,12 +24,8 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-logo .navbar-brand img {
   width: 125px;
-  justify-content: center;
-  position: absolute;
-  top: 10px;
-  left: 625px;
 }
 
 .bnt-actioncall-navbar {
@@ -36,4 +42,17 @@
   align-items: center;
   height: 55px;
   position: relative;
+}
+
+
+.toggle-menus-lines {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    margin: -12px 0 0;
+    width: 34px;
+    height: 24px;
+    transition: .5s ease-in-out;
+
 }
