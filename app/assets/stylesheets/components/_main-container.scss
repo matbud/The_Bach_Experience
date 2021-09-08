@@ -7,6 +7,8 @@
   padding: 50px 150px;
   margin: 0 auto; /* height of your footer */
   min-height: 80vh;
+  align-items: center; //new
+  display: flex; //new
 }
 
 html,
