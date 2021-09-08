@@ -45,7 +45,7 @@ const initFlatpickr = () => {
         endDateInputPlanning.disabled = false;
       },
     });
-    
+
     const endDateCalendar = flatpickr(endDateInputPlanning, {
       enable: [availableDates],
       enableTime: true,

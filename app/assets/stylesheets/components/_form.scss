@@ -5,15 +5,13 @@
 }
 
 .form-event-container {
-  background-color: white;
-  opacity: 1;
-  width: 100%;
-  margin: 0 auto;
-  padding-top: 15px;
+  background-color: rgba(255, 255, 255, 0.85);
+  margin: 40px auto;
+  padding: 15px;
 }
 
 .form-event {
-  width: auto;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -38,10 +36,10 @@
 }
 
 .event_gender .form-check label {
-  width: 200px;
+  width: 150px;
 }
 .event_theme .form-check label {
-  width: 150px;
+  width: 130px;
 }
 
 .form-event [for=event_theme_fancy] {
