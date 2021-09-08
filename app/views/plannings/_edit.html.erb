@@ -16,8 +16,10 @@
             <%= f.input :start_time, as: :string %>
             <%= f.input :end_time, as: :string %>
             <hr>
-            <%= f.button :submit, class:"btn-blue" %>
-            <button type="button" class="btn-red" data-dismiss="modal">Close</button>
+            <%# <%= f.button :submit, class:"btn-blue" %>
+            <%= f.submit "Edit event", :class => "btn-blue" %>
+            <%# <%= f.button :submit, class:"btn-blue" %>
+            <button type="button" class="btn-blue" data-dismiss="modal">Close</button>
             <%# <%= f.submit %>
           <% end %>
         </div>
