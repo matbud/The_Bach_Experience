@@ -74,12 +74,12 @@ Hotel.create(name: "THIS HO(S)TEL", location: "Amsterdam", address: "14 Warmoess
 # hotel6.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # hotel6.save
 
-Hotel.create(name: "Hôtel Sunny", location: "Paris", address: "48, Boulevard du Port Royal, 5e arr., 75005 Paris, France", description: "This family hotel is located in the 5km outside of Paris. It offers soundproofed rooms with flat-screen satellite TV and private bathroom.", theme:"nature", price_per_night: 60, photo_name: 'hotel6.png')
+Hotel.create(name: "Hôtel Sunny", location: "Paris", address: "48, Boulevard du Port Royal, 5e arr., 75005 Paris, France", description: "This family hotel is located 5km outside of Paris. It offers soundproofed rooms with flat-screen satellite TV and private bathroom.", theme:"nature", price_per_night: 60, photo_name: 'hotel6.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # hotel7.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # hotel7.save
 
-Hotel.create(name: "Hôtel Magellan", location: "Paris", address: "17-19 Rue Jean Baptiste Dumas, 17e arr., 75017 Paris, France", description: "Located a 15-minute walk from The Arc de Triomphe and Park Monceau, the Hôtel Magellan has a lounge bar and a garden. With a 24-hour front desk desk, free Wi-Fi is available throughout the hotel.", theme:"fancy, cozy", price_per_night: 80, photo_name: 'hotel7.png')
+Hotel.create(name: "Hôtel Magellan", location: "Paris", address: "17-19 Rue Jean Baptiste Dumas, 17e arr., 75017 Paris, France", description: "Located in a 15-minute walk from The Arc de Triomphe and Park Monceau, the Hôtel Magellan has a lounge bar and a garden. With a 24-hour front desk desk, free Wi-Fi is available throughout the hotel.", theme:"fancy, cozy", price_per_night: 80, photo_name: 'hotel7.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # hotel8.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # hotel8.save
