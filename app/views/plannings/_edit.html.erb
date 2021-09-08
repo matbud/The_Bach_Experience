@@ -11,10 +11,10 @@
       </div>
       <div class="modal-body">
         <div class='form-event-new'>
-          <%= simple_form_for planning do |f| %>
+          <%= simple_form_for planning, remote: true do |f| %>
             <%= f.input :name, as: :string %>
-            <%= f.input :start_time, as: :string %>
-            <%= f.input :end_time, as: :string %>
+            <%= f.input :start_time, as: :string, input_html: { class: "edit_planning_start_date" } %>
+            <%= f.input :end_time, as: :string, input_html: { class: "edit_planning_end_date" } %>
             <hr>
             <%# <%= f.button :submit, class:"btn-blue" %>
             <%= f.submit "Edit event", :class => "btn-blue" %>
