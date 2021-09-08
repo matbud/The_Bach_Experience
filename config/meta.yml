@@ -1,5 +1,5 @@
-meta_product_name: "Product Name"
-meta_title: "Product name - Product tagline"
-meta_description: "Relevant description"
+meta_product_name: "The Bach Experience"
+meta_title: "The Bach Experience - Organize your unique Bachelor(ette) Party"
+meta_description: "Have an unforgettable experience - choose your mood, budget & location and The Bach Experience will prepare a special event just for you!"
 meta_image: "cover.png" # should exist in `app/assets/images/`
 twitter_account: "@product_twitter_account"   # required for Twitter Cards
