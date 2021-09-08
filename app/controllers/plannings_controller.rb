@@ -22,14 +22,14 @@ class PlanningsController < ApplicationController
     @new_planning = Planning.find(params[:id])
     @new_planning.update(planning_params)
     authorize @new_planning
-    redirect_to dashboard_path(current_user.events.first)
+    redirect_to dashboard_path(current_user.event)
   end
 
   def destroy
     @new_planning = Planning.find(params[:id])
     @new_planning.destroy
     authorize @new_planning
-    redirect_to dashboard_path(current_user.events.first)
+    redirect_to dashboard_path(current_user.event)
   end
 
   private
