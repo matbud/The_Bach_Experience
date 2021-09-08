@@ -29,12 +29,13 @@ const initFlatpickr = () => {
     });
   } else if (startDateInputPlanning && endDateInputPlanning) {
     const availableDates = JSON.parse(document.querySelector('.planning-table').dataset.available)
-    const unavailableDates = JSON.parse(document.querySelector('.planning-table').dataset.unavailable)
+    // const unavailableDates = JSON.parse(document.querySelector('.planning-table').dataset.unavailable) // doesn't work
     const startDateCalendar = flatpickr(startDateInputPlanning, {
       enableTime: true,
       dateFormat: "Y-m-d H:i",
       enable: [availableDates],
-      disable: unavailableDates, // doesn't work for now
+      // doesn't work
+      // disable: unavailableDates, 
       onChange: function (selectedDates, selectedDate) {
         if (selectedDate === "") {
           endDateInputPlanning.disabled = true;
@@ -47,6 +48,7 @@ const initFlatpickr = () => {
     console.log(startDateCalendar)
     
     const endDateCalendar = flatpickr(endDateInputPlanning, {
+      enable: [availableDates],
       enableTime: true,
       dateFormat: "Y-m-d H:i"
     });
