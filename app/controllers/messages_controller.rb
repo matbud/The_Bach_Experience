@@ -5,15 +5,15 @@ class MessagesController < ApplicationController
     @message.event = @event
     @message.user = current_user
     authorize @message
-    if @message.save
-      redirect_to dashboard_path(@event, anchor: "message-#{@message.id}")
+    @message.save
+      # redirect_to dashboard_path(@event, anchor: "message-#{@message.id}")
+
       # redirect_to dashboard_path(current_user.events.first, anchor: "message-#{@message.id}")
     # else
     #   render "dashboard/show"
-    end
     EventChannel.broadcast_to(
       @event,
-      render_to_string(partial: "message", locals: { message: @message })
+      {message: render_to_string(partial: "message", locals: { message: @message }), current_user_id: current_user.id}
     )
   end
 
