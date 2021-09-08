@@ -45,7 +45,7 @@ const initFlatpickr = () => {
       },
     });
     console.log(startDateCalendar)
-    
+
     const endDateCalendar = flatpickr(endDateInputPlanning, {
       enableTime: true,
       dateFormat: "Y-m-d H:i"

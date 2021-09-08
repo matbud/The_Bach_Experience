@@ -37,9 +37,9 @@ file = URI.open('https://res.cloudinary.com/dxessq1na/image/upload/v1630754019/u
 user4.photo.attach(io: file, filename: 'u4.jpg', content_type: 'image/jpg')
 user4.save
 
-User.create(email: "margo@gmail.com", password: '123456', first_name: "Margo", last_name: "Tinawi", admin: false, photo: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_600,w_600/v1511364228/qfpwdtmhpnipfjn9cox3.jpg")
-User.create(email: "jane@gmail.com", password: '123456', first_name: "Jane", last_name: "Perrin", admin: false, photo: "https://pbs.twimg.com/profile_images/853292276600143872/xUi4uIIM.jpg")
-User.create(email: "caro@gmail.com", password: '123456', first_name: "Caro", last_name: "Sokolowski", admin: false, photo: "https://pkimgcdn.peekyou.com/6a288adc8aa2d39c4ad1c14b906498b6.jpeg")
+User.create(email: 'margo@gmail.com', password: '1223456', first_name: 'Margo', last_name: 'Tinawi', admin: false, photo: 'https://avatars.githubusercontent.com/u/10155660?v=4')
+User.create(email: 'jane@gmail.com', password: '1232456', first_name: 'Jane', last_name: 'Perrin', admin: false, photo: 'https://pbs.twimg.com/profile_images/853292276600143872/xUi4uIIM.jpg')
+User.create(email: 'caro@gmail.com', password: '1243456', first_name: 'Caro', last_name: 'Sokolowski', admin: false, photo: 'https://pkimgcdn.peekyou.com/6a288adc8aa2d39c4ad1c14b906498b6.jpeg')
 
 puts "creating hotels"
 

@@ -1,6 +1,6 @@
 <div class="container mt-4">
   <div class='form-event'>
-    <%= simple_form_for @event, 
+    <%= simple_form_for @event,
     wrapper: :horizontal_form,
     wrapper_mappings: {
     boolean:       :horizontal_boolean,
@@ -12,15 +12,15 @@
     range:         :horizontal_range,
     time:          :horizontal_multi_select,
     # select:        :horizontal_select
-  } do |f| %>
-      <%= f.input :name, placeholder: "Mel's bachelorette party" %>
+    } do |f| %>
+      <%= f.input :name, placeholder: "Mat's Bachelor Party" %>
       <%= f.input :number_of_guests, label: "No. of guests", input_html: { min: 1 }, input_html: { placeholder: "10" } %>
       <%= f.input :location, collection: ['Amsterdam', 'Paris', 'Ibiza', 'Brussels'], input_html: { placeholder: "Amsterdam" } %>
       <div class="row form-group">
         <div class="col-3 mx-0">
           <%= f.label :start_date, label: "Date"%>
         </div>
-        <div class="col-9 mx-0 d-flex">
+        <div class="col-9">
           <%= f.input_field :start_date, as: :string, placeholder: "1-10-2021", class: 'form-control' %>
           <%= f.input_field :end_date, as: :string, label: false, placeholder: "3-10-2021", class: 'form-control' %>
         </div>
@@ -30,7 +30,7 @@
         <div class="col-3 d-flex align-items-center">
           <%= f.label :gender %>
         </div>
-        <div class="col-9">
+        <div class="col-lg-9">
           <%= f.input_field :gender, as: :radio_buttons, collection: ['Women', "Mixed", 'Men'], wrapper: :horizontal_collection_inline, wrapper_html: { class: "d-flex justify-content-between" } %>
         </div>
       </div>
@@ -38,7 +38,7 @@
         <div class="col-3 d-flex align-items-center">
           <%= f.label :theme %>
         </div>
-        <div class="col-9">
+        <div class="col-lg-9">
           <%= f.input_field :theme, as: :radio_buttons, collection: ['Wild', 'Nature', "Fancy", 'cozy'], wrapper: :horizontal_collection_inline, wrapper_html: { class: "d-flex justify-content-between" } %>
         </div>
       </div>
