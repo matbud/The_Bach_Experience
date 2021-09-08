@@ -56,7 +56,7 @@ const initFlatpickr = () => {
     const editPlanningEndInput = document.querySelectorAll('.edit_planning_end_date')
     if (editPlanningStartInput && editPlanningEndInput) {
         for (let i = 0; i < editPlanningStartInput.length; i += 1) {
-        const startDateCalendar = flatpickr(editPlanningStartInput, {
+        const startDateCalendar = flatpickr(editPlanningStartInput[i], {
           enableTime: true,
           dateFormat: "Y-m-d H:i",
           enable: [availableDates],
@@ -72,7 +72,7 @@ const initFlatpickr = () => {
           },
         });
         
-        const endDateCalendar = flatpickr(editPlanningEndInput, {
+        const endDateCalendar = flatpickr(editPlanningEndInput[i], {
           enable: [availableDates],
           enableTime: true,
           dateFormat: "Y-m-d H:i"
