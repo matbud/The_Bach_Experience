@@ -29,12 +29,13 @@ const initFlatpickr = () => {
     });
   } else if (startDateInputPlanning && endDateInputPlanning) {
     const availableDates = JSON.parse(document.querySelector('.planning-table').dataset.available)
-    const unavailableDates = JSON.parse(document.querySelector('.planning-table').dataset.unavailable)
+    // const unavailableDates = JSON.parse(document.querySelector('.planning-table').dataset.unavailable) // doesn't work
     const startDateCalendar = flatpickr(startDateInputPlanning, {
       enableTime: true,
       dateFormat: "Y-m-d H:i",
       enable: [availableDates],
-      disable: unavailableDates, // doesn't work for now
+      // doesn't work
+      // disable: unavailableDates, 
       onChange: function (selectedDates, selectedDate) {
         if (selectedDate === "") {
           endDateInputPlanning.disabled = true;
@@ -44,12 +45,40 @@ const initFlatpickr = () => {
         endDateInputPlanning.disabled = false;
       },
     });
-    console.log(startDateCalendar)
 
     const endDateCalendar = flatpickr(endDateInputPlanning, {
+      enable: [availableDates],
       enableTime: true,
       dateFormat: "Y-m-d H:i"
     });
+
+    const editPlanningStartInput = document.querySelectorAll('.edit_planning_start_date')
+    const editPlanningEndInput = document.querySelectorAll('.edit_planning_end_date')
+    if (editPlanningStartInput && editPlanningEndInput) {
+        for (let i = 0; i < editPlanningStartInput.length; i += 1) {
+        const startDateCalendar = flatpickr(editPlanningStartInput[i], {
+          enableTime: true,
+          dateFormat: "Y-m-d H:i",
+          enable: [availableDates],
+          // doesn't work
+          // disable: unavailableDates, 
+          onChange: function (selectedDates, selectedDate) {
+            if (selectedDate === "") {
+              endDateInputPlanning.disabled = true;
+            }
+            let minDate = selectedDates[0];
+            endDateCalendar.set("minDate", minDate);
+            endDateInputPlanning.disabled = false;
+          },
+        });
+        
+        const endDateCalendar = flatpickr(editPlanningEndInput[i], {
+          enable: [availableDates],
+          enableTime: true,
+          dateFormat: "Y-m-d H:i"
+        });
+      }
+    }
   }
 };
 

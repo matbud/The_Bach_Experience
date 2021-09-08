@@ -37,9 +37,20 @@ file = URI.open('https://res.cloudinary.com/dxessq1na/image/upload/v1630754019/u
 user4.photo.attach(io: file, filename: 'u4.jpg', content_type: 'image/jpg')
 user4.save
 
-User.create(email: 'margo@gmail.com', password: '1223456', first_name: 'Margo', last_name: 'Tinawi', admin: false, photo: 'https://avatars.githubusercontent.com/u/10155660?v=4')
-User.create(email: 'jane@gmail.com', password: '1232456', first_name: 'Jane', last_name: 'Perrin', admin: false, photo: 'https://pbs.twimg.com/profile_images/853292276600143872/xUi4uIIM.jpg')
-User.create(email: 'caro@gmail.com', password: '1243456', first_name: 'Caro', last_name: 'Sokolowski', admin: false, photo: 'https://pkimgcdn.peekyou.com/6a288adc8aa2d39c4ad1c14b906498b6.jpeg')
+user5 = User.new(email: "margo@gmail.com", password: '123456', first_name: "Margo", last_name: "Tinawi", admin: false)
+file = URI.open('https://res.cloudinary.com/dxessq1na/image/upload/v1631114817/u5_o4ardk.jpg')
+user5.photo.attach(io: file, filename: 'u5.jpg', content_type: 'image/jpg')
+user5.save
+
+user6 = User.new(email: "jane@gmail.com", password: '123456', first_name: "Jane", last_name: "Perrin", admin: false)
+file = URI.open('https://res.cloudinary.com/dxessq1na/image/upload/v1631114817/u6_bzhben.jpg')
+user6.photo.attach(io: file, filename: 'u6.jpg', content_type: 'image/jpg')
+user6.save
+
+user7 = User.new(email: "caro@gmail.com", password: '123456', first_name: "Caro", last_name: "Sokolowski", admin: false)
+file = URI.open('https://res.cloudinary.com/dxessq1na/image/upload/v1631114817/u7_gesn9p.jpg')
+user7.photo.attach(io: file, filename: 'u7.jpg', content_type: 'image/jpg')
+user7.save
 
 puts "creating hotels"
 
@@ -78,12 +89,12 @@ Hotel.create(name: "THIS HO(S)TEL", location: "Amsterdam", address: "14 Warmoess
 # hotel6.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # hotel6.save
 
-Hotel.create(name: "Hôtel Sunny", location: "Paris", address: "48, Boulevard du Port Royal, 5e arr., 75005 Paris, France", description: "This family hotel is located in the 5km outside of Paris. It offers soundproofed rooms with flat-screen satellite TV and private bathroom.", theme:"nature", price_per_night: 60, photo_name: 'hotel6.png')
+Hotel.create(name: "Hôtel Sunny", location: "Paris", address: "48, Boulevard du Port Royal, 5e arr., 75005 Paris, France", description: "This family hotel is located 5km outside of Paris. It offers soundproofed rooms with flat-screen satellite TV and private bathroom.", theme:"nature", price_per_night: 60, photo_name: 'hotel6.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # hotel7.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # hotel7.save
 
-Hotel.create(name: "Hôtel Magellan", location: "Paris", address: "17-19 Rue Jean Baptiste Dumas, 17e arr., 75017 Paris, France", description: "Located a 15-minute walk from The Arc de Triomphe and Park Monceau, the Hôtel Magellan has a lounge bar and a garden. With a 24-hour front desk desk, free Wi-Fi is available throughout the hotel.", theme:"fancy, cozy", price_per_night: 80, photo_name: 'hotel7.png')
+Hotel.create(name: "Hôtel Magellan", location: "Paris", address: "17-19 Rue Jean Baptiste Dumas, 17e arr., 75017 Paris, France", description: "Located in a 15-minute walk from The Arc de Triomphe and Park Monceau, the Hôtel Magellan has a lounge bar and a garden. With a 24-hour front desk desk, free Wi-Fi is available throughout the hotel.", theme:"fancy, cozy", price_per_night: 80, photo_name: 'hotel7.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # hotel8.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # hotel8.save
@@ -93,12 +104,12 @@ Hotel.create(name: "Paris Art Hotel Quartier Latin", location: "Paris", address:
 # hotel9.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # hotel9.save
 
-Hotel.create(name: "Hotel Rural & Spa Can Curreu", location: "Ibiza", address: "Ctra San Carlos, km 12, 07850 Sant Carles de Peralta, Espagne", description: "Located in the village of San Carlos, this luxurious 5-star hotel and spa resort includes an indoor and outdoor swimming pool, a gym and equestrian center. It includes free Wi-Fi.", theme:"cozy, nature", price_per_night: 60, photo_name: 'hotel9.png')
+Hotel.create(name: "Hotel Rural & Spa Can Curreu", location: "Ibiza", address: "Ctra San Carlos, km 12, 07850 Sant Carles de Peralta, Espagne", description: "Located in the village of San Carlos, this luxurious 5-star hotel and spa resort includes an indoor and outdoor swimming pool, a gym and equestrian center. It includes free Wi-Fi.", theme:"cosy, nature", price_per_night: 60, photo_name: 'hotel9.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # hotel10.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # hotel10.save
 
-Hotel.create(name: "Paradiso Ibiza Art Hotel", location: "Ibiza", address: "Playa de Cala Vadella, 07830 Cala Vadella, Espagne", description: "Art comes to life in our most media-friendly hotel. An art gallery curated by ADDA GALLERY PARIS, exhibitions in the lobby, a tattoo studio, the colour pink.", theme:"cozy, wild, fancy", price_per_night: 80, photo_name: 'hotel10.png')
+Hotel.create(name: "Paradiso Ibiza Art Hotel", location: "Ibiza", address: "Playa de Cala Vadella, 07830 Cala Vadella, Espagne", description: "Art comes to life in our most media-friendly hotel. An art gallery curated by ADDA GALLERY PARIS, exhibitions in the lobby, a tattoo studio, the colour pink.", theme:"cosy, wild, fancy", price_per_night: 80, photo_name: 'hotel10.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # hotel11.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # hotel11.save
@@ -110,7 +121,7 @@ Hotel.create(name: "Ibiza Ushuaïa Beach Hotel", location: "Ibiza", address: "Pe
 
 puts "creating activities"
 
-Activity.create(name: "Nails treat", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Very nice place to het your nails done", theme:"cozy, fancy", gender:"women", price: 20, photo_name: "nails.png")
+Activity.create(name: "Nails treat", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Very nice place to get your nails done", theme:"cozy, fancy", gender:"women", price: 20, photo_name: "nails.png")
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity1.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity1.save
@@ -130,22 +141,22 @@ Activity.create(name: "Comedy show", address: "Brussels, Paris, Ibiza, Amsterdam
 # activity4.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity4.save
 
-Activity.create(name: "Whisky tasting", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Best opportunity some high level whisky from the best brand and local", theme:"cozy, fancy", gender:"men", price: 30, photo_name: 'whisky.png')
+Activity.create(name: "Whisky tasting", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Get to taste rare whisky from the best local and international brands", theme:"cozy, fancy", gender:"men", price: 30, photo_name: 'whisky.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity5.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity5.save
 
-Activity.create(name: "Spa", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Nice Spa activities, included Jacuzzi, Massage, Hamam..", theme:"fancy, cozy", gender:"women", price: 40, photo_name: 'spa.png')
+Activity.create(name: "Spa", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Nice Spa activities, including Jacuzzi, Massage, Hammam and Sauna.", theme:"fancy, cozy", gender:"women", price: 40, photo_name: 'spa.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity6.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity6.save
 
-Activity.create(name: "Photoshoot", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Have a professional photographer to immortalize the moment with some creative pictures", theme:"fancy", gender:"women", price: 30, photo_name: 'photoshoot.png')
+Activity.create(name: "Photoshoot", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Have a professional photographer immortalize your best moments with some creative pictures", theme:"fancy", gender:"women", price: 30, photo_name: 'photoshoot.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity7.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity7.save
 
-Activity.create(name: "Mimosa Brunch", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Delicious Brunch, included pancakes, Mimosa à gogo, open bar", theme:"fancy, cozy", gender:"women", price: 25, photo_name: 'brunch.png')
+Activity.create(name: "Mimosa Brunch", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Delicious Brunch, including pancakes, Mimosa à gogo and open bar", theme:"fancy, cozy", gender:"women", price: 25, photo_name: 'brunch.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity8.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity8.save
@@ -155,17 +166,17 @@ Activity.create(name: "Wine tasting", address: "Brussels, Paris, Ibiza, Amsterda
 # activity9.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity9.save
 
-Activity.create(name: "Cocktail Class", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Learn how to create the perfect Cosmopolitan or any coktail following by a degustation", theme:"fancy", gender:"mixed", price: 35, photo_name: 'coktail.png')
+Activity.create(name: "Cocktail Class", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Learn how to create the perfect Cosmopolitan or any coktail, followed by a degustation", theme:"fancy", gender:"mixed", price: 35, photo_name: 'coktail.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity10.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity10.save
 
-Activity.create(name: "Casino", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Make some money while enjoying a free open bar.", theme:"fancy, wild", gender:"mixed", price: 15, photo_name: 'casino.png')
+Activity.create(name: "Casino", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Make some money while enjoying free open bar.", theme:"fancy, wild", gender:"mixed", price: 15, photo_name: 'casino.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity11.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity11.save
 
-Activity.create(name: "F1 racing", address: "Brussels, Paris, Ibiza, Amsterdam", description: "During two hours you will be able to drive test a F1 cars.", theme:"fancy", gender:"men", price: 50, photo_name: 'f1.png')
+Activity.create(name: "F1 racing", address: "Brussels, Paris, Ibiza, Amsterdam", description: "During two hours you will be able to drive test F1 cars.", theme:"fancy", gender:"men", price: 50, photo_name: 'f1.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity12.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity12.save
@@ -180,17 +191,17 @@ Activity.create(name: "Pole Dancing class", address: "Brussels, Paris, Ibiza, Am
 # activity14.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity14.save
 
-Activity.create(name: "Open bar boat trip", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Enjoy a 2h boat tour with an open bar discovering the city", theme:"wild", gender:"mixed", price: 25, photo_name: 'boat.png')
+Activity.create(name: "Open bar boat trip", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Discover the city with a 2h boat tour (open bar included)", theme:"wild", gender:"mixed", price: 25, photo_name: 'boat.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity15.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity15.save
 
-Activity.create(name: "Strip dancer", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Enjoy a nice night with some really skills dancers", theme:"wild", gender:"women", price: 30, photo_name: 'strip.png')
+Activity.create(name: "Strip dancer", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Enjoy a nice night with some really skilled dancers", theme:"wild", gender:"women", price: 30, photo_name: 'strip.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity15.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity15.save
 
-Activity.create(name: "Pub crawl", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Visit the best local brewry and try out some amazing beers", theme:"wild", gender:"mixed", price: 10, photo_name: 'pub.png')
+Activity.create(name: "Pub crawl", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Visit the best local brewery and try out some amazing beers", theme:"wild", gender:"mixed", price: 10, photo_name: 'pub.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity16.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity16.save
@@ -200,12 +211,12 @@ Activity.create(name: "Party bus", address: "Brussels, Paris, Ibiza, Amsterdam",
 # activity17.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity17.save
 
-Activity.create(name: "Escape room", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Try to resolve all the mystery to a thmed escape room", theme:"wild", gender:"mixed", price: 10, photo_name: 'paint.png')
+Activity.create(name: "Escape room", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Try to resolve all the mystery of the escape room", theme:"wild", gender:"mixed", price: 10, photo_name: 'paint.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity18.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity18.save
 
-Activity.create(name: "Shooting Range", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Become a great hunter with some guns lessons", theme:"wild", gender:"men", price: 20, photo_name: 'shoot.png')
+Activity.create(name: "Shooting Range", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Become a great hunter with these great guns lessons", theme:"wild", gender:"men", price: 20, photo_name: 'shoot.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity19.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity19.save
@@ -215,12 +226,12 @@ Activity.create(name: "Paintball", address: "Brussels, Paris, Ibiza, Amsterdam",
 # activity20.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity20.save
 
-Activity.create(name: "Zero Gravity Flight", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Discovering how you will feel if you were without gravity", theme:"wild, fancy", gender:"men", price: 30, photo_name: 'flight.png')
+Activity.create(name: "Zero Gravity Flight", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Discover how you feel without gravity", theme:"wild, fancy", gender:"men", price: 30, photo_name: 'flight.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity21.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity21.save
 
-Activity.create(name: "Yoga", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Have a certificate yoga instructor for a one hour and half Vinyassa Yoga ", theme:"nature", gender:"women, cozy", price: 10, photo_name: 'yoga.png')
+Activity.create(name: "Yoga", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Have a certificate yoga instructor for one hour and a half Vinyassa Yoga ", theme:"nature", gender:"women, cozy", price: 10, photo_name: 'yoga.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity22.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity22.save
@@ -230,17 +241,17 @@ Activity.create(name: "Meditation", address: "Brussels, Paris, Ibiza, Amsterdam"
 # activity23.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity23.save
 
-Activity.create(name: "Hiking", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Discover a wild outside and some wonderful landscape", theme:"nature", gender:"mixed", price: 10, photo_name: 'hike.png')
+Activity.create(name: "Hiking", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Discover a wild outside park and some wonderful landscape", theme:"nature", gender:"mixed", price: 10, photo_name: 'hike.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity24.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity24.save
 
-Activity.create(name: "Horse riding", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Reconnect with nature and animals for a nice balade with horse.", theme:"nature", gender:"mixed", price: 20, photo_name: 'horse.png')
+Activity.create(name: "Horse riding", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Reconnect with nature during a nice balade with a horse.", theme:"nature", gender:"mixed", price: 20, photo_name: 'horse.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity25.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity25.save
 
-Activity.create(name: "Treetop adventure course", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Enjoy a fun attraction parks holding in the trees", theme:"nature", gender:"mixed", price: 20, photo_name: 'accro.png')
+Activity.create(name: "Treetop adventure course", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Enjoy a fun attraction park holding in the trees", theme:"nature", gender:"mixed", price: 20, photo_name: 'accro.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity26.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity26.save
@@ -250,7 +261,7 @@ Activity.create(name: "Kayak", address: "Brussels, Paris, Ibiza, Amsterdam", des
 # activity27.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity27.save
 
-Activity.create(name: "Rockclimbing", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Perfect acitvity for outside need wants to use your energy.", theme:"nature", gender:"mixed", price: 60, photo_name: 'rock.png')
+Activity.create(name: "Rockclimbing", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Want to test your balance, try rockclimbing with your friends", theme:"nature", gender:"mixed", price: 60, photo_name: 'rock.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity28.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity28.save
@@ -260,7 +271,7 @@ Activity.create(name: "Bull riding", address: "Brussels, Paris, Ibiza, Amsterdam
 # activity29.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity29.save
 
-Activity.create(name: "Biking", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Discover the countryside by bikes, a nice acitvity in group.", theme:"nature", gender:"men", price: 30, photo_name: 'bike.png')
+Activity.create(name: "Biking", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Discover the countryside by bike with your friends", theme:"nature", gender:"men", price: 30, photo_name: 'bike.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity30.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity30.save
