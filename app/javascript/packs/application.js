@@ -36,3 +36,5 @@ document.addEventListener("turbolinks:load", () => {
   initFlatpickr(); // calendar for form
   initEventCable(); // chatbox automatic refresh
 });
+
+import "controllers"

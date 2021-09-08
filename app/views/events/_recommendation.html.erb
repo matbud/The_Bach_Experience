@@ -5,16 +5,16 @@
     <div class="col-lg-6 text-center mb-2 pb-4">
       <h4> H O T E L</h4>
         <div class="hotel-card">
-          <%= image_tag @recommendation.hotel.photo_name %>
+          <%= image_tag recommendation.hotel.photo_name %>
           <div class="hotel-card-infos">
-              <h2><%= @recommendation.hotel.name %></h2>
-              <p><%= @recommendation.hotel.description %></p>
+              <h2><%= recommendation.hotel.name %></h2>
+              <p><%= recommendation.hotel.description %></p>
               <div class="row">
-                <p class="col-8">📍<em><%= @recommendation.hotel.address %></em></p>
+                <p class="col-8">📍<em><%= recommendation.hotel.address %></em></p>
 
                 <div class="col-2 hotel-price">
                   <div class="row">
-                    <h3><%= "#{ @recommendation.hotel.price_per_night}€" %></h3>
+                    <h3><%= "#{ recommendation.hotel.price_per_night}€" %></h3>
                     <p id="per-night">/ per night</p>
                   </div>
                 </div>
@@ -26,7 +26,7 @@
     <div class="col-lg-6 text-center">
       <h4> A C T I V I T I E S</h4>
       <div class="card-activities px-3">
-        <% @recommendation.recommended_activities.each do |activity| %>
+        <% recommendation.recommended_activities.each do |activity| %>
 
         <div class="card-activity">
           <%= image_tag activity.activity.photo_name %>

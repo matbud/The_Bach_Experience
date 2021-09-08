@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [ :choose_recommendation, :confirm_recommendation, :summary, :confirm_event, :edit, :update, :invite]
+  before_action :set_event, only: [ :choose_recommendation, :reload_recommendation, :confirm_recommendation, :summary, :confirm_event, :edit, :update, :invite]
   BUDGET_PROPORTIONS = {
     hotel: 0.4,
     activity: 0.2
@@ -29,6 +29,12 @@ class EventsController < ApplicationController
   def choose_recommendation
     authorize @event
     generate_recommendation
+  end
+
+  def reload_recommendation
+    authorize @event
+    generate_recommendation
+    render json: { partial: render_to_string(partial: 'recommendation', locals: { recommendation: @recommendation }) }
   end
 
   def confirm_recommendation
@@ -88,7 +94,6 @@ class EventsController < ApplicationController
     @recommendation = Recommendation.create(hotel: @hotel, event: @event)
 
     # 3. choose valid activites
-    # TODO: change how the activities are selected based on theme etc.
     @valid_activities = Activity.all
     generate_recommended_activities
   end

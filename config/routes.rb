@@ -8,6 +8,7 @@ Rails.application.routes.draw do
      resources :messages, only: :create
   end
   get '/events/:id/choose_recommendation', to: 'events#choose_recommendation', as: :choose_recommendation
+  get '/events/:id/reload_recommendation', to: 'events#reload_recommendation'
   patch '/events/:id/confirm_recommendation', to: 'events#confirm_recommendation', as: :confirm_recommendation
   get '/events/:id/summary', to: 'events#summary', as: :summary
   patch '/events/:id/confirm_event', to: 'events#confirm_event', as: :confirm_event
