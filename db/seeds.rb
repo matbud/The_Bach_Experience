@@ -89,12 +89,12 @@ Hotel.create(name: "Paris Art Hotel Quartier Latin", location: "Paris", address:
 # hotel9.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # hotel9.save
 
-Hotel.create(name: "Hotel Rural & Spa Can Curreu", location: "Ibiza", address: "Ctra San Carlos, km 12, 07850 Sant Carles de Peralta, Espagne", description: "Located in the village of San Carlos, this luxurious 5-star hotel and spa resort includes an indoor and outdoor swimming pool, a gym and equestrian center. It includes free Wi-Fi.", theme:"cosy, nature", price_per_night: 60, photo_name: 'hotel9.png')
+Hotel.create(name: "Hotel Rural & Spa Can Curreu", location: "Ibiza", address: "Ctra San Carlos, km 12, 07850 Sant Carles de Peralta, Espagne", description: "Located in the village of San Carlos, this luxurious 5-star hotel and spa resort includes an indoor and outdoor swimming pool, a gym and equestrian center. It includes free Wi-Fi.", theme:"cozy, nature", price_per_night: 60, photo_name: 'hotel9.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # hotel10.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # hotel10.save
 
-Hotel.create(name: "Paradiso Ibiza Art Hotel", location: "Ibiza", address: "Playa de Cala Vadella, 07830 Cala Vadella, Espagne", description: "Art comes to life in our most media-friendly hotel. An art gallery curated by ADDA GALLERY PARIS, exhibitions in the lobby, a tattoo studio, the colour pink.", theme:"cosy, wild, fancy", price_per_night: 80, photo_name: 'hotel10.png')
+Hotel.create(name: "Paradiso Ibiza Art Hotel", location: "Ibiza", address: "Playa de Cala Vadella, 07830 Cala Vadella, Espagne", description: "Art comes to life in our most media-friendly hotel. An art gallery curated by ADDA GALLERY PARIS, exhibitions in the lobby, a tattoo studio, the colour pink.", theme:"cozy, wild, fancy", price_per_night: 80, photo_name: 'hotel10.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # hotel11.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # hotel11.save
