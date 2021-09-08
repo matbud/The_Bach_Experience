@@ -1,5 +1,5 @@
 <div class="modal fade" id="changeMoodModal" tabindex="-1" aria-labelledby="changeMoodModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="changeMoodModalLabel">Modal title</h5>
@@ -15,12 +15,12 @@
               radio_buttons: :horizontal_collection
             } do |f| %>
           <div class="change-mood">
-            <%= f.input_field :theme, as: :radio_buttons, collection: ['Wild', 'Nature', "Fancy", 'Cosy'], wrapper: :horizontal_collection_inline, wrapper_html: { class: "d-flex justify-content-between" } %>
+            <%= f.input_field :theme, as: :radio_buttons, collection: ['Wild', 'Nature', "Fancy", 'cozy'], wrapper: :horizontal_collection_inline, wrapper_html: { class: "d-flex justify-content-between mx-auto" } %>
           </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <%= f.submit %>
+        <%= f.submit class: "btn-red" %>
       </div>
         <% end %>
     </div>
