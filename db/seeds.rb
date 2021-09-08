@@ -37,9 +37,20 @@ file = URI.open('https://res.cloudinary.com/dxessq1na/image/upload/v1630754019/u
 user4.photo.attach(io: file, filename: 'u4.jpg', content_type: 'image/jpg')
 user4.save
 
-User.create(email: "margo@gmail.com", password: '123456', first_name: "Margo", last_name: "Tinawi", admin: false, photo: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_600,w_600/v1511364228/qfpwdtmhpnipfjn9cox3.jpg")
-User.create(email: "jane@gmail.com", password: '123456', first_name: "Jane", last_name: "Perrin", admin: false, photo: "https://pbs.twimg.com/profile_images/853292276600143872/xUi4uIIM.jpg")
-User.create(email: "caro@gmail.com", password: '123456', first_name: "Caro", last_name: "Sokolowski", admin: false, photo: "https://pkimgcdn.peekyou.com/6a288adc8aa2d39c4ad1c14b906498b6.jpeg")
+user5 = User.new(email: "margo@gmail.com", password: '123456', first_name: "Margo", last_name: "Tinawi", admin: false)
+file = URI.open('https://res.cloudinary.com/dxessq1na/image/upload/v1631114817/u5_o4ardk.jpg')
+user5.photo.attach(io: file, filename: 'u5.jpg', content_type: 'image/jpg')
+user5.save
+
+user6 = User.new(email: "jane@gmail.com", password: '123456', first_name: "Jane", last_name: "Perrin", admin: false)
+file = URI.open('https://res.cloudinary.com/dxessq1na/image/upload/v1631114817/u6_bzhben.jpg')
+user6.photo.attach(io: file, filename: 'u6.jpg', content_type: 'image/jpg')
+user6.save
+
+user7 = User.new(email: "caro@gmail.com", password: '123456', first_name: "Caro", last_name: "Sokolowski", admin: false)
+file = URI.open('https://res.cloudinary.com/dxessq1na/image/upload/v1631114817/u7_gesn9p.jpg')
+user7.photo.attach(io: file, filename: 'u7.jpg', content_type: 'image/jpg')
+user7.save
 
 puts "creating hotels"
 
