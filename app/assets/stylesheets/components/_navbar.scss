@@ -8,11 +8,10 @@
 
 .nav-left {
   position: absolute;
-  right: 0 ;
+  right: 0;
   top: 10px;
   display: flex;
 }
-
 
 // old code ________________________________
 .navbar-lewagon {
@@ -44,15 +43,13 @@
   position: relative;
 }
 
-
-.toggle-menus-lines {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 7px;
-    margin: -12px 0 0;
-    width: 34px;
-    height: 24px;
-    transition: .5s ease-in-out;
-
-}
+// .toggle-menus-lines {
+//   display: block;
+//   position: absolute;
+//   top: 50%;
+//   right: 7px;
+//   margin: -12px 0 0;
+//   width: 34px;
+//   height: 24px;
+//   transition: 0.5s ease-in-out;
+// }
