@@ -22,20 +22,24 @@ file = URI.open('https://res.cloudinary.com/dxessq1na/image/upload/v1630754019/u
 user1.photo.attach(io: file, filename: 'u1.jpg', content_type: 'image/jpg')
 user1.save
 
-user2 = User.new(email: "el@lewagon.com", password: '123456', first_name: "Elodie", last_name: "Duffau", admin: true)
+user2 = User.new(email: "elodie@lewagon.com", password: '123456', first_name: "Elodie", last_name: "Duffau", admin: true)
 file = URI.open('https://res.cloudinary.com/dxessq1na/image/upload/v1630754019/u2_kdtlw2.jpg')
 user2.photo.attach(io: file, filename: 'u2.jpg', content_type: 'image/jpg')
 user2.save
 
-user3 = User.new(email: "mel@lewagon.com", password: '321321', first_name: "Melanie", last_name: "Olivier", admin: true)
+user3 = User.new(email: "melanie@lewagon.com", password: '321321', first_name: "Melanie", last_name: "Olivier", admin: true)
 file = URI.open('https://res.cloudinary.com/dxessq1na/image/upload/v1630754019/u3_zzf3gx.jpg')
 user3.photo.attach(io: file, filename: 'u2.jpg', content_type: 'image/jpg')
 user3.save
 
-user4 = User.new(email: "claire@lewagon.com", password: 'happybirthday', first_name: "Claire", last_name: "Gauthier", admin: false)
+user4 = User.new(email: "claire@gmail.com", password: '123456', first_name: "Claire", last_name: "Gauthier", admin: false)
 file = URI.open('https://res.cloudinary.com/dxessq1na/image/upload/v1630754019/u4_bezmgx.jpg')
 user4.photo.attach(io: file, filename: 'u4.jpg', content_type: 'image/jpg')
 user4.save
+
+User.create(email: "margo@gmail.com", password: '123456', first_name: "Margo", last_name: "Tinawi", admin: false, photo: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_600,w_600/v1511364228/qfpwdtmhpnipfjn9cox3.jpg")
+User.create(email: "jane@gmail.com", password: '123456', first_name: "Jane", last_name: "Perrin", admin: false, photo: "https://pbs.twimg.com/profile_images/853292276600143872/xUi4uIIM.jpg")
+User.create(email: "caro@gmail.com", password: '123456', first_name: "Caro", last_name: "Sokolowski", admin: false, photo: "https://pkimgcdn.peekyou.com/6a288adc8aa2d39c4ad1c14b906498b6.jpeg")
 
 puts "creating hotels"
 
