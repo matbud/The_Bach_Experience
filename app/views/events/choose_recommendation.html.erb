@@ -16,14 +16,13 @@
     </div>
   </div>
 
-  <div class="row pt-2">
-    <%= render 'recommendation' %>
+  <div class="row pt-2" id="recommendation-card">
+    <%= render 'recommendation', recommendation: @recommendation %>
   </div>
 
   <div class="container-card row mt-3 p-4 text-center">
-
-    <div class="col-md-4 p-4">
-      <%= link_to "SURPRISE AGAIN", '#', class: "btn-red btn-border-drawing" %>
+    <div class="col-md-4 p-4" data-controller="reload-recommendations" data-event-id="<%= @event.id %>">
+      <%= link_to "SURPRISE AGAIN", '#', class: "btn-red btn-border-drawing", data: { action: "click->reload-recommendations#reloadRecommendation" } %>
     </div>
 
     <div class="col-md-4 p-4">

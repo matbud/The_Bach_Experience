@@ -21,6 +21,10 @@ class EventPolicy < ApplicationPolicy
     update?
   end
 
+  def reload_recommendation?
+    update?
+  end
+
   def confirm_recommendation?
     update?
   end
