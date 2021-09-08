@@ -8,22 +8,21 @@
         </button>
       </div>
       <div class="modal-body">
-      <p>works or not</p>
         <%= simple_form_for event,
             remote: true, 
             wrapper: :horizontal_form,
             wrapper_mappings: {
               radio_buttons: :horizontal_collection
             } do |f| %>
-          <div class="">
+          <div class="change-mood">
             <%= f.input_field :theme, as: :radio_buttons, collection: ['Wild', 'Nature', "Fancy", 'Cosy'], wrapper: :horizontal_collection_inline, wrapper_html: { class: "d-flex justify-content-between" } %>
           </div>
-        <% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <%= f.submit %>
       </div>
+        <% end %>
     </div>
   </div>
 </div>
