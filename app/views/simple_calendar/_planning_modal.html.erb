@@ -15,7 +15,7 @@
       </div>
       <div class="modal-body">
         <div class='form-event-new'>
-          <%= simple_form_for [ @event, @new_planning ] do |f| %>
+          <%= simple_form_for [ @event, @new_planning ], remote: true do |f| %>
             <%= f.input :name, as: :string %>
             <%= f.input :start_time, as: :string %>
             <%= f.input :end_time, as: :string %>

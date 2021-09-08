@@ -45,13 +45,40 @@ const initFlatpickr = () => {
         endDateInputPlanning.disabled = false;
       },
     });
-    console.log(startDateCalendar)
     
     const endDateCalendar = flatpickr(endDateInputPlanning, {
       enable: [availableDates],
       enableTime: true,
       dateFormat: "Y-m-d H:i"
     });
+
+    const editPlanningStartInput = document.querySelectorAll('.edit_planning_start_date')
+    const editPlanningEndInput = document.querySelectorAll('.edit_planning_end_date')
+    if (editPlanningStartInput && editPlanningEndInput) {
+        for (let i = 0; i < editPlanningStartInput.length; i += 1) {
+        const startDateCalendar = flatpickr(editPlanningStartInput, {
+          enableTime: true,
+          dateFormat: "Y-m-d H:i",
+          enable: [availableDates],
+          // doesn't work
+          // disable: unavailableDates, 
+          onChange: function (selectedDates, selectedDate) {
+            if (selectedDate === "") {
+              endDateInputPlanning.disabled = true;
+            }
+            let minDate = selectedDates[0];
+            endDateCalendar.set("minDate", minDate);
+            endDateInputPlanning.disabled = false;
+          },
+        });
+        
+        const endDateCalendar = flatpickr(editPlanningEndInput, {
+          enable: [availableDates],
+          enableTime: true,
+          dateFormat: "Y-m-d H:i"
+        });
+      }
+    }
   }
 };
 
