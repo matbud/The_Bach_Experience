@@ -1,10 +1,10 @@
 .eventchatroom {
   background: white;
   // height: calc(50vh - 66px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex-grow: 1;
+  // display: flex;
+  // flex-direction: row;
+  // // justify-content: space-between;
+  // // flex-grow: 1;
 
   h1 {
     padding: 0.5rem 1rem;
@@ -23,9 +23,9 @@
 #new_message {
   padding: 8px;
   border-top: 1px solid $light-gray;
-  display: flex;
+  // display: flex;
   justify-content: center;
-  flex-direction: row;
+  // flex-direction: row;
   align-items: center;
 
   .form-group {

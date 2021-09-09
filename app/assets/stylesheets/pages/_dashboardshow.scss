@@ -31,8 +31,26 @@
 .dashboard-collapse-title {
   font-size: 25px;
   margin: 0;
+  font-weight: 400;
+  letter-spacing: 1.2px;
 }
 
 .card-header {
   padding: 8px 20px;
+}
+
+
+.calendar-title {
+font-weight: bold;
+color: $bx-blue;
+}
+
+.day {
+font-style: italic;
+color: $bx-blue;
+}
+
+
+.modal-content {
+  margin-top: 150px;
 }
