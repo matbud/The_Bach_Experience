@@ -1,11 +1,13 @@
 class GuestsController < ApplicationController
   def create
     @event = Event.find(params[:event_id])
-    @emails = params[:emails].gsub(" ", "").split(/,|;|&/)
-    @emails.each do |email|
-      user = User.find_by(email: email)
-      guest = Guest.create(status: 'pending', event: @event, user: user)
-      authorize guest
+    if params[:emails]
+      @emails = params[:emails].gsub(" ", "").split(/,|;|&/)
+      @emails.each do |email|
+        user = User.find_by(email: email)
+        guest = Guest.create(status: 'pending', event: @event, user: user)
+        authorize guest
+      end
     end
     redirect_to dashboard_path(current_user.event)
   end
