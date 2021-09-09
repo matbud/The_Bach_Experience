@@ -1,13 +1,19 @@
-<div class="d-flex">
-  <div class="eventchatroom">
+<div class=" container">
+  <div class="row eventchatroom">
     <div id="messages" data-current-user-id="<%= current_user.id %>" data-event-id="<%= @event.id %>">
       <% @event.messages.each do |message| %>
         <%= render 'messages/message', message: message %>
       <% end %>
     </div>
-    <%= simple_form_for [ @event, @message ], remote: true do |f| %>
-      <%= f.input :content, label: false, placeholder: "Type a message" %>
-      <%= f.submit "Send", :class => "btn-gradient chatbox-submit" %>
-    <% end %>
   </div>
+
+    <%= simple_form_for [ @event, @message ], remote: true do |f| %>
+  <div class="mr-0 ml-0">
+    <%= f.input :content, label: false, placeholder: "Talk to your friends" %>
+  </div>
+
+  <div class="row justify-content-center">
+    <%= f.submit "Send", :class => "btn-gradient chatbox-submit" %>
+  </div>
+    <% end %>
 </div>

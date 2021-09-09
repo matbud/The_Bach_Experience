@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
 <a type="button" class="btn-red my-1" data-toggle="modal" data-target="#staticBackdrop">
-  Add planning event
+  EVENT
 </a>
 <!-- Modal -->
 <%# tabindex="-1" - cut from the div below, causes js issues %>
@@ -8,7 +8,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Event:</h5>
+        <h5 class="modal-title" id="staticBackdropLabel">What's your event ?</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -20,9 +20,16 @@
             <%= f.input :start_time, as: :string %>
             <%= f.input :end_time, as: :string %>
             <hr>
-            <%= f.submit "Add event", :class => "btn-blue" %>
+            <div class="row justify-content-space-around">
+              <div class="col">
+                 <%= f.submit "ADD", :class => "btn-blue" %>
+               </div>
+              <div class="col">
+                <a type="button" class="btn-blue text-center" data-dismiss="modal">CLOSE</a>
+              </div>
+
+            </div>
             <%# <%= f.button :submit, class:"btn-blue" %>
-            <a type="button" class="btn-blue" data-dismiss="modal">Close</a>
           <% end %>
         </div>
       </div>

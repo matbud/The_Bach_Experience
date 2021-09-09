@@ -34,11 +34,14 @@
   <% elsif params[:controller] == 'events' && (params[:action] == 'new' || params[:action] == 'edit') %>
     <body class="form-event-bg">
 
-   <% elsif params[:controller] == 'events' && (params[:action] == 'summary') %>
+  <% elsif params[:controller] == 'events' && (params[:action] == 'summary') %>
     <body class="review-body">
 
-    <% elsif params[:controller] == 'events' && (params[:action] == 'invite') %>
+  <% elsif params[:controller] == 'events' && (params[:action] == 'invite') %>
     <body class="invite-body">
+
+   <% elsif params[:controller] == 'dashboards' && (params[:action] == 'show') %>
+    <body class="dash-body">
 
   <% else %>
     <body>

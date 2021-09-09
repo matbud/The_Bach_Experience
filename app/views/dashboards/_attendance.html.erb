@@ -19,9 +19,9 @@
           <% end %>
           <td class="px-2"><%= guest.user.first_name %></td>
           <% if guest.status == "accepted" %>
-            <td class="px-2"><%= "#{guest.status} ✔️" %></td>
+            <td class="px-2"><%= "#{guest.status}"%> <i class="fas fa-check" id="green"></i> </td>
           <% elsif guest.status == "rejected" %>
-            <td class="px-2"><%= "#{guest.status} ❌" %></td>
+            <td class="px-2"><%= "#{guest.status} " %>❌</td>
           <% else %>
             <td class="px-2"><%= guest.status %></td>
           <% end %>
