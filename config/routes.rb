@@ -15,9 +15,9 @@ Rails.application.routes.draw do
   get '/events/:id/invite', to: 'events#invite', as: :invite
 
   get 'dashboards/:id', to: 'dashboards#show', as: :dashboard
-  get '/draft', to: 'pages#draft'
+  # get '/draft', to: 'pages#draft'
   # To be removed
-  get '/test', to: 'pages#test'
+  # get '/test', to: 'pages#test'
 
   resources :plannings, only: [ :edit, :update, :destroy ]
   patch '/guests/:id/accept', to: "guests#accept_invitation", as: :accept_invitation

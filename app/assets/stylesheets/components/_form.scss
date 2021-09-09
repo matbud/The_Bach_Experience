@@ -113,3 +113,23 @@
   /* Firefox 18- */
   font-style: italic;
 }
+
+.form-event .event_gender, .event_theme {
+  flex-direction: column;
+}
+@include media-breakpoint-up(md) {
+  .form-event .event_gender, .event_theme {
+    flex-direction: row;
+  }
+}
+
+.form-event .form-check {
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+@include media-breakpoint-up(md) {
+  .form-event .form-check {
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+}
