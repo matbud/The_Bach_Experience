@@ -13,7 +13,7 @@ const initEventCable = () => {
           console.log(data); // called when data is broadcast in the cable
           messagesContainer.insertAdjacentHTML("beforeend", data.message);
           if (current_user_id == data.current_user_id) {
-            let form = document.querySelector("#messages + form");
+            let form = document.querySelector("form");
             form.reset();
             let messages =
               messagesContainer.querySelectorAll(".message-container");
