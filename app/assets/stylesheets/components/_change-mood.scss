@@ -12,8 +12,20 @@
   text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   filter: saturate(80%) contrast(75%) brightness(90%);
+  z-index: 1;
 }
 
+#changeMoodModal .change-mood .event_theme {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0 auto;
+}
+@include media-breakpoint-up(lg) {
+  #changeMoodModal .change-mood .event_theme {
+    flex-direction: row;
+  }
+}
 .change-mood [for=event_theme_fancy] {
   background-image: image-url("fancy.png");
 }
@@ -35,7 +47,25 @@
 }
 
 .change-mood [type=radio]:checked + label {
-  // outline: 3px solid $bx-red;
+  outline: 1.8px solid black;
   transform: scale(1.1);
   filter: saturate(100%) contrast(100%) brightness(100%);
+  z-index: 2;
+}
+@include media-breakpoint-up(lg) {
+  .change-mood [type=radio]:checked + label {
+    // outline: 3px solid $bx-red;
+
+  }
+}
+
+
+.change-mood .form-check {
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+@include media-breakpoint-up(lg) {
+  .change-mood .form-check {
+    margin-bottom: 0;
+  }
 }

@@ -2,7 +2,7 @@ class GuestsController < ApplicationController
   def create
     @event = Event.find(params[:event_id])
     if params[:emails]
-      @emails = params[:emails].gsub(" ", "").split(/,|;|&/)
+      @emails = params[:emails].gsub(/[ \n\r]/, "").split(/,|;|&/)
       @emails.each do |email|
         user = User.find_by(email: email)
         guest = Guest.create(status: 'pending', event: @event, user: user)

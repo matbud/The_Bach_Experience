@@ -33,7 +33,7 @@
   justify-content: center;
   align-items: center;
   background-size: cover;
-  // width: 140px;
+  width: 80px;
   height: 150px;
   color: white;
   font-weight: bold;
@@ -41,13 +41,20 @@
   text-shadow: 2px 2px 5px rgba(0,0,0,0.9);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   filter: saturate(90%) contrast(90%) brightness(95%);
+  z-index: 1;
+}
+
+.form-event .form-check-inline {
+  flex-grow: 1;
 }
 
 .event_gender .form-check label {
-  width: 150px;
+  // width: 150px;
+  flex-grow: 1;
 }
 .event_theme .form-check label {
-  width: 130px;
+  // width: 130px;
+  flex-grow: 1;
 }
 
 .form-event [for=event_theme_fancy] {
@@ -81,10 +88,10 @@
 }
 
 .form-event [type=radio]:checked + label {
-  // outline: 3px solid $bx-red;
+  outline: 1.8px solid black;
   transform: scale(1.18);
   filter: saturate(100%) contrast(100%) brightness(100%);
-  border: 1,2px solid black;
+  z-index: 2;
 }
 
 
