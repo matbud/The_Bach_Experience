@@ -7,7 +7,7 @@
 </form> %>
 <%# <div class="container col-6 my-4"> %>
     <%= form_tag event_guests_path(@event), method: :post do %>
-      <%= text_area_tag(:emails, nil, size: "35x4"), placeholder: "anna@gmail.com, tom@gmail.com" %> <br>
+      <%= text_area_tag(:emails, nil, size: "35x4") placeholder: "anna@gmail.com, tom@gmail.com" %> <br>
       <%# <%= text_field_tag(:emails, size: "70x5") %>
       <%= submit_tag "Let's party", class:"btn-red my-3" %>
     <% end %>
