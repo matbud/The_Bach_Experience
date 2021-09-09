@@ -1,12 +1,14 @@
 <div class="container">
 
-  <div class="container-card row summary-header mb-2">
-    <h3 class="text-center p-4 mb-2"> Take a moment to review the details of your event <i class="fas fa-pen-alt"></i> </h3>
+  <div class="container-card row summary-header text-center mb-3">
+    <div class="col">
+    <h3 class="content-center p-4 mb-2"> Take a moment to review the details of your event <i class="fas fa-pen-alt"></i> </h3>
+    </div>
   </div>
 
-  <div class="row">
+  <div class="row container-card mr-0">
 
-    <div class="container-card col-md-4">
+    <div class="col-md-4 d-flex align-items-center">
       <%= render 'summary_card' %>
     </div>
 
@@ -16,7 +18,7 @@
 
   </div>
 
-  <div class="container-card summary-header row py-4 mt-1">
+  <div class="container-card row py-4 mt-3 mr-0">
 
     <div class="row">
       <%= link_to "Edit", edit_event_path(@event), class: "btn-red mx-5" %>
