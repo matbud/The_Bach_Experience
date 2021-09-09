@@ -10,6 +10,13 @@
   align-items: center; //new
   display: flex; //new
 }
+@media only screen and (max-width: 600px) {
+  .main-container {
+    padding: 20px 10px;
+
+  }
+}
+
 
 html,
 body {
