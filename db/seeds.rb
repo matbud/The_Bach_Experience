@@ -109,12 +109,12 @@ Hotel.create(name: "Hotel Rural & Spa Can Curreu", location: "Ibiza", address: "
 # hotel10.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # hotel10.save
 
-Hotel.create(name: "Paradiso Ibiza Art Hotel", location: "Ibiza", address: "Playa de Cala Vadella, 07830 Cala Vadella, Espagne", description: "Art comes to life in our most media-friendly hotel. An art gallery curated by ADDA GALLERY PARIS, exhibitions in the lobby, a tattoo studio, the colour pink.", theme:"cosy, wild, fancy", price_per_night: 80, photo_name: 'hotel10.png')
+Hotel.create(name: "Paradiso Ibiza Art Hotel", location: "Ibiza", address: "Playa de Cala Vadella, 07830 Cala Vadella, Espagne", description: "Art comes to life in our most media-friendly hotel. An art gallery curated by ADDA GALLERY PARIS, exhibitions in the lobby, a tattoo studio, the colour pink.", theme:"cosy, wild, fancy", price_per_night: 80, photo_name: 'hotel11.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # hotel11.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # hotel11.save
 
-Hotel.create(name: "Ibiza Ushuaïa Beach Hotel", location: "Ibiza", address: "Periodista Francisco Escanelles 20 83, 07800 Ibiza, Espagne", description: "Set on Playa d’en Bossa Beach, the adults-only Ushuaia Ibiza Beach Hotel features a spa and 3 outdoor pools with large sun beds. Guests enjoy free entrance to live DJ performances hosted by the hotel.", theme:"wild, fancy", price_per_night: 70, photo_name: 'hotel11.png')
+Hotel.create(name: "Ibiza Ushuaïa Beach Hotel", location: "Ibiza", address: "Periodista Francisco Escanelles 20 83, 07800 Ibiza, Espagne", description: "Set on Playa d’en Bossa Beach, the adults-only Ushuaia Ibiza Beach Hotel features a spa and 3 outdoor pools with large sun beds. Guests enjoy free entrance to live DJ performances hosted by the hotel.", theme:"wild, fancy", price_per_night: 70, photo_name: 'hotel12.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # hotel12.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # hotel12.save
@@ -211,7 +211,7 @@ Activity.create(name: "Party bus", address: "Brussels, Paris, Ibiza, Amsterdam",
 # activity17.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity17.save
 
-Activity.create(name: "Escape room", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Try to resolve all the mystery of the escape room", theme:"wild", gender:"mixed", price: 10, photo_name: 'paint.png')
+Activity.create(name: "Escape room", address: "Brussels, Paris, Ibiza, Amsterdam", description: "Try to resolve all the mystery of the escape room", theme:"wild", gender:"men", price: 10, photo_name: 'paint.png')
 # file = URI.open('https://unsplash.it/1300/600?random')
 # activity18.photo.attach(io: file, filename: '1.jpg', content_type: 'image/jpg')
 # activity18.save
