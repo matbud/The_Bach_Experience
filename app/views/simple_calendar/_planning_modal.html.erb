@@ -1,7 +1,10 @@
 <!-- Button trigger modal -->
-<a type="button" class="btn-red my-1" data-toggle="modal" data-target="#staticBackdrop">
-  EVENT
-</a>
+<% if current_user == @event.user %>
+  <a type="button" class="btn-red my-1" data-toggle="modal" data-target="#staticBackdrop">
+    EVENT
+  </a>
+<% end %>
+
 <!-- Modal -->
 <%# tabindex="-1" - cut from the div below, causes js issues %>
 <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" aria-labelledby="staticBackdropLabel" aria-hidden="true">

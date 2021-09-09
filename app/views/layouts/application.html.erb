@@ -31,7 +31,7 @@
   </head>
   <% if params[:controller] == 'events' && params[:action] == 'choose_recommendation' %>
     <body class="show-body">
-  <% elsif params[:controller] == 'events' && (params[:action] == 'new' || params[:action] == 'edit') %>
+  <% elsif params[:controller] == 'events' && (params[:action] == 'new' || params[:action] == 'edit' || params[:action] = '') %>
     <body class="form-event-bg">
 
   <% elsif params[:controller] == 'events' && (params[:action] == 'summary') %>

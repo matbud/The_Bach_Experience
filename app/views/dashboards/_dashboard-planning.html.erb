@@ -7,6 +7,7 @@
           <p><%= planning.name %></p>
           <small><%= planning.time unless planning.multi_days? %></small>
         </div>
+        <% if current_user == @event.user %>
         <div class="planning-commands">
           <a type="button" data-toggle="modal" data-target="#staticBackdropEdit-<%= planning.id %>">
             📝
@@ -19,6 +20,7 @@
                 data: { confirm: "Are you sure?" } %>
           </div>
         </div>
+        <% end %>
       </div>
     <% end %>
   <% end %>
