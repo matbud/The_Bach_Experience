@@ -30,10 +30,7 @@
             <%= image_tag "https://pbs.twimg.com/profile_images/1380119262950531074/sYlD_F3U_400x400.jpg", class: "avatar-2 dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <% if current_user.event.id %>
-              <%= link_to "My event dashboard", dashboard_path(current_user.event), class: "dropdown-item"%>
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            <% elsif current_user.guest %>
+            <% if current_user.guest %>
               <%= link_to "My event dashboard", dashboard_path(current_user.guest.event), class: "dropdown-item"%>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             <% else %>
