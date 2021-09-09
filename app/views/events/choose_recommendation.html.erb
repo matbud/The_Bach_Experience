@@ -24,15 +24,15 @@
 
   <div class="container-card row mt-3 p-4 text-center">
     <div class="col-md-4 p-4" data-controller="reload-recommendations" data-event-id="<%= @event.id %>">
-      <%= link_to "SURPRISE AGAIN", '#', class: "btn-red btn-border-drawing", data: { action: "click->reload-recommendations#reloadRecommendation" } %>
+      <%= link_to "SURPRISE AGAIN", '#', class: "btn-blue btn-border-drawing", data: { action: "click->reload-recommendations#reloadRecommendation" } %>
     </div>
 
     <div class="col-md-4 p-4">
-      <a class="btn-red" data-toggle="modal" data-target="#changeMoodModal">CHANGE MOOD</a>
+      <a class="btn-blue" data-toggle="modal" data-target="#changeMoodModal">CHANGE MOOD</a>
     </div>
 
     <div class="col-md-4 p-4">
-      <%= link_to 'I LOVE IT', confirm_recommendation_path(@event), method: :patch, class: "btn-blue" %>
+      <%= link_to 'I LOVE IT', confirm_recommendation_path(@event), method: :patch, class: "btn-red" %>
     </div>
     </div>
   </div>
