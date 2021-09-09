@@ -27,7 +27,7 @@ file = URI.open('https://res.cloudinary.com/dxessq1na/image/upload/v1630754019/u
 user2.photo.attach(io: file, filename: 'u2.jpg', content_type: 'image/jpg')
 user2.save
 
-user3 = User.new(email: "melanie@lewagon.com", password: '321321', first_name: "Melanie", last_name: "Olivier", admin: true)
+user3 = User.new(email: "melanie@gmail.com", password: '321321', first_name: "Melanie", last_name: "Olivier", admin: true)
 file = URI.open('https://res.cloudinary.com/dxessq1na/image/upload/v1630754019/u3_zzf3gx.jpg')
 user3.photo.attach(io: file, filename: 'u2.jpg', content_type: 'image/jpg')
 user3.save
