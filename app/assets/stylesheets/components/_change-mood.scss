@@ -52,13 +52,6 @@
   filter: saturate(100%) contrast(100%) brightness(100%);
   z-index: 2;
 }
-@include media-breakpoint-up(lg) {
-  .change-mood [type=radio]:checked + label {
-    // outline: 3px solid $bx-red;
-
-  }
-}
-
 
 .change-mood .form-check {
   margin-right: 0;
