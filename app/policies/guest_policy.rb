@@ -6,7 +6,7 @@ class GuestPolicy < ApplicationPolicy
   end
 
   def create?
-    user.admin
+    true
   end
 
   def accept_invitation?

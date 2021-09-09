@@ -9,6 +9,7 @@ class GuestsController < ApplicationController
         authorize guest
       end
     end
+    authorize @event
     redirect_to dashboard_path(current_user.event)
   end
 
