@@ -36,7 +36,7 @@
       </div>
       <div class="row form-group pt-2">
         <div class="col-3 d-flex align-items-center">
-          <%= f.label :theme %>
+          <%= f.label :theme, label: "Mood" %>
         </div>
         <div class="col-lg-9">
           <%= f.input_field :theme, as: :radio_buttons, collection: ['Wild', 'Nature', "Fancy", 'Cozy'], wrapper: :horizontal_collection_inline, wrapper_html: { class: "d-flex justify-content-between" } %>

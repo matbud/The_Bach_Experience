@@ -2,28 +2,27 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="changeMoodModalLabel">Modal title</h5>
+        <h5 class="modal-title text-center" id="changeMoodModalLabel">Change mood</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-        <%= simple_form_for event,
-            remote: true, 
-            wrapper: :horizontal_form,
-            wrapper_mappings: {
-              radio_buttons: :horizontal_collection
-            } do |f| %>
-                  <div class="modal-body">
-
-          <div class="change-mood">
-            <%= f.input_field :theme, as: :radio_buttons, collection: ['Wild', 'Nature', "Fancy", 'Cozy'], wrapper: :horizontal_collection_inline, wrapper_html: { class: "d-flex justify-content-between mx-auto" } %>
-          </div>
+      <%= simple_form_for event,
+          remote: true, 
+          wrapper: :horizontal_form,
+          wrapper_mappings: {
+            radio_buttons: :horizontal_collection
+          } do |f| %>
+      <div class="modal-body">
+        <div class="change-mood">
+          <%= f.input_field :theme, as: :radio_buttons, collection: ['Wild', 'Nature', "Fancy", 'Cozy'], wrapper: :horizontal_collection_inline, wrapper_html: { class: "d-flex justify-content-between mx-auto" } %>
+        </div>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer d-flex justify-content-around">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <%= f.submit class: "btn-red" %>
       </div>
-        <% end %>
+      <% end %>
     </div>
   </div>
 </div>
