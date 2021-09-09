@@ -1,35 +1,38 @@
-// new code ________________________________
-
-.navbar-logo {
-  display: flex;
-  height: 85px;
-  justify-content: center;
-}
-
-.nav-left {
+// MIXINS
+@mixin centerer {
   position: absolute;
-  right: 0 ;
-  top: 10px;
-  display: flex;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-
-// old code ________________________________
+// UI KIT CSS
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  height: 85px;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-logo .navbar-brand img {
+.navbar-lewagon .navbar-brand img {
   width: 125px;
+  @include centerer;
+  // margin: 10px;
 }
 
-.bnt-actioncall-navbar {
-  padding-right: 20px;
+// OUR CSS
+.nav-item {
+  text-align: right;
+}
+
+.avatar-navbar {
+  margin: 5px 0px 10px 15px;
 }
 
 .navbar-lewagon .navbar-brand-2 img {
@@ -37,22 +40,11 @@
   justify-content: left;
 }
 
-.navbar-2 {
-  display: flex;
-  align-items: center;
-  height: 55px;
-  position: relative;
+.navbar-login-btn {
+  margin: 12px 0px 10px 15px;
 }
 
-
-.toggle-menus-lines {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 7px;
-    margin: -12px 0 0;
-    width: 34px;
-    height: 24px;
-    transition: .5s ease-in-out;
-
+.dropdown-menu-right {
+  // width: 50%;
+  text-align: right;
 }
