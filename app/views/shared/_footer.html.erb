@@ -1,27 +1,25 @@
 <div class="footer">
   <div class="footer-img">
-     <%= image_tag "logos.png" %>
+    <%= image_tag "logos.png" %>
   </div>
-
   <div class="footer-copyright">
-    <em>Have the best time of your life with</em><a href="#"><span class="fun-color"> The Bach Experience</a> </span>✨
+    <em>Have the best time of your life with </em>
+    <%= link_to root_path do %>
+      <span class="fun-color">The Bach Experience</span>
+    <% end %>
   </div>
-
   <div class="footer-links">
     <div class='col'>
       <div class="row test">
         <a href="https://github.com/matbud/The_Bach_Experience"><i class="fab fa-github"></i></a>
         <a href="https://www.instagram.com/bachexp/"><i class="fab fa-instagram"></i></a>
       </div>
-
       <div class="row people">
         <a href="https://www.linkedin.com/in/m%C3%A9lanie-olivier-41705258/"><i class="fas fa-user-secret"></i></a>
         <a href="https://www.linkedin.com/in/elodiemarieduffau/"><i class="fas fa-user-secret"></i></a>
         <a href="#"><i class="fas fa-user-secret"></i></a>
       </div>
-
-        <span class="best">#BestTeam</span>
+      <span class="best">#BestTeam</span>
     </div>
   </div>
-
 </div>
