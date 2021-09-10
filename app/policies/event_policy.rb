@@ -5,8 +5,12 @@ class EventPolicy < ApplicationPolicy
     end
   end
 
+  def new?
+    true
+  end
+
   def create?
-    user.admin
+    new?
   end
 
   def show?
