@@ -11,6 +11,8 @@ class EventsController < ApplicationController
     end
     @event = Event.new
     authorize @event
+    # @user = User.new
+    # authorize @user
   end
 
   def create
