@@ -15,8 +15,8 @@ const initEventCable = () => {
           if (current_user_id == data.current_user_id) {
             let chatroom = document.querySelector(".container-chatroom");
             let form = chatroom.querySelector("form");
-            console.log(form);
-            console.log("the form should have reset");
+            // console.log(form);
+            // console.log("the form should have reset");
             form.reset();
             let messages =
               messagesContainer.querySelectorAll(".message-container");
