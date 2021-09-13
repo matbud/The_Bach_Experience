@@ -6,7 +6,7 @@ class PlanningPolicy < ApplicationPolicy
   end
 
   def create?
-    user.admin
+    record.event.user == user
   end
 
   def update?
