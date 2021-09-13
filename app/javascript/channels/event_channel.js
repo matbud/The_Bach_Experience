@@ -13,7 +13,10 @@ const initEventCable = () => {
           console.log(data); // called when data is broadcast in the cable
           messagesContainer.insertAdjacentHTML("beforeend", data.message);
           if (current_user_id == data.current_user_id) {
-            let form = document.querySelector("form");
+            let chatroom = document.querySelector(".container-chatroom");
+            let form = chatroom.querySelector("form");
+            // console.log(form);
+            // console.log("the form should have reset");
             form.reset();
             let messages =
               messagesContainer.querySelectorAll(".message-container");
